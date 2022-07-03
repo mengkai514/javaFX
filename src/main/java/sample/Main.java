@@ -9,13 +9,12 @@ public class Main{
     static DetectProductPositionByFiberSensors detectProduct = new DetectProductPositionByFiberSensors();
     static Main mainApp = new Main();
     static ImageCatch imageCatch = new ImageCatch(mainApp);
-    static boolean flag = false;
+    public static boolean flag = false;
     static Check check = new Check(mainApp);
 
     public void ImageCatch2(){
-        System.out.println(1111);
         new Thread(imageCatch).start();
-        flag = true;
+//        flag = false;
 
     }
 
@@ -34,12 +33,8 @@ public class Main{
                     boolean isArrive = detectProduct.detectProductPosition();
                     System.out.println(isArrive);
                     if (isArrive){
+//                        flag = false;
                         mainApp.ImageCatch2();
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
                     }
                 }
 

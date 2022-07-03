@@ -10,7 +10,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import util.ImageCatch;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -30,7 +34,7 @@ public class Check extends Application {
 
         checkStage.show();
 
-//        Image image = new Image("file:D:\\JAVA\\workspace\\JavaFX\\src\\img\\1.jpg");
+//        Image image = new Image("file:D:\\JAVA\\workspace\\JavaFX\\src\\img\\2.jpg");
 //        ImageView imageShow = (ImageView) root.lookup("#imageShow");
 //        imageShow.setImage(image);
 
@@ -41,7 +45,23 @@ public class Check extends Application {
                 Platform.runLater(new Runnable() {
                     public void run() {
                         if(mainApp.flag){
+//                            try {
+//                                FileInputStream is = new FileInputStream("D:\\JAVA\\workspace\\JavaFX\\src\\img\\1.jpg");
+//                                ImageCatch imageCatch = new ImageCatch();
+//                                if (imageCatch.bytesImage != null){
+//                                    Image image = new Image(imageCatch.bytesImage);
+//                                    ImageView imageShow = (ImageView) root.lookup("#imageShow");
+//                                    imageShow.setImage(image);
+//                                }
+//                            } catch (Exception e) {
+//                                e.printStackTrace();
+//                            }
                             Image image = new Image("file:D:\\JAVA\\workspace\\JavaFX\\src\\img\\1.jpg");
+                            ImageView imageShow = (ImageView) root.lookup("#imageShow");
+                            imageShow.setImage(image);
+                        }
+                        else{
+                            Image image = new Image("file:D:\\JAVA\\workspace\\JavaFX\\src\\img\\2.jpg");
                             ImageView imageShow = (ImageView) root.lookup("#imageShow");
                             imageShow.setImage(image);
                         }

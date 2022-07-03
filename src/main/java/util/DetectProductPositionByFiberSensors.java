@@ -10,9 +10,13 @@ import java.io.OutputStream;
 
 public class DetectProductPositionByFiberSensors {
     public boolean detectProductPosition(){
+        long startTime = System.currentTimeMillis();
         SocketCommunication listenProductPosition = new SocketCommunication("listenProductPosition");
 //        JSONObject productPosition = listenProductPosition.communite("listenProductPosition");
         JSONObject productPosition = listenProductPosition.res;
+
+        long endTime = System.currentTimeMillis();
+        System.out.println("获取传感器时间:"+(endTime-startTime));
         System.out.println(productPosition);
         String isArrive = productPosition.getString("content");
         if(isArrive.equals("True")) {
