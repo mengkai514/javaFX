@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductDetectController">
+   <children>
+      <Circle fx:id="statusCircle" fill="#eb0000" layoutX="56.0" layoutY="46.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="21.0" />
+      <Label layoutX="742.0" layoutY="91.0" prefHeight="50.0" prefWidth="209.0" text="当前批次信息" AnchorPane.rightAnchor="475.0" AnchorPane.topAnchor="91.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="startButton" layoutX="269.0" layoutY="22.0" mnemonicParsing="false" onAction="#startConveyor" text="开始" AnchorPane.leftAnchor="269.0" AnchorPane.topAnchor="22.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="stopbutton" layoutX="387.0" layoutY="22.0" mnemonicParsing="false" onAction="#stopConveyor" text="停止" AnchorPane.leftAnchor="387.0" AnchorPane.topAnchor="22.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Separator layoutY="80.0" prefHeight="22.0" prefWidth="1237.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+      <AnchorPane layoutX="669.0" layoutY="147.0" prefHeight="349.0" prefWidth="642.0" style="-fx-border-width: 2; -fx-border-color: #FFCE47;" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="147.0">
+         <children>
+            <Label layoutX="14.0" layoutY="20.0" text="已检测数量" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberOfDetectedTextField" alignment="CENTER" editable="false" layoutX="157.0" layoutY="16.0" prefHeight="32.0" prefWidth="108.0" promptText="0" AnchorPane.leftAnchor="157.0" AnchorPane.topAnchor="16.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Label layoutX="28.0" layoutY="98.0" text="缺陷数量" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="98.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberOfDefectTextField" alignment="CENTER" layoutX="159.0" layoutY="94.0" prefHeight="32.0" prefWidth="108.0" promptText="0" AnchorPane.leftAnchor="157.0" AnchorPane.topAnchor="94.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Label layoutX="42.0" layoutY="175.0" text="缺陷率" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="175.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="defectRateTextField" alignment="CENTER" layoutX="159.0" layoutY="171.0" prefHeight="32.0" prefWidth="108.0" promptText="0%" AnchorPane.leftAnchor="159.0" AnchorPane.topAnchor="171.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Button fx:id="clearProductPlateBuuton" layoutX="257.0" layoutY="271.0" mnemonicParsing="false" onAction="#resetPlate" text="重置料盘" AnchorPane.leftAnchor="257.0" AnchorPane.topAnchor="273.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Label layoutX="336.0" layoutY="22.0" text="料盘良品数量" AnchorPane.rightAnchor="162.0" AnchorPane.topAnchor="22.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberOfGoodProductTextField" alignment="CENTER" layoutX="493.0" layoutY="16.0" prefHeight="32.0" prefWidth="108.0" promptText="0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="16.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Button fx:id="clearProductPlateBuuton1" layoutX="72.0" layoutY="271.0" mnemonicParsing="false" onAction="#resetData" text="重置数据" AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="271.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="45.0" layoutY="147.0" prefHeight="503.0" prefWidth="575.0" style="-fx-border-color: #FFCE47; -fx-border-width: 2;" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="147.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="380.0" fitWidth="571.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Circle fx:id="pinAskewCircle" fill="LIME" layoutX="109.0" layoutY="425.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="409.0" />
+            <Circle fx:id="pinGlueCircle" fill="LIME" layoutX="288.0" layoutY="425.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="272.0" AnchorPane.topAnchor="409.0" />
+            <Circle fx:id="glueOutCircle" fill="LIME" layoutX="466.0" layoutY="425.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="409.0" />
+            <Label layoutX="63.0" layoutY="457.0" text="针脚歪斜">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="240.0" layoutY="457.0" text="针脚黏胶">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="444.0" layoutY="457.0" text="溢胶">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="45.0" layoutY="91.0" prefHeight="50.0" prefWidth="209.0" text="当前检测结果">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="742.0" layoutY="525.0" prefHeight="50.0" prefWidth="209.0" text="检测设置" AnchorPane.rightAnchor="475.0" AnchorPane.topAnchor="525.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="742.0" layoutY="575.0" prefHeight="254.0" prefWidth="642.0" style="-fx-border-width: 2; -fx-border-color: #FFCE47;" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="575.0">
+         <children>
+            <Label layoutX="18.0" layoutY="29.0" text="传送带速度" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="29.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="conveyorSpeedTextField" alignment="CENTER" layoutX="169.0" layoutY="25.0" prefHeight="45.0" prefWidth="152.0" promptText="20" AnchorPane.leftAnchor="171.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Label layoutX="10.0" layoutY="111.0" text="相机曝光时间" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="111.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cameraExposureTimeTextField" alignment="CENTER" layoutX="171.0" layoutY="107.0" prefHeight="45.0" prefWidth="152.0" promptText="0.01ms" AnchorPane.leftAnchor="171.0" AnchorPane.topAnchor="107.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+            <Label layoutX="20.0" layoutY="190.0" text="相机分辨率" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="190.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CameraResolutionTextField" alignment="CENTER" layoutX="173.0" layoutY="186.0" prefHeight="45.0" prefWidth="152.0" promptText="3333*2222" AnchorPane.leftAnchor="171.0" AnchorPane.topAnchor="186.0">
+               <font>
+                  <Font size="22.0" />
+               </font></TextField>
+         </children>
+      </AnchorPane>
+      <Label fx:id="statusLabel" layoutX="108.0" layoutY="30.0" text="未运行">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

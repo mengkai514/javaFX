@@ -1,320 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/PythonImageConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Check.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/DetectProductPositionByFiberSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/DetectProductPositionByFiberSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ImageCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ImageCatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Check$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Check$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Check$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Check$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Check.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientReceive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ClientReceive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ClientSend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/DetectProductPositionByFiberSensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/DetectProductPositionByFiberSensors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ImageCatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ImageCatch.class" afterDir="false" />
-    </list>
+    <list default="true" id="ef1ac281-0725-4dca-8a68-f7b2a983df8b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
-    <ui_properties converted="true" />
-    <breakpoint_rules converted="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JavaFxApplication" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="Tag Library Descriptor" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="FindManager">
-    <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="false" />
-    </FindUsagesManager>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="D:\JAVA\develop\maven\repository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../develop/apache-maven-3.3.9" />
-        <option name="userSettingsFile" value="D:\JAVA\develop\apache-maven-3.3.9\conf\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectId" id="2Ay3dH7JEufE8pL1eSdGDtVsaV9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
-  </component>
+  <component name="ProjectId" id="2AjV2ixlUCjlRvQRG1AgyzX9qG2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="service.impl" />
+      <recent name="service" />
+      <recent name="controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects_workspace\java_projects\DigitalTubeDetectUI\src\main\java" />
+      <recent name="D:\Projects_workspace\java_projects\DigitalTubeDetectUI\src\main\resources\view" />
+      <recent name="D:\Java_Workspace\DigitalTubeDetectUI\src\main\resources\view" />
+      <recent name="D:\Java_Workspace\DigitalTubeDetectUI\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JAVA\workspace\JavaFX\src\main\resources\sample" />
+      <recent name="D:\Projects_workspace\java_projects\DigitalTubeDetectUI\src\main\resources\image" />
+      <recent name="D:\Projects_workspace\java_projects\DigitalTubeDetectUI\src\main\resources\view" />
+      <recent name="D:\Java_Workspace\DigitalTubeDetectUI\src\main\resources\view" />
+      <recent name="D:\Java_Workspace\DigitalTubeDetectUI\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model" />
+      <recent name="utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
-      <Host>localhost</Host>
-      <Port>5050</Port>
-    </configuration>
-    <configuration name="Check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.Check" />
-      <module name="JavaFX" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MKMK" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.MKMK" />
-      <module name="JavaFX" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <module name="JavaFX" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
+  <component name="RunManager">
+    <configuration name="MyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.MyApplication" />
+      <module name="DigitalTubeDetectUI" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MKMK" />
-        <item itemvalue="Application.Check" />
+        <item itemvalue="Application.MyApplication" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
-      <created>1359379246138</created>
+      <changelist id="ef1ac281-0725-4dca-8a68-f7b2a983df8b" name="Changes" comment="" />
+      <created>1655522780709</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1359379246138</updated>
-      <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1655968085580" duration="12776000" />
-      <workItem from="1656032283140" duration="41281000" />
-      <workItem from="1656379226524" duration="19832000" />
-      <workItem from="1656464903681" duration="18755000" />
-      <workItem from="1656550931546" duration="19487000" />
-      <workItem from="1656588024341" duration="6403000" />
-      <workItem from="1656594590460" duration="1714000" />
-      <workItem from="1656638839604" duration="2276000" />
-      <workItem from="1656725447676" duration="23599000" />
-      <workItem from="1656812500069" duration="13704000" />
+      <updated>1655522780709</updated>
+      <workItem from="1655522782412" duration="6790000" />
+      <workItem from="1655562694669" duration="828000" />
+      <workItem from="1655563704548" duration="5426000" />
+      <workItem from="1655688603912" duration="4444000" />
+      <workItem from="1655780098079" duration="21000" />
+      <workItem from="1655780352960" duration="35000" />
+      <workItem from="1655810393152" duration="2604000" />
+      <workItem from="1655821515031" duration="2194000" />
+      <workItem from="1655823739613" duration="196000" />
+      <workItem from="1655823959224" duration="1745000" />
+      <workItem from="1655825741950" duration="2806000" />
+      <workItem from="1655829158242" duration="47000" />
+      <workItem from="1655829230595" duration="104000" />
+      <workItem from="1655861422504" duration="13963000" />
+      <workItem from="1655958202985" duration="1338000" />
+      <workItem from="1655959567612" duration="378000" />
+      <workItem from="1655960180349" duration="377000" />
+      <workItem from="1656210986798" duration="1803000" />
+      <workItem from="1656315123755" duration="2168000" />
+      <workItem from="1656378941674" duration="6628000" />
+      <workItem from="1656467507385" duration="1177000" />
+      <workItem from="1656469664678" duration="3304000" />
+      <workItem from="1656473724394" duration="18134000" />
+      <workItem from="1656519495662" duration="6470000" />
+      <workItem from="1656567334720" duration="7840000" />
+      <workItem from="1656642895821" duration="2619000" />
+      <workItem from="1656728568327" duration="657000" />
+      <workItem from="1656748282765" duration="2040000" />
+      <workItem from="1656815995431" duration="13000000" />
+      <workItem from="1656835386656" duration="9648000" />
+      <workItem from="1656855315534" duration="11805000" />
+      <workItem from="1656898533723" duration="8390000" />
+      <workItem from="1656922188471" duration="4497000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1656589369101">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1656589369101" />
-    <state x="305" y="45" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1655969187263">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="305" y="45" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.728@0.0.1366.728" timestamp="1655969187263" />
-    <state x="463" y="108" key="FileChooserDialogImpl" timestamp="1655969277536">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1655969277536" />
-    <state width="1323" height="350" key="GridCell.Tab.0.bottom" timestamp="1656838783928">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="350" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1656838783928" />
-    <state width="1323" height="350" key="GridCell.Tab.0.center" timestamp="1656838783928">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="350" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1656838783928" />
-    <state width="1323" height="350" key="GridCell.Tab.0.left" timestamp="1656838783927">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="350" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1656838783927" />
-    <state width="1323" height="350" key="GridCell.Tab.0.right" timestamp="1656838783928">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="350" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1656838783928" />
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1655969644689">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1655969644689" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1655969285440">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1655969285440" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1656489091797">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1656489091797" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1656399672189">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1656399672189" />
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="recvMap.get(&quot;type&quot;)==&quot;setImage&quot;" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

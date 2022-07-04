@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vBox" prefHeight="936.0" prefWidth="1384.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TechFrameController">
+   <children>
+      <HBox fx:id="hBox" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 30;">
+         <children>
+            <Button fx:id="accountManageButton" mnemonicParsing="false" onAction="#onAccountManageButtonClick" text="账号管理">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+            <Button fx:id="equipmentSettingButton" mnemonicParsing="false" onAction="#onEquipmentSettingButtonClick" text="设备检修">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+            <Button fx:id="productDetectButton" mnemonicParsing="false" onAction="#onProductDetectButtonClick" text="产品检测">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <StackPane fx:id="stackPane" prefHeight="829.0" prefWidth="1384.0" />
+   </children>
+</VBox>
