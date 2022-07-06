@@ -15,8 +15,8 @@ import javafx.stage.Stage;
 import java.io.InputStream;
 
 /**
- * @description: ¿ØÖÆ½çÃæÏÔÊ¾Âß¼­
- * @author: »ÆÌÎ
+ * @description: æ§åˆ¶ç•Œé¢æ˜¾ç¤ºé€»è¾‘
+ * @author: é»„æ¶›
  * @date: 2022-7-4
  */
 public class MyApplication extends Application {
@@ -26,37 +26,37 @@ public class MyApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        stage.setTitle("ÊıÂë¹ÜÈ±Ïİ¼ì²âÏµÍ³");
-        //¼ÓÔØµÇÂ¼½çÃæ
+        stage.setTitle("æ•°ç ç®¡ç¼ºé™·æ£€æµ‹ç³»ç»Ÿ");
+        //åŠ è½½ç™»å½•ç•Œé¢
         gotoLogin();
-        //ÉèÖÃ¿É¸Ä±ä´°¿Ú´óĞ¡
+        //è®¾ç½®å¯æ”¹å˜çª—å£å¤§å°
         stage.setResizable(true);
-        //Õ¹Ê¾½Ò½çÃæ
+        //å±•ç¤ºæ­ç•Œé¢
         stage.show();
     }
 
     /**
-     * Ìø×ªµ½µÇÂ¼½çÃæ
+     * è·³è½¬åˆ°ç™»å½•ç•Œé¢
      */
     public void gotoLogin() {
         try {
             LoginController loginController = (LoginController) replaceSceneContent(StaticResourcesConfig.LOGIN_VIEW_PATH);
-            //½«myApplicationÊµÀı´«¸øloginController£¬ÒÔ±ãÔÚµÇÂ¼³É¹¦ºóÓÉloginControllerµ÷ÓÃgotoMain()º¯ÊıÏÔÊ¾Ö÷½çÃæ
+            //å°†myApplicationå®ä¾‹ä¼ ç»™loginControllerï¼Œä»¥ä¾¿åœ¨ç™»å½•æˆåŠŸåç”±loginControllerè°ƒç”¨gotoMain()å‡½æ•°æ˜¾ç¤ºä¸»ç•Œé¢
             loginController.setApp(this);
         } catch (Exception ex) {
-            System.out.println("µÇÂ¼½çÃæ¼ÓÔØ´íÎó");
+            System.out.println("ç™»å½•ç•Œé¢åŠ è½½é”™è¯¯");
         }
     }
 
     /**
-     * Ìø×ªµ½Ö÷½çÃæ
+     * è·³è½¬åˆ°ä¸»ç•Œé¢
      */
     public void gotoTechPage() {
         try {
             TechFrameController techFrameController = (TechFrameController) replaceSceneContent(StaticResourcesConfig.MAIN_VIEW_PATH);
             techFrameController.setApp(this);
         } catch (Exception ex) {
-            System.out.println("¼¼Êõ¹ÜÀíÔ±½çÃæ¼ÓÔØ´íÎó");
+            System.out.println("æŠ€æœ¯ç®¡ç†å‘˜ç•Œé¢åŠ è½½é”™è¯¯");
         }
     }
 
@@ -65,7 +65,7 @@ public class MyApplication extends Application {
             ProductDetectController productDetectController = (ProductDetectController) replaceSceneContent(StaticResourcesConfig.PRODUCTDETECT_VIEW_PATH);
             productDetectController.setApp(this);
         } catch (Exception ex) {
-            System.out.println("¼¼Êõ²Ù×÷Ô±½çÃæ¼ÓÔØ´íÎó");
+            System.out.println("æŠ€æœ¯æ“ä½œå‘˜ç•Œé¢åŠ è½½é”™è¯¯");
         }
     }
 
@@ -74,7 +74,7 @@ public class MyApplication extends Application {
     }
 
     /**
-     * ÖÃ»»Scene£¬»ñÈ¡ĞÂScence°ó¶¨µÄControllerÊµÀı
+     * ç½®æ¢Sceneï¼Œè·å–æ–°Scenceç»‘å®šçš„Controllerå®ä¾‹
      *
      * @param fxml
      * @return
@@ -89,7 +89,7 @@ public class MyApplication extends Application {
         try {
 
             Parent root = loader.load(in);
-//            ×¼±¸ºÃĞÂScene
+//            å‡†å¤‡å¥½æ–°Scene
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.sizeToScene();
@@ -98,12 +98,12 @@ public class MyApplication extends Application {
         } finally {
             in.close();
         }
-        //·µ»Øfxml°ó¶¨µÄcontroller
+        //è¿”å›fxmlç»‘å®šçš„controller
         return (Initializable) loader.getController();
     }
 
     /**
-     * ³ÌĞòÈë¿Úmain
+     * ç¨‹åºå…¥å£main
      *
      * @param args
      */

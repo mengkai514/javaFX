@@ -1,7 +1,7 @@
 package service;
 /**
- * @description: 传送带控制功能的服务层
- * @author: 黄涛
+ * @description: 浼犻�佸甫鎺у埗鍔熻兘鐨勬湇鍔″眰
+ * @author: 榛勬稕
  * @date: 2022-7-4
  */
 public interface ConveyorService {

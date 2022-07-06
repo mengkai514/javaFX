@@ -17,14 +17,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
- * @description: µÇÂ¼½çÃæcontroller
- * @author: »ÆÌÎ
+ * @description: ç™»å½•ç•Œé¢controller
+ * @author: é»„æ¶›
  * @date: 2022-7-4
  */
 public class LoginController implements Initializable {
 
     private MyApplication myApplication;
-    //    ÒÔÏÂÃ¿¸öÊôĞÔ¶¼´ú±í½çÃæÉÏµÄÒ»¸ö×é¼ş£¬ÔÚÊ¹ÓÃÊ±²»ĞèÒªÊµÀı»¯£¨new£©£¬ÒòÎª×¢½Å@FXMLÒÑ¾­°ïÎÒÃÇ×öÁËÕâ¼şÊÂÁË
+    //    ä»¥ä¸‹æ¯ä¸ªå±æ€§éƒ½ä»£è¡¨ç•Œé¢ä¸Šçš„ä¸€ä¸ªç»„ä»¶ï¼Œåœ¨ä½¿ç”¨æ—¶ä¸éœ€è¦å®ä¾‹åŒ–ï¼ˆnewï¼‰ï¼Œå› ä¸ºæ³¨è„š@FXMLå·²ç»å¸®æˆ‘ä»¬åšäº†è¿™ä»¶äº‹äº†
     @FXML
     private TextField userIdTextField;
 
@@ -42,15 +42,15 @@ public class LoginController implements Initializable {
     private Button loginButton;
 
     /**
-     * ÊÂ¼ş´¦Àíº¯Êı£¬±¾º¯Êı°ó¶¨ÔÚ¡°µÇÂ¼¡±°´Å¥ÉÏ£¬µ±°´Å¥±»µã»÷Ê±´¥·¢´Ëº¯Êı¡£
-     * £¨¹ØÓÚÈçºÎ°ó¶¨£¬ÔÚÍ¼ĞÎ»¯ÍÏ×§¹¤¾ßÓÒ²à±ßÀ¸£¬codeÑ¡ÏîÖĞµÄ¡°on Action¡±£¬ÌîÈëÊÂ¼ş´¦Àíº¯ÊıµÄÃû³Æ¼´¿É£»Ò²¿É²é¿´±¾ÏîÄ¿ÎÄ¼ş¡°login.fxml¡±ÎÄ¼şµÚ44ĞĞ£¬ÓĞonAction="#login"×ÖÑù£©
+     * äº‹ä»¶å¤„ç†å‡½æ•°ï¼Œæœ¬å‡½æ•°ç»‘å®šåœ¨â€œç™»å½•â€æŒ‰é’®ä¸Šï¼Œå½“æŒ‰é’®è¢«ç‚¹å‡»æ—¶è§¦å‘æ­¤å‡½æ•°ã€‚
+     * ï¼ˆå…³äºå¦‚ä½•ç»‘å®šï¼Œåœ¨å›¾å½¢åŒ–æ‹–æ‹½å·¥å…·å³ä¾§è¾¹æ ï¼Œcodeé€‰é¡¹ä¸­çš„â€œon Actionâ€ï¼Œå¡«å…¥äº‹ä»¶å¤„ç†å‡½æ•°çš„åç§°å³å¯ï¼›ä¹Ÿå¯æŸ¥çœ‹æœ¬é¡¹ç›®æ–‡ä»¶â€œlogin.fxmlâ€æ–‡ä»¶ç¬¬44è¡Œï¼Œæœ‰onAction="#login"å­—æ ·ï¼‰
      *
      * @param event
      */
     @FXML
     void login(ActionEvent event) {
 
-//      »ñÈ¡ÓÃ»§ÊäÈëµÄÕËºÅÃÜÂë
+//      è·å–ç”¨æˆ·è¾“å…¥çš„è´¦å·å¯†ç 
         String userId = userIdTextField.getText();
         String password = userPasswordTextField.getText();
         String accountType = accountTypeChoiceBox.getValue();
@@ -58,18 +58,18 @@ public class LoginController implements Initializable {
     }
 
     /**
-     * @param loginResult µÇÂ¼½á¹û£¬true±íÊ¾µÇÂ¼³É¹¦£¬false±íÊ¾µÇÂ¼Ê§°Ü
-     * @param errCode     0´ú±íµÇÂ¼³É¹¦,´ËÊ±accountType²ÎÊıÎªÓÃ»§µÇÂ¼ÏµÍ³µÄÒâÏòÀàĞÍ£»
-     *                    1´ú±íÕËºÅÃÜÂë´íÎó£»´ËÊ±accountType²ÎÊıÎŞĞ§
-     *                    2´ú±íÕËºÅÀàĞÍ´íÎó£¬´ËÊ±accountType²ÎÊıÎªÓÃ»§¿ÉµÇÂ¼µÄ×î¸ßÕË»§ÀàĞÍ£»
-     *                    3´ú±íÎ´Öª´íÎó£¬ÎŞĞ§
+     * @param loginResult ç™»å½•ç»“æœï¼Œtrueè¡¨ç¤ºç™»å½•æˆåŠŸï¼Œfalseè¡¨ç¤ºç™»å½•å¤±è´¥
+     * @param errCode     0ä»£è¡¨ç™»å½•æˆåŠŸ,æ­¤æ—¶accountTypeå‚æ•°ä¸ºç”¨æˆ·ç™»å½•ç³»ç»Ÿçš„æ„å‘ç±»å‹ï¼›
+     *                    1ä»£è¡¨è´¦å·å¯†ç é”™è¯¯ï¼›æ­¤æ—¶accountTypeå‚æ•°æ— æ•ˆ
+     *                    2ä»£è¡¨è´¦å·ç±»å‹é”™è¯¯ï¼Œæ­¤æ—¶accountTypeå‚æ•°ä¸ºç”¨æˆ·å¯ç™»å½•çš„æœ€é«˜è´¦æˆ·ç±»å‹ï¼›
+     *                    3ä»£è¡¨æœªçŸ¥é”™è¯¯ï¼Œæ— æ•ˆ
      * @param accountType
      */
     public void loginResult_Callback(boolean loginResult, int errCode, String accountType) {
         if (errCode == 0) {
             switch (accountType) {
-                case "¼¼Êõ²Ù×÷Ô±":
-                    //Ìø×ªµ½¼¼Êõ²Ù×÷Ô±½çÃæ
+                case "æŠ€æœ¯æ“ä½œå‘˜":
+                    //è·³è½¬åˆ°æŠ€æœ¯æ“ä½œå‘˜ç•Œé¢
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
@@ -77,8 +77,8 @@ public class LoginController implements Initializable {
                         }
                     });
                     break;
-                case "¼¼Êõ¹ÜÀíÔ±":
-                    //Ìø×ªµ½¼¼Êõ¹ÜÀíÔ±½çÃæ
+                case "æŠ€æœ¯ç®¡ç†å‘˜":
+                    //è·³è½¬åˆ°æŠ€æœ¯ç®¡ç†å‘˜ç•Œé¢
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
@@ -86,8 +86,8 @@ public class LoginController implements Initializable {
                         }
                     });
                     break;
-                case "³§³¤":
-                    //Ìø×ªµ½³§³¤½çÃæ
+                case "å‚é•¿":
+                    //è·³è½¬åˆ°å‚é•¿ç•Œé¢
                     Platform.runLater(new Runnable() {
                         @Override
                         public void run() {
@@ -104,28 +104,28 @@ public class LoginController implements Initializable {
                 @Override
                 public void run() {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("ÌáÊ¾");
-                    alert.setHeaderText("µÇÂ¼Ê§°Ü");
+                    alert.setTitle("æç¤º");
+                    alert.setHeaderText("ç™»å½•å¤±è´¥");
                     switch (errCode) {
                         case 1:
-                            //ÌáÊ¾µÇÂ¼Ê§°Ü£¬ÕËºÅÃÜÂë´íÎó
-                            alert.setContentText("ÕËºÅ»òÃÜÂë´íÎó");
+                            //æç¤ºç™»å½•å¤±è´¥ï¼Œè´¦å·å¯†ç é”™è¯¯
+                            alert.setContentText("è´¦å·æˆ–å¯†ç é”™è¯¯");
                             alert.showAndWait();
                             break;
                         case 2:
-                            //ÌáÊ¾µÇÂ¼Ê§°Ü£¬ÕË»§ÀàĞÍÓĞÎó
+                            //æç¤ºç™»å½•å¤±è´¥ï¼Œè´¦æˆ·ç±»å‹æœ‰è¯¯
 
-                            alert.setContentText("Ñ¡ÔñµÄÕË»§ÀàĞÍÓĞÎó£¬ÄúÄÜÑ¡ÔñµÄ×î¸ßÕË»§ÀàĞÍÎª" + accountType);
+                            alert.setContentText("é€‰æ‹©çš„è´¦æˆ·ç±»å‹æœ‰è¯¯ï¼Œæ‚¨èƒ½é€‰æ‹©çš„æœ€é«˜è´¦æˆ·ç±»å‹ä¸º" + accountType);
                             alert.showAndWait();
                             break;
                         case 3:
-                            //ÌáÊ¾µÇÂ¼Ê§°Ü£¬·¢ÉúÎ´Öª´íÎó
-                            alert.setContentText("Êı¾İ¿â²Ù×÷Ê±·¢ÉúÎ´Öª´íÎó");
+                            //æç¤ºç™»å½•å¤±è´¥ï¼Œå‘ç”ŸæœªçŸ¥é”™è¯¯
+                            alert.setContentText("æ•°æ®åº“æ“ä½œæ—¶å‘ç”ŸæœªçŸ¥é”™è¯¯");
                             alert.showAndWait();
                             break;
                         default:
-                            //ÌáÊ¾µÇÂ¼Ê§°Ü£¬·¢ÉúÎ´Öª´íÎó
-                            alert.setContentText("·¢ÉúÎ´Öª´íÎó");
+                            //æç¤ºç™»å½•å¤±è´¥ï¼Œå‘ç”ŸæœªçŸ¥é”™è¯¯
+                            alert.setContentText("å‘ç”ŸæœªçŸ¥é”™è¯¯");
                             alert.showAndWait();
                             break;
                     }
@@ -137,7 +137,7 @@ public class LoginController implements Initializable {
 
 
     /**
-     * ±£´æÖ÷¿ØÖÆÀàÊµÀımyApplication£¬ÒÔ±ãµÇÂ¼³É¹¦ºóµ÷ÓÃmyApplicationµÄ·½·¨Ìø×ªµ½ÆäËûÒ³Ãæ
+     * ä¿å­˜ä¸»æ§åˆ¶ç±»å®ä¾‹myApplicationï¼Œä»¥ä¾¿ç™»å½•æˆåŠŸåè°ƒç”¨myApplicationçš„æ–¹æ³•è·³è½¬åˆ°å…¶ä»–é¡µé¢
      *
      * @param myApplication
      */
@@ -147,8 +147,8 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        accountTypeChoiceBox.getItems().addAll("¼¼Êõ²Ù×÷Ô±", "¼¼Êõ¹ÜÀíÔ±", "³§³¤");
-        accountTypeChoiceBox.setValue("¼¼Êõ²Ù×÷Ô±");
+        accountTypeChoiceBox.getItems().addAll("æŠ€æœ¯æ“ä½œå‘˜", "æŠ€æœ¯ç®¡ç†å‘˜", "å‚é•¿");
+        accountTypeChoiceBox.setValue("æŠ€æœ¯æ“ä½œå‘˜");
     }
 
 

@@ -14,14 +14,17 @@ public class ConveyorServiceImpl implements ConveyorService {
 
     @Override
     public boolean startConveyor() {
-        //            ´´½¨Ğ­ÒémapÓÃÓÚ×ª»»Î´json¸ñÊ½µÄĞ­Òé
+        //            åˆ›å»ºåè®®mapç”¨äºè½¬æ¢æœªjsonæ ¼å¼çš„åè®®
         Map<String, Object> dataMap = new HashMap<>();
         dataMap.put("type", "startConveyor");
-        //            ½«map×ª»»Îªjson¸ñÊ½µÄ×Ö·û´®
+        //            å°†mapè½¬æ¢ä¸ºjsonæ ¼å¼çš„å­—ç¬¦ä¸²
         JSONObject jsonObject = new JSONObject(dataMap);
         String sendString = jsonObject.toJSONString();
         String retsString = new SocketSender().send(sendString, 9999);
         Map retMap = JSONObject.parseObject(retsString, Map.class);
+        if(retMap==null){
+            return false;
+        }
         if (retMap.get("statusCode").equals("200") || (Integer) retMap.get("statusCode") == 200) {
             return true;
         } else {
@@ -31,10 +34,10 @@ public class ConveyorServiceImpl implements ConveyorService {
 
     @Override
     public boolean stopConveyor() {
-        //            ´´½¨Ğ­ÒémapÓÃÓÚ×ª»»Î´json¸ñÊ½µÄĞ­Òé
+        //            åˆ›å»ºåè®®mapç”¨äºè½¬æ¢æœªjsonæ ¼å¼çš„åè®®
         Map<String, Object> dataMap = new HashMap<>();
         dataMap.put("type", "stopConveyor");
-        //            ½«map×ª»»Îªjson¸ñÊ½µÄ×Ö·û´®
+        //            å°†mapè½¬æ¢ä¸ºjsonæ ¼å¼çš„å­—ç¬¦ä¸²
         JSONObject jsonObject = new JSONObject(dataMap);
         String sendString = jsonObject.toJSONString();
         String retsString = new SocketSender().send(sendString, 9999);

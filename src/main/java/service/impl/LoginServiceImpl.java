@@ -11,8 +11,8 @@ import javax.management.loading.PrivateClassLoader;
 import java.sql.SQLException;
 
 /**
- * @description: µÇÂ¼¹¦ÄÜµÄ·şÎñ²ã
- * @author: »ÆÌÎ
+ * @description: ç™»å½•åŠŸèƒ½çš„æœåŠ¡å±‚
+ * @author: é»„æ¶›
  * @date: 2022-7-4
  */
 public class LoginServiceImpl implements LoginService {
@@ -33,13 +33,13 @@ public class LoginServiceImpl implements LoginService {
                 UserInfo userInfo = null;
                 try {
                     userInfo = accountDAO.selectUserByIdAndPassword(userId, password);
-                    //ÈôuserInfo.getUserId()==null´ú±íÕË»§ÃûÃÜÂë²»¶Ô
+                    //è‹¥userInfo.getUserId()==nullä»£è¡¨è´¦æˆ·åå¯†ç ä¸å¯¹
                     if (userInfo.getUserId() == null) {
                         loginController.loginResult_Callback(false, 1, null);
                     }
-                    //ÕËºÅÃÜÂëÕıÈ·£¬µ«ĞèÒª±È½ÏÓÃ»§ÊäÈëµÄÕËºÅÀàĞÍÊÇ·ñµÍÓÚÊı¾İ¿âÖĞµÄÕËºÅÀàĞÍ
+                    //è´¦å·å¯†ç æ­£ç¡®ï¼Œä½†éœ€è¦æ¯”è¾ƒç”¨æˆ·è¾“å…¥çš„è´¦å·ç±»å‹æ˜¯å¦ä½äºæ•°æ®åº“ä¸­çš„è´¦å·ç±»å‹
                     else {
-                        //Èç¹ûÓÃ»§ÊäÈëµÄÕË»§ÀàĞÍÈ¨ÏŞĞ¡ÓÚµÈÓÚÕË»§ÔÚÊı¾İ¿âÖĞµÄÈ¨ÏŞ£¬ÔòµÇÂ¼³É¹¦
+                        //å¦‚æœç”¨æˆ·è¾“å…¥çš„è´¦æˆ·ç±»å‹æƒé™å°äºç­‰äºè´¦æˆ·åœ¨æ•°æ®åº“ä¸­çš„æƒé™ï¼Œåˆ™ç™»å½•æˆåŠŸ
                         if (compareAccountType(accountType, userInfo.getAccountType()) <= 0) {
                             loginController.loginResult_Callback(true, 0, accountType);
                         } else {
@@ -68,32 +68,32 @@ public class LoginServiceImpl implements LoginService {
 
 
     /**
-     * @param InputAccountType ÓÃ»§ÊäÈëµÄÕË»§ÀàĞÍ
-     * @param realAccountType  Êı¾İ¿âÖĞµÄÕË»§ÀàĞÍ
-     * @return ÓÃ»§ÊäÈëÕË»§ÀàĞÍ½ÏµÍÊ±·µ»Ø¸ºÊı£¬ÓÃ»§ÊäÈëÀàĞÍ½Ï¸ßÊ±·µ»ØÕıÊı£¬ÏàÍ¬Ê±·µ»Ø 0
+     * @param InputAccountType ç”¨æˆ·è¾“å…¥çš„è´¦æˆ·ç±»å‹
+     * @param realAccountType  æ•°æ®åº“ä¸­çš„è´¦æˆ·ç±»å‹
+     * @return ç”¨æˆ·è¾“å…¥è´¦æˆ·ç±»å‹è¾ƒä½æ—¶è¿”å›è´Ÿæ•°ï¼Œç”¨æˆ·è¾“å…¥ç±»å‹è¾ƒé«˜æ—¶è¿”å›æ­£æ•°ï¼Œç›¸åŒæ—¶è¿”å› 0
      */
     private int compareAccountType(String InputAccountType, String realAccountType) {
-        //¼ì²éÓÃ»§ÊäÈëµÄÕË»§ÀàĞÍÊÇ·ñµÍÓÚÓÃ»§µÄÕË»§ÀàĞÍ£¬Ö»ÓĞµÍÓÚÓÃ»§µÄÕË»§ÀàĞÍ²ÅÄÜµÇÂ¼£¬Èç¹ÜÀíÔ±ÕËºÅ¿É×÷ÎªÆÕÍ¨ÓÃ»§µÇÂ¼
+        //æ£€æŸ¥ç”¨æˆ·è¾“å…¥çš„è´¦æˆ·ç±»å‹æ˜¯å¦ä½äºç”¨æˆ·çš„è´¦æˆ·ç±»å‹ï¼Œåªæœ‰ä½äºç”¨æˆ·çš„è´¦æˆ·ç±»å‹æ‰èƒ½ç™»å½•ï¼Œå¦‚ç®¡ç†å‘˜è´¦å·å¯ä½œä¸ºæ™®é€šç”¨æˆ·ç™»å½•
         int inputAccountLevel = 1;
         int realAccountLevel = 1;
-//                        ½«ÓÃ»§ÊäÈëµÄÕËºÅÀàĞÍºÍÊı¾İ¿âµÄÕËºÅÄÚĞÄ·Ö±ğ¸³ÓèµÈ¼¶£¬ÒÔ±ã±È½Ï
-        if (InputAccountType.equals("¼¼Êõ²Ù×÷Ô±")) {
+//                        å°†ç”¨æˆ·è¾“å…¥çš„è´¦å·ç±»å‹å’Œæ•°æ®åº“çš„è´¦å·å†…å¿ƒåˆ†åˆ«èµ‹äºˆç­‰çº§ï¼Œä»¥ä¾¿æ¯”è¾ƒ
+        if (InputAccountType.equals("æŠ€æœ¯æ“ä½œå‘˜")) {
             inputAccountLevel = 1;
-        } else if (InputAccountType.equals("¼¼Êõ¹ÜÀíÔ±")) {
+        } else if (InputAccountType.equals("æŠ€æœ¯ç®¡ç†å‘˜")) {
             inputAccountLevel = 2;
 
-        } else if (InputAccountType.equals("³§³¤")) {
+        } else if (InputAccountType.equals("å‚é•¿")) {
             inputAccountLevel = 3;
         } else {
             inputAccountLevel = 999;
         }
 
-        if (realAccountType.equals("¼¼Êõ²Ù×÷Ô±")) {
+        if (realAccountType.equals("æŠ€æœ¯æ“ä½œå‘˜")) {
             realAccountLevel = 1;
-        } else if (realAccountType.equals("¼¼Êõ¹ÜÀíÔ±")) {
+        } else if (realAccountType.equals("æŠ€æœ¯ç®¡ç†å‘˜")) {
             realAccountLevel = 2;
 
-        } else if (realAccountType.equals("³§³¤")) {
+        } else if (realAccountType.equals("å‚é•¿")) {
             realAccountLevel = 3;
         } else {
             realAccountLevel = 0;

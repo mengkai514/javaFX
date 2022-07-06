@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
- * @description: ÕË»§¹ÜÀí½çÃæcontroller
- * @author: »ÆÌÎ
+ * @description: è´¦æˆ·ç®¡ç†ç•Œé¢controller
+ * @author: é»„æ¶›
  * @date: 2022-7-4
  */
 public class AccountManageController implements Initializable {
@@ -36,7 +36,7 @@ public class AccountManageController implements Initializable {
     @FXML
     private HBox hBox;
 
-    //ÕËºÅÌõ¼şÉ¸Ñ¡Ò»À¸µÄ×é¼ş
+    //è´¦å·æ¡ä»¶ç­›é€‰ä¸€æ çš„ç»„ä»¶
     @FXML
     private TextField userId_textFeild;
 
@@ -46,7 +46,7 @@ public class AccountManageController implements Initializable {
     @FXML
     private Button search_button;
 
-    //±í¸ñ²¿·ÖµÄ×é¼ş
+    //è¡¨æ ¼éƒ¨åˆ†çš„ç»„ä»¶
     @FXML
     private TableView<UserInfo> table;
 
@@ -66,7 +66,7 @@ public class AccountManageController implements Initializable {
     private TableColumn<UserInfo, String> owner_tableCol;
 
 
-    //¡°µ±Ç°Ñ¡ÖĞÕË»§¡±Ò»À¸µÄ×é¼ş
+    //â€œå½“å‰é€‰ä¸­è´¦æˆ·â€ä¸€æ çš„ç»„ä»¶
 
     @FXML
     private TextField selectedUserId_TextField;
@@ -87,7 +87,7 @@ public class AccountManageController implements Initializable {
     private Button deleteButton;
 
 
-    //Ìí¼ÓÕË»§Ò»À¸µÄ×é¼ş
+    //æ·»åŠ è´¦æˆ·ä¸€æ çš„ç»„ä»¶
     @FXML
     private TextField addUserId_TextField;
 
@@ -117,7 +117,7 @@ public class AccountManageController implements Initializable {
     }
 
     /**
-     * »Øµ÷º¯Êı£¬ÓÃÓÚ¸üĞÂËÑË÷½á¹ûÔÚ±í¸ñÖĞµÄÏÔÊ¾
+     * å›è°ƒå‡½æ•°ï¼Œç”¨äºæ›´æ–°æœç´¢ç»“æœåœ¨è¡¨æ ¼ä¸­çš„æ˜¾ç¤º
      *
      * @param userInfoList
      */
@@ -127,7 +127,7 @@ public class AccountManageController implements Initializable {
     }
 
     /**
-     * Çå¿ÕËÑË÷Ìõ¼ş
+     * æ¸…ç©ºæœç´¢æ¡ä»¶
      *
      * @param event
      */
@@ -139,7 +139,7 @@ public class AccountManageController implements Initializable {
 
 
     /**
-     * »ñÈ¡Êó±êµã»÷µÄ±í¸ñÖĞµÄĞĞ£¬½«ÕâÑù¶ÔÓ¦µÄÕË»§ĞÅÏ¢ÏÔÊ¾ÔÚ¡°µ±Ç°Ñ¡ÖĞÕË»§¡±Ò»À¸ÖĞ
+     * è·å–é¼ æ ‡ç‚¹å‡»çš„è¡¨æ ¼ä¸­çš„è¡Œï¼Œå°†è¿™æ ·å¯¹åº”çš„è´¦æˆ·ä¿¡æ¯æ˜¾ç¤ºåœ¨â€œå½“å‰é€‰ä¸­è´¦æˆ·â€ä¸€æ ä¸­
      *
      * @param event
      */
@@ -153,7 +153,7 @@ public class AccountManageController implements Initializable {
     }
 
     /**
-     * É¾³ıÕË»§°´Å¥µÄÊÂ¼ş´¦Àíº¯Êı
+     * åˆ é™¤è´¦æˆ·æŒ‰é’®çš„äº‹ä»¶å¤„ç†å‡½æ•°
      *
      * @param event
      */
@@ -161,27 +161,27 @@ public class AccountManageController implements Initializable {
     void deleteAccount(ActionEvent event) {
         TableView<UserInfo> tempTable = table;
         UserInfo userInfo = tempTable.getSelectionModel().getSelectedItem();
-        //ĞèÒª¶àÏß³Ì²Ù×÷ÒÔ¼°·´À¡
+        //éœ€è¦å¤šçº¿ç¨‹æ“ä½œä»¥åŠåé¦ˆ
         new AccountManageServiceImpl(this).deleteAccount(userInfo.getUserId());
     }
 
     /**
-     * É¾³ıÕË»§µÄ»Øµ÷º¯Êı
+     * åˆ é™¤è´¦æˆ·çš„å›è°ƒå‡½æ•°
      *
-     * @param result ÊÇ·ñÉ¾³ı³É¹¦
+     * @param result æ˜¯å¦åˆ é™¤æˆåŠŸ
      */
     public void deleteAccountResult_Callback(boolean result) {
         if (result) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("É¾³ı³É¹¦");
-            alert.setContentText("É¾³ıÕË»§³É¹¦");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("åˆ é™¤æˆåŠŸ");
+            alert.setContentText("åˆ é™¤è´¦æˆ·æˆåŠŸ");
             alert.showAndWait();
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("É¾³ıÊ§°Ü");
-            alert.setContentText("É¾³ıÕË»§Ê§°Ü");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("åˆ é™¤å¤±è´¥");
+            alert.setContentText("åˆ é™¤è´¦æˆ·å¤±è´¥");
             alert.showAndWait();
         }
         //delete the selected item from the tableView
@@ -192,7 +192,7 @@ public class AccountManageController implements Initializable {
     }
 
     /**
-     * Ìá½»ĞŞ¸Ä°´Å¥µÄÊÂ¼ş´¦Àíº¯Êı
+     * æäº¤ä¿®æ”¹æŒ‰é’®çš„äº‹ä»¶å¤„ç†å‡½æ•°
      *
      * @param event
      */
@@ -203,35 +203,35 @@ public class AccountManageController implements Initializable {
         userInfo.setUserId(selectedUserId_TextField.getText());
         userInfo.setOwner(selectedOwner_TextField.getText());
         userInfo.setAccountType(selectedAccountType_ChoiceBox.getValue());
-        //ĞèÒª¶àÏß³Ì²Ù×÷ÒÔ¼°·´À¡
+        //éœ€è¦å¤šçº¿ç¨‹æ“ä½œä»¥åŠåé¦ˆ
         new AccountManageServiceImpl(this).editAccount(userInfo);
     }
 
     /**
-     * ĞŞ¸ÄÕË»§µÄ»Øµ÷º¯Êı
+     * ä¿®æ”¹è´¦æˆ·çš„å›è°ƒå‡½æ•°
      *
-     * @param result ÊÇ·ñĞŞ¸Ä³É¹¦
+     * @param result æ˜¯å¦ä¿®æ”¹æˆåŠŸ
      */
     public void editAccountResult_Callback(boolean result) {
         if (result) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("ĞŞ¸Ä³É¹¦");
-            alert.setContentText("ĞŞ¸ÄÕË»§ĞÅÏ¢³É¹¦");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("ä¿®æ”¹æˆåŠŸ");
+            alert.setContentText("ä¿®æ”¹è´¦æˆ·ä¿¡æ¯æˆåŠŸ");
             alert.showAndWait();
-            //Ë¢ĞÂ±í¸ñ
+            //åˆ·æ–°è¡¨æ ¼
             searchAccount(null);
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("ĞŞ¸ÄÊ§°Ü");
-            alert.setContentText("ĞŞ¸ÄÕË»§ĞÅÏ¢Ê§°Ü");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("ä¿®æ”¹å¤±è´¥");
+            alert.setContentText("ä¿®æ”¹è´¦æˆ·ä¿¡æ¯å¤±è´¥");
             alert.showAndWait();
         }
     }
 
     /**
-     * ÖØÖÃÃÜÂë°´Å¥µÄÊÂ¼ş´¦Àíº¯Êı
+     * é‡ç½®å¯†ç æŒ‰é’®çš„äº‹ä»¶å¤„ç†å‡½æ•°
      *
      * @param event
      */
@@ -240,35 +240,35 @@ public class AccountManageController implements Initializable {
         TableView<UserInfo> tempTable = table;
         UserInfo userInfo = tempTable.getSelectionModel().getSelectedItem();
         userInfo.setPassword("123456");
-        //ĞèÒª¶àÏß³Ì²Ù×÷,ÒÔ¼°·´À¡
+        //éœ€è¦å¤šçº¿ç¨‹æ“ä½œ,ä»¥åŠåé¦ˆ
         new AccountManageServiceImpl(this).editAccount(userInfo);
     }
 
     /**
-     * ÖØÖÃÃÜÂëµÄ»Øµ÷º¯Êı
+     * é‡ç½®å¯†ç çš„å›è°ƒå‡½æ•°
      *
-     * @param result ÊÇ·ñÖØÖÃ³É¹¦
+     * @param result æ˜¯å¦é‡ç½®æˆåŠŸ
      */
     void resetPasswordResult_Callback(boolean result) {
         if (result) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("ÖØÖÃÃÜÂë³É¹¦");
-            alert.setContentText("ÖØÖÃÃÜÂë³É¹¦");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("é‡ç½®å¯†ç æˆåŠŸ");
+            alert.setContentText("é‡ç½®å¯†ç æˆåŠŸ");
             alert.showAndWait();
-            //Ë¢ĞÂ±í¸ñ
+            //åˆ·æ–°è¡¨æ ¼
             searchAccount(null);
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("ÖØÖÃÃÜÂëÊ§°Ü");
-            alert.setContentText("ÖØÖÃÃÜÂëÊ§°Ü,ÇëÖØÊÔ");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("é‡ç½®å¯†ç å¤±è´¥");
+            alert.setContentText("é‡ç½®å¯†ç å¤±è´¥,è¯·é‡è¯•");
             alert.showAndWait();
         }
     }
 
     /**
-     * Ìí¼ÓÕË»§,ÓÃ»§µã»÷Ìí¼ÓÕË»§°´Å¥ºó´¥·¢´Ëº¯Êı
+     * æ·»åŠ è´¦æˆ·,ç”¨æˆ·ç‚¹å‡»æ·»åŠ è´¦æˆ·æŒ‰é’®åè§¦å‘æ­¤å‡½æ•°
      *
      * @param event
      */
@@ -279,18 +279,18 @@ public class AccountManageController implements Initializable {
         userInfo.setOwner(addOwner_TextField.getText());
         userInfo.setPassword(addPassword_TextField.getText());
         userInfo.setAccountType(addAccountType_ChoiceBox.getValue());
-        //ÃÜÂëÖĞ²»ÄÜ°üº¬¿Õ¸ñÇÒÃÜÂë²»ÄÜÎª¿Õ£¬ÈôĞÂ½¨ÓÃ»§µÄÃÜÂë²»·ûºÏ¹æÔò¾ÍÌáÊ¾ÓÃ»§ÖØĞÂÊäÈë
+        //å¯†ç ä¸­ä¸èƒ½åŒ…å«ç©ºæ ¼ä¸”å¯†ç ä¸èƒ½ä¸ºç©ºï¼Œè‹¥æ–°å»ºç”¨æˆ·çš„å¯†ç ä¸ç¬¦åˆè§„åˆ™å°±æç¤ºç”¨æˆ·é‡æ–°è¾“å…¥
         if (userInfo.getPassword().contains(" ")) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("´íÎó");
-            alert.setHeaderText("ÃÜÂë²»ÄÜ°üº¬¿Õ¸ñ");
-            alert.setContentText("ÇëÖØĞÂÊäÈëÃÜÂë");
+            alert.setTitle("é”™è¯¯");
+            alert.setHeaderText("å¯†ç ä¸èƒ½åŒ…å«ç©ºæ ¼");
+            alert.setContentText("è¯·é‡æ–°è¾“å…¥å¯†ç ");
             alert.showAndWait();
         } else if (userInfo.getPassword().equals("")) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("´íÎó");
-            alert.setHeaderText("ÃÜÂë²»ÄÜÎª¿Õ");
-            alert.setContentText("ÇëÖØĞÂÊäÈëÃÜÂë");
+            alert.setTitle("é”™è¯¯");
+            alert.setHeaderText("å¯†ç ä¸èƒ½ä¸ºç©º");
+            alert.setContentText("è¯·é‡æ–°è¾“å…¥å¯†ç ");
             alert.showAndWait();
         } else {
             new AccountManageServiceImpl(this).addAccount(userInfo);
@@ -298,47 +298,47 @@ public class AccountManageController implements Initializable {
     }
 
     /**
-     * Ìí¼ÓÕË»§µÄ»Øµ÷º¯Êı
+     * æ·»åŠ è´¦æˆ·çš„å›è°ƒå‡½æ•°
      *
-     * @param result ÊÇ·ñÌí¼Ó³É¹¦
+     * @param result æ˜¯å¦æ·»åŠ æˆåŠŸ
      */
     public void addAccountResult_Callback(boolean result) {
         Platform.runLater(() -> {
             if (result) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("ÌáÊ¾");
-                alert.setHeaderText("Ìí¼ÓÕË»§³É¹¦");
+                alert.setTitle("æç¤º");
+                alert.setHeaderText("æ·»åŠ è´¦æˆ·æˆåŠŸ");
                 alert.showAndWait();
-                //Ë¢ĞÂ±í¸ñ
+                //åˆ·æ–°è¡¨æ ¼
                 searchAccount(null);
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("´íÎó");
-                alert.setHeaderText("Ìí¼ÓÕË»§Ê§°Ü");
+                alert.setTitle("é”™è¯¯");
+                alert.setHeaderText("æ·»åŠ è´¦æˆ·å¤±è´¥");
                 alert.showAndWait();
             }
         });
     }
 
     /**
-     * ³õÊ¼»¯º¯Êı£¬ÔÚ¼ÓÔØ¡°ÕËºÅ¹ÜÀí½çÃæ¡±²¢»ñµÃ±¾ControllerµÄÊµÀıÊ±£¬»áÖ´ĞĞ
+     * åˆå§‹åŒ–å‡½æ•°ï¼Œåœ¨åŠ è½½â€œè´¦å·ç®¡ç†ç•Œé¢â€å¹¶è·å¾—æœ¬Controllerçš„å®ä¾‹æ—¶ï¼Œä¼šæ‰§è¡Œ
      *
      * @param location
      * @param resources
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //½«±í¸ñÖĞµÄÁĞÓë¶ÔÏóÊôĞÔ°ó¶¨
+        //å°†è¡¨æ ¼ä¸­çš„åˆ—ä¸å¯¹è±¡å±æ€§ç»‘å®š
         userId_tableCol.setCellValueFactory(new PropertyValueFactory<UserInfo, String>("userId"));
         accountType_tableCol.setCellValueFactory(new PropertyValueFactory<UserInfo, String>("accountType"));
         password_tableCol.setCellValueFactory(new PropertyValueFactory<UserInfo, String>("password"));
         owner_tableCol.setCellValueFactory(new PropertyValueFactory<UserInfo, String>("owner"));
-        //´´½¨Ò»¸ö´æ´¢ÕËºÅÀàĞÍµÄArrayList²¢½«Æä×ª»»ÎªObservableList£¬ÓÃÓÚÕË»§ÀàĞÍÏÂÀ­¿òµÄÏÔÊ¾
+        //åˆ›å»ºä¸€ä¸ªå­˜å‚¨è´¦å·ç±»å‹çš„ArrayListå¹¶å°†å…¶è½¬æ¢ä¸ºObservableListï¼Œç”¨äºè´¦æˆ·ç±»å‹ä¸‹æ‹‰æ¡†çš„æ˜¾ç¤º
         ArrayList<String> accountTypeList = new ArrayList<>();
-        accountTypeList.add("¼¼Êõ²Ù×÷Ô±");
-        accountTypeList.add("¼¼Êõ¹ÜÀíÔ±");
-        accountTypeList.add("³§³¤");
-        //create ObservableList from accountTypeList£¬and make it the items of the ChoiceBox
+        accountTypeList.add("æŠ€æœ¯æ“ä½œå‘˜");
+        accountTypeList.add("æŠ€æœ¯ç®¡ç†å‘˜");
+        accountTypeList.add("å‚é•¿");
+        //create ObservableList from accountTypeListï¼Œand make it the items of the ChoiceBox
         ObservableList<String> accountTypeObservableList = FXCollections.observableArrayList(accountTypeList);
         selectedAccountType_ChoiceBox.setItems(accountTypeObservableList);
         addAccountType_ChoiceBox.setItems(accountTypeObservableList);

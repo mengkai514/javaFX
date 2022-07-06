@@ -18,9 +18,9 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
- * @description: ¼¼Êõ¹ÜÀíÔ±µÇÂ¼ºóÏÔÊ¾µÄ½çÃæ¿ò¼Ü¡£
- * °üÀ¨¡°ÕËºÅ¹ÜÀí½çÃæ¡±¡¢¡°²úÆ·¼ì²â½çÃæ¡±µÈ½çÃæ¶¼¼ÓÔØµ½´Ë½çÃæÖĞcontroller
- * @author: »ÆÌÎ
+ * @description: æŠ€æœ¯ç®¡ç†å‘˜ç™»å½•åæ˜¾ç¤ºçš„ç•Œé¢æ¡†æ¶ã€‚
+ * åŒ…æ‹¬â€œè´¦å·ç®¡ç†ç•Œé¢â€ã€â€œäº§å“æ£€æµ‹ç•Œé¢â€ç­‰ç•Œé¢éƒ½åŠ è½½åˆ°æ­¤ç•Œé¢ä¸­controller
+ * @author: é»„æ¶›
  * @date: 2022-7-4
  */
 public class TechFrameController implements Initializable {
@@ -76,7 +76,7 @@ public class TechFrameController implements Initializable {
         SimpleDoubleProperty widthProperty = new SimpleDoubleProperty(stackPane.prefWidthProperty().doubleValue());
         ArrayList<Object> ReList = null;
 
-        //¼ÓÔØÕË»§¹ÜÀí½çÃæ
+        //åŠ è½½è´¦æˆ·ç®¡ç†ç•Œé¢
         ReList = addFxml(StaticResourcesConfig.ACCOUNTMANAGE_VIEW_PATH, heightProperty, widthProperty);
         accountManageController = (AccountManageController) ReList.get(0);
         accountManageAnchorPane = (AnchorPane) ReList.get(1);
@@ -84,7 +84,7 @@ public class TechFrameController implements Initializable {
         accountManageAnchorPane.prefWidthProperty().bind(widthProperty);
 
 
-        //¼ÓÔØ²úÆ·¼ì²â½çÃæ
+        //åŠ è½½äº§å“æ£€æµ‹ç•Œé¢
         ReList = addFxml(StaticResourcesConfig.PRODUCTDETECT_VIEW_PATH, heightProperty, widthProperty);
         productDetectController = (ProductDetectController) ReList.get(0);
         productDetectAnchorPane = (AnchorPane) ReList.get(1);
@@ -92,14 +92,14 @@ public class TechFrameController implements Initializable {
         productDetectAnchorPane.prefWidthProperty().bind(widthProperty);
 
 
-        //¼ÓÔØÉè±¸Î¬»¤½çÃæ
+        //åŠ è½½è®¾å¤‡ç»´æŠ¤ç•Œé¢
         ReList = addFxml(StaticResourcesConfig.EQUIPMENTSETTING_VIEW_PATH, heightProperty, widthProperty);
         equipmentSettingController = (EquipmentSettingController) ReList.get(0);
         equipmentSettingAnchorPane = (AnchorPane) ReList.get(1);
         equipmentSettingAnchorPane.prefHeightProperty().bind(heightProperty);
         equipmentSettingAnchorPane.prefWidthProperty().bind(widthProperty);
 
-        //ÒÔÉÏÈı¸ö·ÅÈëstackPaneÏÔÊ¾
+        //ä»¥ä¸Šä¸‰ä¸ªæ”¾å…¥stackPaneæ˜¾ç¤º
         stackPane.getChildren().addAll(equipmentSettingAnchorPane, productDetectAnchorPane, accountManageAnchorPane);
 
     }

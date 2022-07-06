@@ -2,16 +2,14 @@ package DAO;
 
 import com.alibaba.fastjson.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @description: Ö÷ÒªÓÃÓÚ½¨Á¢socketÏò±¾»úÖ¸¶¨¶Ë¿Ú·¢ÉúÏûÏ¢
- * @author: »ÆÌÎ
+ * @description: ä¸»è¦ç”¨äºå»ºç«‹socketå‘æœ¬æœºæŒ‡å®šç«¯å£å‘ç”Ÿæ¶ˆæ¯
+ * @author: é»„æ¶›
  * @date: 2022-7-4
  */
 public class SocketSender {
@@ -22,25 +20,30 @@ public class SocketSender {
         String retString = null;
         try {
             socket = new Socket("localhost", port);
-            //»ñÈ¡ÊäÈëÊä³öÁ÷
+            //è·å–è¾“å…¥è¾“å‡ºæµ
             inputStream = socket.getInputStream();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "gbk"));
             outputStream = socket.getOutputStream();
-            //·¢ËÍĞÅÏ¢
+            //å‘é€ä¿¡æ¯
             outputStream.write(sendString.getBytes());
             outputStream.flush();
-            //µÈ´ı·şÎñÆ÷·µ»ØĞÅÏ¢
+            //ç­‰å¾…æœåŠ¡å™¨è¿”å›ä¿¡æ¯
             byte[] bytes = new byte[1024];
             int len = inputStream.read(bytes);
             retString = new String(bytes, 0, len);
+//            while((retString = bufferedReader.readLine())!=null){}
+
+        } catch (IOException e) {
+            e.printStackTrace();
 
         } catch (Exception e) {
             e.printStackTrace();
 
         } finally {
             try {
-                //¹Ø±ÕÁ¬½Ó
+                //å…³é—­è¿æ¥
                 socket.close();
-                //¹Ø±ÕÊäÈëÊä³öÁ÷
+                //å…³é—­è¾“å…¥è¾“å‡ºæµ
                 inputStream.close();
                 outputStream.close();
             } catch (Exception e) {

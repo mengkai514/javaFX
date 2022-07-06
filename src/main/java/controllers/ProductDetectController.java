@@ -24,8 +24,8 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 /**
- * @description: ²úÆ·¼ì²â½çÃæµÄcontroller
- * @author: »ÆÌÎ
+ * @description: äº§å“æ£€æµ‹ç•Œé¢çš„controller
+ * @author: é»„æ¶›
  * @date: 2022-7-4
  */
 public class ProductDetectController implements Initializable {
@@ -81,13 +81,13 @@ public class ProductDetectController implements Initializable {
 
     @FXML
     private Circle glueOutCircle;
-    //ÒÑ¼ì²âÊıÁ¿
+    //å·²æ£€æµ‹æ•°é‡
     private int numberOfDetected = 0;
-    //È±ÏİÊıÁ¿
+    //ç¼ºé™·æ•°é‡
     private int numberOfDefect = 0;
-    //È±ÏİÂÊ
+    //ç¼ºé™·ç‡
     private double defectRate = 0;
-    //Á¼Æ·ÊıÁ¿
+    //è‰¯å“æ•°é‡
     private int numberOfGoodProduct = 0;
 
     private MyApplication myApplication;
@@ -100,24 +100,24 @@ public class ProductDetectController implements Initializable {
     void startConveyor(ActionEvent event) {
         ConveyorService conveyorService = new ConveyorServiceImpl();
         if (conveyorService.startConveyor()) {
-            //µ¯´°ÌáÊ¾´«ËÍ´øÆô¶¯³É¹¦
+            //å¼¹çª—æç¤ºä¼ é€å¸¦å¯åŠ¨æˆåŠŸ
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("´«ËÍ´øÆô¶¯³É¹¦");
-            alert.setContentText("´«ËÍ´øÆô¶¯³É¹¦");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("ä¼ é€å¸¦å¯åŠ¨æˆåŠŸ");
+            alert.setContentText("ä¼ é€å¸¦å¯åŠ¨æˆåŠŸ");
             alert.showAndWait();
-            //            ¸Ä±ä×´Ì¬±êÇ©µÄÑÕÉ«ÎªÂÌÉ«
+            //            æ”¹å˜çŠ¶æ€æ ‡ç­¾çš„é¢œè‰²ä¸ºç»¿è‰²
             statusCircle.setFill(javafx.scene.paint.Color.GREEN);
-            statusLabel.setText("ÕıÔÚÔËĞĞ...");
+            statusLabel.setText("æ­£åœ¨è¿è¡Œ...");
         } else {
-            //µ¯´°ÌáÊ¾´«ËÍ´øÆô¶¯Ê§°Ü
+            //å¼¹çª—æç¤ºä¼ é€å¸¦å¯åŠ¨å¤±è´¥
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("´«ËÍ´øÆô¶¯Ê§°Ü");
-            alert.setContentText("´«ËÍ´øÆô¶¯Ê§°Ü");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("ä¼ é€å¸¦å¯åŠ¨å¤±è´¥");
+            alert.setContentText("ä¼ é€å¸¦å¯åŠ¨å¤±è´¥");
             alert.showAndWait();
-            //            ¸Ä±ä×´Ì¬±êÇ©µÄÑÕÉ«ÎªºìÉ«
-            statusLabel.setText("Î´ÔËĞĞ");
+            //            æ”¹å˜çŠ¶æ€æ ‡ç­¾çš„é¢œè‰²ä¸ºçº¢è‰²
+            statusLabel.setText("æœªè¿è¡Œ");
             statusCircle.setFill(javafx.scene.paint.Color.RED);
         }
     }
@@ -126,26 +126,26 @@ public class ProductDetectController implements Initializable {
     void stopConveyor(ActionEvent event) {
         ConveyorService conveyorService = new ConveyorServiceImpl();
         if (conveyorService.stopConveyor()) {
-            //µ¯´°ÌáÊ¾´«ËÍ´øÍ£Ö¹³É¹¦
+            //å¼¹çª—æç¤ºä¼ é€å¸¦åœæ­¢æˆåŠŸ
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("´«ËÍ´øÍ£Ö¹³É¹¦");
-            alert.setContentText("´«ËÍ´øÍ£Ö¹³É¹¦");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("ä¼ é€å¸¦åœæ­¢æˆåŠŸ");
+            alert.setContentText("ä¼ é€å¸¦åœæ­¢æˆåŠŸ");
             alert.showAndWait();
 
-            //            ¸Ä±ä×´Ì¬±êÇ©µÄÑÕÉ«ÎªºìÉ«
+            //            æ”¹å˜çŠ¶æ€æ ‡ç­¾çš„é¢œè‰²ä¸ºçº¢è‰²
             statusCircle.setFill(Color.RED);
-            statusLabel.setText("Î´ÔËĞĞ");
+            statusLabel.setText("æœªè¿è¡Œ");
         } else {
-            //µ¯´°ÌáÊ¾´«ËÍ´øÆô¶¯Ê§°Ü
+            //å¼¹çª—æç¤ºä¼ é€å¸¦å¯åŠ¨å¤±è´¥
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("ÌáÊ¾");
-            alert.setHeaderText("´«ËÍ´øÍ£Ö¹Ê§°Ü");
-            alert.setContentText("´«ËÍ´øÍ£Ö¹Ê§°Ü");
+            alert.setTitle("æç¤º");
+            alert.setHeaderText("ä¼ é€å¸¦åœæ­¢å¤±è´¥");
+            alert.setContentText("ä¼ é€å¸¦åœæ­¢å¤±è´¥");
             alert.showAndWait();
-            //            ¸Ä±ä×´Ì¬±êÇ©µÄÑÕÉ«ÎªÂÌÉ«
+            //            æ”¹å˜çŠ¶æ€æ ‡ç­¾çš„é¢œè‰²ä¸ºç»¿è‰²
             statusCircle.setFill(Color.GREEN);
-            statusLabel.setText("ÕıÔÚÔËĞĞ...");
+            statusLabel.setText("æ­£åœ¨è¿è¡Œ...");
         }
     }
 
@@ -164,23 +164,23 @@ public class ProductDetectController implements Initializable {
     }
 
     public void setImageByBase64(String base64) {
-        //½«base64½âÂëÎªjpgÍ¼Æ¬,²¢ÏÔÊ¾ÔÚimageViewÉÏ
+        //å°†base64è§£ç ä¸ºjpgå›¾ç‰‡,å¹¶æ˜¾ç¤ºåœ¨imageViewä¸Š
         BASE64Decoder decoder = new BASE64Decoder();
         OutputStream out = null;
         try {
-//          ´ò¿ªÎÄ¼şÊä³öÁ÷
+//          æ‰“å¼€æ–‡ä»¶è¾“å‡ºæµ
             out = new FileOutputStream("src\\main\\resources\\image\\result.jpg");
-            //È¥µôÇ°×ºdata:image/jpeg;base64,
+            //å»æ‰å‰ç¼€data:image/jpeg;base64,
             base64 = base64.substring(base64.indexOf(",", 1) + 1, base64.length());
-            // Base64½âÂë
+            // Base64è§£ç 
             byte[] b = decoder.decodeBuffer(base64);
-            //´¦ÀíÒì³£Öµ
+            //å¤„ç†å¼‚å¸¸å€¼
             for (int i = 0; i < b.length; ++i) {
-                if (b[i] < 0) {// µ÷ÕûÒì³£Êı¾İ
+                if (b[i] < 0) {// è°ƒæ•´å¼‚å¸¸æ•°æ®
                     b[i] += 256;
                 }
             }
-            //Ğ´ÈëÎÄ¼ş
+            //å†™å…¥æ–‡ä»¶
             out.write(b);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -197,14 +197,14 @@ public class ProductDetectController implements Initializable {
             }
 
         }
-        //´Ó¸Õ¸Õ´æÈëµÄÎÄ¼şÖĞ´´½¨Image¶ÔÏó
+        //ä»åˆšåˆšå­˜å…¥çš„æ–‡ä»¶ä¸­åˆ›å»ºImageå¯¹è±¡
         Image image = new Image("file:src/main/resources/image/result.jpg");
-        //½«image¶ÔÏóÏÔÊ¾ÔÚimageViewÉÏ
+        //å°†imageå¯¹è±¡æ˜¾ç¤ºåœ¨imageViewä¸Š
         imageView.setImage(image);
     }
 
     /**
-     * ´Óurl»ñÈ¡Í¼Æ¬²¢ÉèÖÃÔÚimageViewÉÏ£¬±¾µØurlÊ¾Àı£ºfile:src/main/resources/image/result.jpg
+     * ä»urlè·å–å›¾ç‰‡å¹¶è®¾ç½®åœ¨imageViewä¸Šï¼Œæœ¬åœ°urlç¤ºä¾‹ï¼šfile:src/main/resources/image/result.jpg
      * @param imagePath
      */
     public void setImageByPath(String imagePath) {
@@ -213,36 +213,36 @@ public class ProductDetectController implements Initializable {
     }
 
     /**
-     * »Øµ÷º¯Êı£¬ÓÃÓÚÉèÖÃ½á¹ûÔÚÒ³ÃæÉÏÏÔÊ¾
-     * @param imageBase64 Í¼Æ¬µÄbase64±àÂë
-     * @param isPinAskew Õë½ÅÊÇ·ñÍáĞ±
-     * @param isPinGlue Õë½ÅÊÇ·ñğ¤½º
-     * @param isGlueOut ÊÇ·ñÒç½º
+     * å›è°ƒå‡½æ•°ï¼Œç”¨äºè®¾ç½®ç»“æœåœ¨é¡µé¢ä¸Šæ˜¾ç¤º
+     * @param imageBase64 å›¾ç‰‡çš„base64ç¼–ç 
+     * @param isPinAskew é’ˆè„šæ˜¯å¦æ­ªæ–œ
+     * @param isPinGlue é’ˆè„šæ˜¯å¦é»èƒ¶
+     * @param isGlueOut æ˜¯å¦æº¢èƒ¶
      */
     public void setDetectResult(String imageBase64, boolean isPinAskew, boolean isPinGlue, boolean isGlueOut) {
-        //¸üĞÂÍ¼Æ¬
+        //æ›´æ–°å›¾ç‰‡
         setImageByBase64(imageBase64);
-        //¸üĞÂ¼ì²â½á¹û
-        //Õë½ÅÍáĞ±
+        //æ›´æ–°æ£€æµ‹ç»“æœ
+        //é’ˆè„šæ­ªæ–œ
         if (isPinAskew) {
             pinAskewCircle.setFill(Color.GREEN);
         } else {
             pinAskewCircle.setFill(Color.RED);
         }
-        //Õë½ÅÕ³½º
+        //é’ˆè„šç²˜èƒ¶
         if (isPinGlue) {
             pinGlueCircle.setFill(Color.GREEN);
         } else {
             pinGlueCircle.setFill(Color.RED);
         }
-        //Òç½º
+        //æº¢èƒ¶
         if (isGlueOut) {
             glueOutCircle.setFill(Color.GREEN);
         } else {
             glueOutCircle.setFill(Color.RED);
         }
 
-//        ¸üĞÂÅú´ÎÍ³¼ÆĞÅÏ¢
+//        æ›´æ–°æ‰¹æ¬¡ç»Ÿè®¡ä¿¡æ¯
         numberOfDetectedTextField.setText(String.valueOf(++numberOfDetected));
         if (isPinAskew == false || isPinGlue == false || isGlueOut == false) {
             numberOfDefectTextField.setText(String.valueOf(++numberOfDefect));
@@ -259,7 +259,7 @@ public class ProductDetectController implements Initializable {
     }
 
     /**
-     * ÖØÖÃ±ê¼ÇÈ±ÏİÀàĞÍµÄÔ²È¦µÄÑÕÉ«
+     * é‡ç½®æ ‡è®°ç¼ºé™·ç±»å‹çš„åœ†åœˆçš„é¢œè‰²
      */
     public void resetDefectCircleColor() {
         pinAskewCircle.setFill(Color.GREEN);
@@ -267,15 +267,15 @@ public class ProductDetectController implements Initializable {
         glueOutCircle.setFill(Color.GREEN);
     }
     /**
-     * ÔÚ¼ÓÔØ±¾Ò³ÃæÊ±£¬²¢»ñÈ¡±¾ControllerµÄÊ¾ÀıÊ±£¬»áµ÷ÓÃ´Ë·½·¨½øĞĞ³õÊ¼»¯
+     * åœ¨åŠ è½½æœ¬é¡µé¢æ—¶ï¼Œå¹¶è·å–æœ¬Controllerçš„ç¤ºä¾‹æ—¶ï¼Œä¼šè°ƒç”¨æ­¤æ–¹æ³•è¿›è¡Œåˆå§‹åŒ–
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //´´½¨socket¼àÌıÏß³ÌÊµÀı
+        //åˆ›å»ºsocketç›‘å¬çº¿ç¨‹å®ä¾‹
         SocketListener socketListener = new SocketListener();
-        //´«Êä±¾controller1µÄÊµÀı£¬ÒÔ±ãÔÚ¼àÌıÏß³ÌÖĞµ÷ÓÃ»Øµ÷º¯Êı¸üĞÂ½çÃæ
+        //ä¼ è¾“æœ¬controller1çš„å®ä¾‹ï¼Œä»¥ä¾¿åœ¨ç›‘å¬çº¿ç¨‹ä¸­è°ƒç”¨å›è°ƒå‡½æ•°æ›´æ–°ç•Œé¢
         socketListener.setProductDetectController(this);
-        //Æô¶¯Ïß³Ì
+        //å¯åŠ¨çº¿ç¨‹
         new Thread(socketListener).start();
     }
 }

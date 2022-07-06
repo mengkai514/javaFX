@@ -2,8 +2,8 @@ package service;
 
 import model.UserInfo;
 /**
- * @description: 账号管理功能的服务层
- * @author: 黄涛
+ * @description: 璐﹀彿绠＄悊鍔熻兘鐨勬湇鍔″眰
+ * @author: 榛勬稕
  * @date: 2022-7-4
  */
 public interface AccountManageService {

@@ -7,73 +7,73 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 
 /**
- * Êı¾İ¿âJDBCÖ±Á¬ºÍ¹Ø±ÕÁ¬½Ó¡£
+ * æ•°æ®åº“JDBCç›´è¿å’Œå…³é—­è¿æ¥ã€‚
  * 
- * @author ÀîÓıÇÅ£¬Â¬ĞÇÓî£¬»ÆÌÎ
- *»ÆÌÎ¸üĞÂ£º¼òµ¥ÊµÏÖÁËÒ»¸öÊı¾İ¿âÁ¬½Ó³Ø£¬Ä¿µÄÔÚÓÚÅäºÏ¶àÏß³Ì±à³ÌÊ¹ÓÃ
+ * @author æè‚²æ¡¥ï¼Œå¢æ˜Ÿå®‡ï¼Œé»„æ¶›
+ *é»„æ¶›æ›´æ–°ï¼šç®€å•å®ç°äº†ä¸€ä¸ªæ•°æ®åº“è¿æ¥æ± ï¼Œç›®çš„åœ¨äºé…åˆå¤šçº¿ç¨‹ç¼–ç¨‹ä½¿ç”¨
  */
 public class DBConnector {
 	private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 	
-	//localhost:3306 IP+¶Ë¿ÚĞÎÊ½Á´½ÓÊı¾İ¿âÓ¦ÓÃ,Í¬Ñ§ÃÇ×Ô¼ºÊÔÊÔ°Ñlocalhost¸ÄÎª127.0.0.1ÄÜÓÃÂğ¡£3306ÊÇmysqlÄ¬ÈÏ¶Ë¿Ú¡£
-	//booklib ÊÇ×Ô¼º´´½¨µÄÊı¾İ¿â¡°¿âÃû¡±£¬userºÍpass¶ÔÓ¦Êı¾İ¿âÕËºÅÃÜÂë¡£
-	//useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC£¨Õâ¶Î»°ÊÇJDBC 8.XXX°æ±¾ºóĞèÒª¼ÓÉÏµÄSSL£¬5.XXX°æ±¾µÄÍ¬Ñ§²»ÓÃ¹Ü£©¡£
+	//localhost:3306 IP+ç«¯å£å½¢å¼é“¾æ¥æ•°æ®åº“åº”ç”¨,åŒå­¦ä»¬è‡ªå·±è¯•è¯•æŠŠlocalhostæ”¹ä¸º127.0.0.1èƒ½ç”¨å—ã€‚3306æ˜¯mysqlé»˜è®¤ç«¯å£ã€‚
+	//booklib æ˜¯è‡ªå·±åˆ›å»ºçš„æ•°æ®åº“â€œåº“åâ€ï¼Œuserå’Œpasså¯¹åº”æ•°æ®åº“è´¦å·å¯†ç ã€‚
+	//useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTCï¼ˆè¿™æ®µè¯æ˜¯JDBC 8.XXXç‰ˆæœ¬åéœ€è¦åŠ ä¸Šçš„SSLï¼Œ5.XXXç‰ˆæœ¬çš„åŒå­¦ä¸ç”¨ç®¡ï¼‰ã€‚
 	private static final String DB_URL = "jdbc:mysql://bj-cynosdbmysql-grp-l38rjgu6.sql.tencentcdb.com:21549/DigitalTubeDetectDB?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 	private static final String USER = "root";
 	private static final String PASS = "Ht1657673964";
-	//×îĞ¡Á¬½ÓÊı
+	//æœ€å°è¿æ¥æ•°
 	private static final int minCount = 1;
-	//×î´óÁ¬½ÓÊı
+	//æœ€å¤§è¿æ¥æ•°
 	private static final int maxCount = 10;
-	//µ±Ç°Á¬½ÓÊı
+	//å½“å‰è¿æ¥æ•°
 	private static  int currentCount=0;
 	private static final LinkedList<Connection> connectionsPool = new LinkedList<>();
 
 
 	/**
-	 * ´´½¨Ò»¸öĞÂÁ¬½Ó
+	 * åˆ›å»ºä¸€ä¸ªæ–°è¿æ¥
 	 * @return
 	 */
 	private static Connection connect() {
-		// ×¢²á JDBC Çı¶¯
+		// æ³¨å†Œ JDBC é©±åŠ¨
 		try {
 			Class.forName(JDBC_DRIVER);
 		} catch (Exception e) {
-			System.out.println("×¢²á JDBC Çı¶¯ Ê§°Ü£¡");
+			System.out.println("æ³¨å†Œ JDBC é©±åŠ¨ å¤±è´¥ï¼");
 			e.printStackTrace();
 		}
 
 
-		// ´ò¿ªÁ´½Ó
+		// æ‰“å¼€é“¾æ¥
 		Connection connection;
 		try {
 			connection = DriverManager.getConnection(DB_URL, USER, PASS);
 			currentCount++;
 			return connection;
 		} catch (SQLException e) {
-			System.out.println("Á¬½ÓÊı¾İ¿âÊ§°Ü");
+			System.out.println("è¿æ¥æ•°æ®åº“å¤±è´¥");
 			e.printStackTrace();
 			return null;
 		}
 	}
 
 	/**
-	 * ´ÓÁ¬½Ó³ØÖĞ»ñÈ¡Ò»¸öÁ¬½Ó
+	 * ä»è¿æ¥æ± ä¸­è·å–ä¸€ä¸ªè¿æ¥
 	 * @return
 	 */
 	public static synchronized Connection getConnection()  {
-		//Èç¹ûÁ¬½Ó³ØÖĞÓĞ£¬ÔòÖ±½Ó·µ»ØÒ»¸öÁ¬½Ó
+		//å¦‚æœè¿æ¥æ± ä¸­æœ‰ï¼Œåˆ™ç›´æ¥è¿”å›ä¸€ä¸ªè¿æ¥
 		if(connectionsPool.size()>0){
 			return connectionsPool.remove(0);
 
 
-		}else {//Èç¹ûÁ¬½Ó³ØÖĞÃ»ÓĞ£¬Ôò³¢ÊÔnewÒ»¸ö£¬»òµÈ´ıÆäËûÏß³ÌÊÍ·Å×ÊÔ´¡£
-			//Èç¹û´ïµ½×î´óÁ¬½ÓÊı,ÔòµÈ´ıÆäËûÏß³ÌÊÍ·Å×ÊÔ´
+		}else {//å¦‚æœè¿æ¥æ± ä¸­æ²¡æœ‰ï¼Œåˆ™å°è¯•newä¸€ä¸ªï¼Œæˆ–ç­‰å¾…å…¶ä»–çº¿ç¨‹é‡Šæ”¾èµ„æºã€‚
+			//å¦‚æœè¾¾åˆ°æœ€å¤§è¿æ¥æ•°,åˆ™ç­‰å¾…å…¶ä»–çº¿ç¨‹é‡Šæ”¾èµ„æº
 			if(currentCount>=maxCount){
-				//µÈ´ıÆäËûÏß³ÌÊÍ·Å×ÊÔ´
+				//ç­‰å¾…å…¶ä»–çº¿ç¨‹é‡Šæ”¾èµ„æº
 				while (connectionsPool.size()<=0);
 				return connectionsPool.remove(0);
-			}else{//Èç¹ûÃ»ÓĞ´ïµ½×î´óÁ¬½ÓÊı,ÔòÖ±½ÓnewÒ»¸öÁ¬½Ó
+			}else{//å¦‚æœæ²¡æœ‰è¾¾åˆ°æœ€å¤§è¿æ¥æ•°,åˆ™ç›´æ¥newä¸€ä¸ªè¿æ¥
 				Connection connection=connect();
 				if(connection!=null){
 					connectionsPool.add(connection);
@@ -84,7 +84,7 @@ public class DBConnector {
 	}
 
 	/**
-	 * °ÑÁ¬½Ó·µ»Ø¸øÁ¬½Ó³Ø
+	 * æŠŠè¿æ¥è¿”å›ç»™è¿æ¥æ± 
 	 * @param connection
 	 */
 	public static synchronized void giveBackConnection(Connection connection)  {
@@ -92,13 +92,13 @@ public class DBConnector {
 	}
 
 	/**
-	 * °ÑÁ¬½Ó·µ»Ø¸øÁ¬½Ó³Ø£¬²¢¹Ø±ÕÖ¸¶¨ĞèÒª¹Ø±ÕµÄpreparedStatement
+	 * æŠŠè¿æ¥è¿”å›ç»™è¿æ¥æ± ï¼Œå¹¶å…³é—­æŒ‡å®šéœ€è¦å…³é—­çš„preparedStatement
 	 * @param connection
-	 * @param preparedStatement ĞèÒª¹Ø±ÕµÄpreparedStatement
+	 * @param preparedStatement éœ€è¦å…³é—­çš„preparedStatement
 	 * @throws SQLException
 	 */
 	public static synchronized void giveBackConnection(Connection connection,PreparedStatement preparedStatement) {
-		//¹Ø±ÕpreparedStatement
+		//å…³é—­preparedStatement
 		try {
 			if(preparedStatement!=null){
 				preparedStatement.close();
@@ -106,12 +106,12 @@ public class DBConnector {
 		}catch (SQLException e){
 			e.printStackTrace();
 		}
-		//Ñ¹Èëconnection
+		//å‹å…¥connection
 		connectionsPool.add(connection);
 	}
 
 	public static void close() {
-		// ¹Ø±ÕËùÓĞÁ¬½Ó
+		// å…³é—­æ‰€æœ‰è¿æ¥
 		connectionsPool.forEach(x->{
 			try {
 				x.close();

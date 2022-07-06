@@ -13,14 +13,14 @@ public final class StaticResourcesConfig {
 
 
     // WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-    // WWW   ½çÃæ×Ö¶ÎÏÔÊ¾ 				    WWW
+    // WWW   ç•Œé¢å­—æ®µæ˜¾ç¤º 				    WWW
     // WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-    public final static String MAIN_TREE_HEADER = "Ê×Ò³";
-    public final static String MAIN_TREE_HEADER_ITEM1 = "¼ÇÊÂ±¾";
-    public final static String MAIN_TREE_HEADER_ITEM2 = "¼ôÌù°å";
-    public final static String MAIN_TREE_HEADER_ITEM3 = "ÓÃ»§¹ÜÀí";
-    public final static String MAIN_TREE_HEADER_ITEM4 = "Êı¾İ·ÖÎö";
-    public final static String MAIN_TREE_HEADER_ITEM5 = "ÓïÑÔ";
+    public final static String MAIN_TREE_HEADER = "é¦–é¡µ";
+    public final static String MAIN_TREE_HEADER_ITEM1 = "è®°äº‹æœ¬";
+    public final static String MAIN_TREE_HEADER_ITEM2 = "å‰ªè´´æ¿";
+    public final static String MAIN_TREE_HEADER_ITEM3 = "ç”¨æˆ·ç®¡ç†";
+    public final static String MAIN_TREE_HEADER_ITEM4 = "æ•°æ®åˆ†æ";
+    public final static String MAIN_TREE_HEADER_ITEM5 = "è¯­è¨€";
 
 
 }

@@ -44,7 +44,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -59,8 +59,8 @@
       <recent name="D:\Java_Workspace\DigitalTubeDetectUI\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects_workspace\java_projects\DigitalTubeDetectUI\src\main\resources\image" />
       <recent name="D:\Projects_workspace\java_projects\DigitalTubeDetectUI\src\main\resources\view" />
+      <recent name="D:\Projects_workspace\java_projects\DigitalTubeDetectUI\src\main\resources\image" />
       <recent name="D:\Java_Workspace\DigitalTubeDetectUI\src\main\resources\view" />
       <recent name="D:\Java_Workspace\DigitalTubeDetectUI\src\main\resources" />
     </key>
@@ -123,7 +123,13 @@
       <workItem from="1656835386656" duration="9648000" />
       <workItem from="1656855315534" duration="11805000" />
       <workItem from="1656898533723" duration="8390000" />
-      <workItem from="1656922188471" duration="4497000" />
+      <workItem from="1656922188471" duration="4498000" />
+      <workItem from="1656932073106" duration="197000" />
+      <workItem from="1657003051907" duration="2747000" />
+      <workItem from="1657026203343" duration="3112000" />
+      <workItem from="1657030213713" duration="2505000" />
+      <workItem from="1657073213660" duration="3042000" />
+      <workItem from="1657078779474" duration="64000" />
     </task>
     <servers />
   </component>
@@ -136,5 +142,9 @@
         <watch expression="recvMap.get(&quot;type&quot;)==&quot;setImage&quot;" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

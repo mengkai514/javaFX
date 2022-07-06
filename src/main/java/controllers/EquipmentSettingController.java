@@ -6,8 +6,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
- * @description: 设备维护界面的controller
- * @author: 黄涛
+ * @description: 璁惧缁存姢鐣岄潰鐨刢ontroller
+ * @author: 榛勬稕
  * @date: 2022-7-4
  */
 public class EquipmentSettingController implements Initializable {

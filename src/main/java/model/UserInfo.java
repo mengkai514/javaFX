@@ -1,7 +1,7 @@
 package model;
 
 import lombok.Data;
-//@Data注脚需要lombok依赖，报错的话请更新依赖
+//@Data娉ㄨ剼闇�瑕乴ombok渚濊禆锛屾姤閿欑殑璇濊鏇存柊渚濊禆
 @Data
 public class UserInfo {
     public String userId;

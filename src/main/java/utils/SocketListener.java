@@ -10,8 +10,8 @@ import java.net.Socket;
 import java.util.Map;
 
 /**
- * @description: socket¼àÌıÏß³Ì£¬¼àÌıÀ´×ÔpythonµÄsocketÁ¬½Ó
- * @author: »ÆÌÎ
+ * @description: socketç›‘å¬çº¿ç¨‹ï¼Œç›‘å¬æ¥è‡ªpythonçš„socketè¿æ¥
+ * @author: é»„æ¶›
  * @date: 2022-7-4
  */
 public class SocketListener implements Runnable {
@@ -21,43 +21,43 @@ public class SocketListener implements Runnable {
     @Override
     public void run() {
 
-        //½¨Á¢·şÎñÆ÷¶ËSocket¶ÔÏó£¬Ö¸¶¨°ó¶¨µÄ¶Ë¿ÚºÅ
+        //å»ºç«‹æœåŠ¡å™¨ç«¯Socketå¯¹è±¡ï¼ŒæŒ‡å®šç»‘å®šçš„ç«¯å£å·
         ServerSocket serverSocket = null;
         try {
             serverSocket = new ServerSocket(8080);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        while (true) {//¼àÌısocketÁ¬½Ó
+        while (true) {//ç›‘å¬socketè¿æ¥
             try {
-                //µ÷ÓÃaccept()·½·¨¿ªÊ¼¼àÌı£¬µÈ´ı¿Í»§¶ËµÄÁ¬½Ó
+                //è°ƒç”¨accept()æ–¹æ³•å¼€å§‹ç›‘å¬ï¼Œç­‰å¾…å®¢æˆ·ç«¯çš„è¿æ¥
                 Socket socket = serverSocket.accept();
-                //»ñÈ¡ÊäÈëÁ÷£¬¶ÁÈ¡¿Í»§¶Ë·¢ËÍ¹ıÀ´µÄĞÅÏ¢
+                //è·å–è¾“å…¥æµï¼Œè¯»å–å®¢æˆ·ç«¯å‘é€è¿‡æ¥çš„ä¿¡æ¯
                 InputStream inputStream = socket.getInputStream();
                 BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, "gbk"));
-                //»ñÈ¡Êä³öÁ÷£¬Ïò¿Í»§¶Ë·¢ËÍĞÅÏ¢
+                //è·å–è¾“å‡ºæµï¼Œå‘å®¢æˆ·ç«¯å‘é€ä¿¡æ¯
                 OutputStream outputStream = socket.getOutputStream();
                 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(outputStream, "gbk"));
 
-                //¶ÁÈ¡¿Í»§¶Ë·¢ËÍ¹ıÀ´µÄĞÅÏ¢
+                //è¯»å–å®¢æˆ·ç«¯å‘é€è¿‡æ¥çš„ä¿¡æ¯
                 String recvStr = br.readLine();
                 if (recvStr != null) {
-                    //½«recvStrÕâ¸öjson×ª»»Map¶ÔÏó
+                    //å°†recvStrè¿™ä¸ªjsonè½¬æ¢Mapå¯¹è±¡
                     Map<String, Object> recvMap = JSONObject.parseObject(recvStr, Map.class);
 
-                    //Èç¹ûÊÇ¸æÖª¼ì²âµ½ÁËÊıÂë¹Ü
+                    //å¦‚æœæ˜¯å‘ŠçŸ¥æ£€æµ‹åˆ°äº†æ•°ç ç®¡
                     if (recvMap.get("type").equals("productDetected")) {
                         Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
-                                //ÏÔÊ¾¶ÔÓÚÍ¼Æ¬¸øÓÃ»§
+                                //æ˜¾ç¤ºå¯¹äºå›¾ç‰‡ç»™ç”¨æˆ·
                                 productDetectController.setImageByPath("file:src/main/resources/image/positionDetected.jpg");
-                                //ÖØÖÃ¼ì²â½á¹ûÍ¼Æ¬ÏÂ·½µÄÈı¸öÔ²µãµÄÑÕÉ«ÎªÂÌÉ«
+                                //é‡ç½®æ£€æµ‹ç»“æœå›¾ç‰‡ä¸‹æ–¹çš„ä¸‰ä¸ªåœ†ç‚¹çš„é¢œè‰²ä¸ºç»¿è‰²
                                 productDetectController.resetDefectCircleColor();
                             }
                         });
                     }
-                    //Èç¹ûÊÇ¸æÖª×¥È¡µ½ÁËÍ¼Æ¬
+                    //å¦‚æœæ˜¯å‘ŠçŸ¥æŠ“å–åˆ°äº†å›¾ç‰‡
                     else if (recvMap.get("type").equals("ImageCaught")) {
                         Platform.runLater(new Runnable() {
                             @Override
@@ -66,14 +66,14 @@ public class SocketListener implements Runnable {
                             }
                         });
                     }
-                    //Èç¹ûÊÇÉèÖÃ½á¹û¼¯
+                    //å¦‚æœæ˜¯è®¾ç½®ç»“æœé›†
                     else if (recvMap.get("type").equals("setDetectResult")) {
                         Map resultMap = (Map) recvMap.get("content");
                         Boolean isPinAskew = (Boolean) resultMap.get("isPinAskew");
                         Boolean isPinGlue = (Boolean) resultMap.get("isPinGlue");
                         Boolean isGlueOut = (Boolean) resultMap.get("isGlueOut");
                         String Base64Data = (String) resultMap.get("ImageResult");
-                        //µ÷ÓÃ»Øµ÷º¯Êı¸üĞÂ½çÃæ
+                        //è°ƒç”¨å›è°ƒå‡½æ•°æ›´æ–°ç•Œé¢
                         Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
@@ -81,20 +81,24 @@ public class SocketListener implements Runnable {
                             }
                         });
                     } else {
-                        System.out.println("ÃüÁîÎ´¶¨Òå");
+                        System.out.println("å‘½ä»¤æœªå®šä¹‰");
                     }
                 }
-
-
-                //¹Ø±ÕÊä³öÁ÷¡¢ÊäÈëÁ÷¡¢Socket
+                //å…³é—­è¾“å‡ºæµã€è¾“å…¥æµã€Socket
                 outputStream.close();
                 inputStream.close();
                 br.close();
                 bw.close();
                 socket.close();
-                //severSocket²»ÄÜÔÚ´Ë¹Ø±Õ£¬·ñÔòserverSocket.accept()»á±¨´íclosed
+                //severSocketä¸èƒ½åœ¨æ­¤å…³é—­ï¼Œå¦åˆ™serverSocket.accept()ä¼šæŠ¥é”™closed
                 //serverSocket.close();
             } catch (Exception e) {
+                e.printStackTrace();
+            }
+            //çº¿ç¨‹ç¡çœ 5ç§’
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }

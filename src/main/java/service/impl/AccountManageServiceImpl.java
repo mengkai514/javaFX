@@ -48,7 +48,7 @@ public class AccountManageServiceImpl implements AccountManageService {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                //去除密码中的空格，若去除后密码中的空格后为空字符串则直接设置为默认密码：123456
+                //鍘婚櫎瀵嗙爜涓殑绌烘牸锛岃嫢鍘婚櫎鍚庡瘑鐮佷腑鐨勭┖鏍煎悗涓虹┖瀛楃涓插垯鐩存帴璁剧疆涓洪粯璁ゅ瘑鐮侊細123456
                 String password = userInfo.getPassword();
                 if (password.contains(" ")) {
                     password = password.replace(" ", "");

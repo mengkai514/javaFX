@@ -10,14 +10,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- * @description: ÕËºÅ¹ÜÀíÏà¹ØµÄÊı¾İ¿â²Ù×÷²ãÃæ
- * @author: »ÆÌÎ
+ * @description: è´¦å·ç®¡ç†ç›¸å…³çš„æ•°æ®åº“æ“ä½œå±‚é¢
+ * @author: é»„æ¶›
  * @date: 2022-7-4
  */
 public class AccountDAO {
-    //    Í¨¹ıÕËºÅºÍÃÜÂë·µ»ØÓÃ»§¸öÊı£¬²»·µ»ØÓÃ»§ĞÅÏ¢
+    //    é€šè¿‡è´¦å·å’Œå¯†ç è¿”å›ç”¨æˆ·ä¸ªæ•°ï¼Œä¸è¿”å›ç”¨æˆ·ä¿¡æ¯
     public int countUserByIdAndPassword(String userId, String password) throws SQLException {
-        //»ñÈ¡Êı¾İ¿âÁ¬½Ó
+        //è·å–æ•°æ®åº“è¿æ¥
         //c
         Connection connection = DBConnector.getConnection();
 
@@ -27,17 +27,17 @@ public class AccountDAO {
         preparedStatement.setString(2, password);
         ResultSet result = preparedStatement.executeQuery();
         result.next();
-//        ±£´æ½á¹û
+//        ä¿å­˜ç»“æœ
         int re = result.getInt(1);
-//        ¹é»¹Á´½Ó£¬¹Ø±Õresultset
+//        å½’è¿˜é“¾æ¥ï¼Œå…³é—­resultset
         DBConnector.giveBackConnection(connection, preparedStatement);
         result.close();
         return re;
     }
 
-    //      Í¨¹ıÕËºÅºÍÃÜÂë²éÑ¯ÓÃ»§ĞÅÏ¢
+    //      é€šè¿‡è´¦å·å’Œå¯†ç æŸ¥è¯¢ç”¨æˆ·ä¿¡æ¯
     public UserInfo selectUserByIdAndPassword(String userId, String password) throws SQLException {
-        //»ñÈ¡Êı¾İ¿âÁ¬½Ó
+        //è·å–æ•°æ®åº“è¿æ¥
         Connection connection = DBConnector.getConnection();
 
         String sql = "Select * from userInfo where userId=? And password=?";
@@ -45,7 +45,7 @@ public class AccountDAO {
         preparedStatement.setString(1, userId);
         preparedStatement.setString(2, password);
         ResultSet result = preparedStatement.executeQuery();
-//        ´Ó²éÑ¯½á¹ûÖĞ»ñÈ¡Êı¾İ£¬±£´æÔÚUserinfoÖĞ
+//        ä»æŸ¥è¯¢ç»“æœä¸­è·å–æ•°æ®ï¼Œä¿å­˜åœ¨Userinfoä¸­
         UserInfo userInfo = new UserInfo();
         if (result.next()) {
             userInfo.setUserId(result.getString("userId"));
@@ -53,14 +53,14 @@ public class AccountDAO {
             userInfo.setAccountType(result.getString("accountType"));
         }
 
-//        ¹é»¹Á´½Ó£¬¹Ø±Õresultset
+//        å½’è¿˜é“¾æ¥ï¼Œå…³é—­resultset
         DBConnector.giveBackConnection(connection, preparedStatement);
         result.close();
         return userInfo;
     }
 
     public ArrayList<UserInfo> selectAllUserInfo() throws SQLException {
-        //»ñÈ¡Êı¾İ¿âÁ¬½Ó
+        //è·å–æ•°æ®åº“è¿æ¥
         Connection connection = DBConnector.getConnection();
 
         String sql = "Select * from userInfo where userId=?";
@@ -77,14 +77,14 @@ public class AccountDAO {
             userInfo.setAccountType(result.getString("accountType"));
             userInfoList.add(userInfo);
         }
-//        ¹é»¹Á´½Ó£¬¹Ø±Õresultset
+//        å½’è¿˜é“¾æ¥ï¼Œå…³é—­resultset
         DBConnector.giveBackConnection(connection, preparedStatement);
         result.close();
         return userInfoList;
     }
 
     public UserInfo selectUserInfoByUserId(String userId) throws SQLException {
-        //»ñÈ¡Êı¾İ¿âÁ¬½Ó
+        //è·å–æ•°æ®åº“è¿æ¥
         Connection connection = DBConnector.getConnection();
 
         String sql = "Select * from userInfo where userId=?";
@@ -105,7 +105,7 @@ public class AccountDAO {
     }
 
     public ArrayList<UserInfo> selectUserInfoByCondition(String condition) throws SQLException {
-        //»ñÈ¡Êı¾İ¿âÁ¬½Ó
+        //è·å–æ•°æ®åº“è¿æ¥
         Connection connection = DBConnector.getConnection();
 
         String sql = "Select * from userInfo " + condition;
@@ -127,7 +127,7 @@ public class AccountDAO {
     }
 
     public boolean deleteUserInfoByUserId(String userId) throws SQLException {
-        //»ñÈ¡Êı¾İ¿âÁ¬½Ó
+        //è·å–æ•°æ®åº“è¿æ¥
         Connection connection = DBConnector.getConnection();
 
         String sql = "Delete from userInfo where userId=?";
@@ -143,7 +143,7 @@ public class AccountDAO {
     }
 
     public boolean InsertUserInfo(UserInfo userInfo) throws SQLException {
-        //»ñÈ¡Êı¾İ¿âÁ¬½Ó
+        //è·å–æ•°æ®åº“è¿æ¥
         Connection connection = DBConnector.getConnection();
 
         String sql = "Insert into userInfo(userId,password,owner,accountType) values(?,?,?,?)";
@@ -162,7 +162,7 @@ public class AccountDAO {
     }
 
     public boolean updateUserInfo(UserInfo userInfo) throws SQLException {
-        //»ñÈ¡Êı¾İ¿âÁ¬½Ó
+        //è·å–æ•°æ®åº“è¿æ¥
         Connection connection = DBConnector.getConnection();
 
         String sql = "Update userInfo set password=?,owner=?,accountType=? where userId=?";
