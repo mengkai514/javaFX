@@ -12,7 +12,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/controllers/LoginController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/controllers/TechFrameController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/controllers/imageViewController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controllers/resultViewController.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/model/UserInfo.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/service/AccountManageService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/service/ConveyorService.java" charset="UTF-8" />

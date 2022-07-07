@@ -1,6 +1,7 @@
 package controllers;
 
 import app.MyApplication;
+import configs.StaticResourcesConfig;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,11 +11,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import service.ConveyorService;
 import service.impl.ConveyorServiceImpl;
 import sun.misc.BASE64Decoder;
+import utils.FxmlLoader;
 import utils.SocketListener;
 
 import java.io.FileNotFoundException;
@@ -22,6 +26,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 /**
  * @description: 产品检测界面的controller
@@ -31,8 +36,10 @@ import java.util.ResourceBundle;
 public class ProductDetectController implements Initializable {
 
     @FXML
-    private TextField numberOfDefectTextField;
+    private AnchorPane anchorPanel;
 
+    @FXML
+    private TextField numberOfDefectTextField;
 
     @FXML
     private Button clearProductPlateBuuton1;
@@ -68,6 +75,9 @@ public class ProductDetectController implements Initializable {
     private Label statusLabel;
 
     @FXML
+    private FlowPane flowPane;
+
+    @FXML
     private TextField numberOfGoodProductTextField;
 
     @FXML
@@ -90,7 +100,16 @@ public class ProductDetectController implements Initializable {
     //良品数量
     private int numberOfGoodProduct = 0;
 
+    private ArrayList<ResultViewController> resultViewControllerList= new ArrayList<>();
+
+    private ArrayList<AnchorPane> resultViewAnchorPaneList = new ArrayList<>();
+
+    public static int currentResultViewIndex=0;
+    public static int maxResultViewIndex=9;
+
     private MyApplication myApplication;
+
+
 
     public void setApp(MyApplication myApplication) {
         this.myApplication = myApplication;
@@ -163,91 +182,34 @@ public class ProductDetectController implements Initializable {
 
     }
 
-    public void setImageByBase64(String base64) {
-        //将base64解码为jpg图片,并显示在imageView上
-        BASE64Decoder decoder = new BASE64Decoder();
-        OutputStream out = null;
-        try {
-//          打开文件输出流
-            out = new FileOutputStream("src\\main\\resources\\image\\result.jpg");
-            //去掉前缀data:image/jpeg;base64,
-            base64 = base64.substring(base64.indexOf(",", 1) + 1, base64.length());
-            // Base64解码
-            byte[] b = decoder.decodeBuffer(base64);
-            //处理异常值
-            for (int i = 0; i < b.length; ++i) {
-                if (b[i] < 0) {// 调整异常数据
-                    b[i] += 256;
-                }
-            }
-            //写入文件
-            out.write(b);
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } finally {
-            try {
-                out.flush();
-                out.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-        }
-        //从刚刚存入的文件中创建Image对象
-        Image image = new Image("file:src/main/resources/image/result.jpg");
-        //将image对象显示在imageView上
-        imageView.setImage(image);
-    }
 
     /**
-     * 从url获取图片并设置在imageView上，本地url示例：file:src/main/resources/image/result.jpg
-     * @param imagePath
-     */
-    public void setImageByPath(String imagePath) {
-        Image image = new Image(imagePath);
-        imageView.setImage(image);
-    }
-
-    /**
-     * 回调函数，用于设置结果在页面上显示
+     * 回调函数，用于设置结果在resultView上显示
      * @param imageBase64 图片的base64编码
      * @param isPinAskew 针脚是否歪斜
      * @param isPinGlue 针脚是否黏胶
      * @param isGlueOut 是否溢胶
      */
     public void setDetectResult(String imageBase64, boolean isPinAskew, boolean isPinGlue, boolean isGlueOut) {
-        //更新图片
-        setImageByBase64(imageBase64);
-        //更新检测结果
-        //针脚歪斜
-        if (isPinAskew) {
-            pinAskewCircle.setFill(Color.GREEN);
-        } else {
-            pinAskewCircle.setFill(Color.RED);
+        //更新结果
+        resultViewControllerList.get(currentResultViewIndex).setDetectResult(imageBase64 ,isPinAskew, isPinGlue, isGlueOut);
+        //设置当前resultView的边框样式为默认样式，并将下一个resultView的边框样式改为选中样式
+        resultViewControllerList.get(currentResultViewIndex).setDefaultBorderStyle();
+        resultViewControllerList.get((currentResultViewIndex+1)%(maxResultViewIndex+1)).setSelectedBorderStyle();
+        //更新currentResultViewIndex
+        if(currentResultViewIndex<maxResultViewIndex){
+            currentResultViewIndex++;
+        }else{
+            currentResultViewIndex=0;
         }
-        //针脚粘胶
-        if (isPinGlue) {
-            pinGlueCircle.setFill(Color.GREEN);
-        } else {
-            pinGlueCircle.setFill(Color.RED);
-        }
-        //溢胶
-        if (isGlueOut) {
-            glueOutCircle.setFill(Color.GREEN);
-        } else {
-            glueOutCircle.setFill(Color.RED);
-        }
+
+
 
 //        更新批次统计信息
         numberOfDetectedTextField.setText(String.valueOf(++numberOfDetected));
         if (isPinAskew == false || isPinGlue == false || isGlueOut == false) {
             numberOfDefectTextField.setText(String.valueOf(++numberOfDefect));
         }
-
         defectRate = ((double) numberOfDefect) / numberOfDetected;
 
         defectRateTextField.setText(String.valueOf(defectRate * 100).substring(0, 4) + "%");
@@ -273,9 +235,36 @@ public class ProductDetectController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         //创建socket监听线程实例
         SocketListener socketListener = new SocketListener();
+
         //传输本controller1的实例，以便在监听线程中调用回调函数更新界面
         socketListener.setProductDetectController(this);
-        //启动线程
+
+        //设置flowPane中内容的间距
+        flowPane.setHgap(10);
+        flowPane.setVgap(10);
+
+        //在flowPane中添加组件
+        ArrayList<Object> reList = new ArrayList<>();
+        ResultViewController resultViewController=null;
+        AnchorPane resultViewAnchorPane=null;
+//        在界面中的flowPane中添加多个resultView（检测结果的View）
+        int i=0;
+        while(i<=ProductDetectController.maxResultViewIndex){
+            //加载resultView的Controller 和 AnchorPane对象
+            reList = FxmlLoader.addFxml(StaticResourcesConfig.RESULTVIEW_VIEW_PATH);
+            resultViewController = (ResultViewController) reList.get(0);
+            resultViewAnchorPane = (AnchorPane) reList.get(1);
+            //设置每个resultView左上角的label显示的字样
+            resultViewController.setIndexLabel("数码管"+String.valueOf(i+1));
+            //将resultView载入到flowPane中
+            flowPane.getChildren().add(resultViewAnchorPane);
+//            将resultViewController保存在一个List方便后面调用
+            resultViewControllerList.add(resultViewController);
+            i++;
+        }
+        //设置第一个resultView的边框样式为选中样式(不知道为什么没有效果)
+//        resultViewControllerList.get(0).setSelectedBorderStyle();
+        //启动socket监听线程
         new Thread(socketListener).start();
     }
 }

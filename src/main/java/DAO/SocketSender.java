@@ -22,7 +22,7 @@ public class SocketSender {
             socket = new Socket("localhost", port);
             //获取输入输出流
             inputStream = socket.getInputStream();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "gbk"));
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));
             outputStream = socket.getOutputStream();
             //发送信息
             outputStream.write(sendString.getBytes());

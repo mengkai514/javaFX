@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductDetectController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="945.0" prefWidth="1631.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProductDetectController">
    <children>
       <Circle fx:id="statusCircle" fill="#eb0000" layoutX="56.0" layoutY="46.0" radius="25.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="21.0" />
       <Label layoutX="742.0" layoutY="91.0" prefHeight="50.0" prefWidth="209.0" text="当前批次信息" AnchorPane.rightAnchor="475.0" AnchorPane.topAnchor="91.0">
@@ -76,30 +76,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="45.0" layoutY="147.0" prefHeight="503.0" prefWidth="575.0" style="-fx-border-color: #FFCE47; -fx-border-width: 2;" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="147.0">
-         <children>
-            <ImageView fx:id="imageView" fitHeight="380.0" fitWidth="571.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Circle fx:id="pinAskewCircle" fill="LIME" layoutX="109.0" layoutY="425.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="93.0" AnchorPane.topAnchor="409.0" />
-            <Circle fx:id="pinGlueCircle" fill="LIME" layoutX="288.0" layoutY="425.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="272.0" AnchorPane.topAnchor="409.0" />
-            <Circle fx:id="glueOutCircle" fill="LIME" layoutX="466.0" layoutY="425.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="409.0" />
-            <Label layoutX="63.0" layoutY="457.0" text="针脚歪斜">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="240.0" layoutY="457.0" text="针脚黏胶">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="444.0" layoutY="457.0" text="溢胶">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <Label layoutX="45.0" layoutY="91.0" prefHeight="50.0" prefWidth="209.0" text="当前检测结果">
+      <Label layoutX="56.0" layoutY="91.0" prefHeight="50.0" prefWidth="209.0" text="当前检测结果" AnchorPane.leftAnchor="56.0" AnchorPane.topAnchor="91.0">
          <font>
             <Font size="32.0" />
          </font>
@@ -140,10 +117,11 @@
                </font></TextField>
          </children>
       </AnchorPane>
-      <Label fx:id="statusLabel" layoutX="108.0" layoutY="30.0" text="未运行">
+      <Label fx:id="statusLabel" layoutX="108.0" layoutY="30.0" text="未运行" AnchorPane.leftAnchor="108.0" AnchorPane.topAnchor="30.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
+      <FlowPane fx:id="flowPane" layoutX="52.0" layoutY="147.0" prefHeight="685.0" prefWidth="850.0" style="-fx-background-color: rgb(250,250,250);" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="729.0" AnchorPane.topAnchor="147.0" />
    </children>
 </AnchorPane>

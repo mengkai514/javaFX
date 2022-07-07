@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
+import utils.FxmlLoader;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -72,61 +73,39 @@ public class TechFrameController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        SimpleDoubleProperty heightProperty = new SimpleDoubleProperty(stackPane.prefHeightProperty().doubleValue());
-        SimpleDoubleProperty widthProperty = new SimpleDoubleProperty(stackPane.prefWidthProperty().doubleValue());
         ArrayList<Object> ReList = null;
 
         //加载账户管理界面
-        ReList = addFxml(StaticResourcesConfig.ACCOUNTMANAGE_VIEW_PATH, heightProperty, widthProperty);
+        ReList = FxmlLoader.addFxml(StaticResourcesConfig.ACCOUNTMANAGE_VIEW_PATH);
         accountManageController = (AccountManageController) ReList.get(0);
         accountManageAnchorPane = (AnchorPane) ReList.get(1);
-        accountManageAnchorPane.prefHeightProperty().bind(heightProperty);
-        accountManageAnchorPane.prefWidthProperty().bind(widthProperty);
+        //绑定长宽到父元素stackPane的长宽
+        accountManageAnchorPane.prefHeightProperty().bind(stackPane.heightProperty());
+        accountManageAnchorPane.prefWidthProperty().bind(stackPane.widthProperty());
 
 
         //加载产品检测界面
-        ReList = addFxml(StaticResourcesConfig.PRODUCTDETECT_VIEW_PATH, heightProperty, widthProperty);
+        ReList = FxmlLoader.addFxml(StaticResourcesConfig.PRODUCTDETECT_VIEW_PATH);
         productDetectController = (ProductDetectController) ReList.get(0);
         productDetectAnchorPane = (AnchorPane) ReList.get(1);
-        productDetectAnchorPane.prefHeightProperty().bind(heightProperty);
-        productDetectAnchorPane.prefWidthProperty().bind(widthProperty);
+        //绑定长宽到父元素stackPane的长宽
+        productDetectAnchorPane.prefHeightProperty().bind(stackPane.heightProperty());
+        productDetectAnchorPane.prefWidthProperty().bind(stackPane.widthProperty());
 
 
         //加载设备维护界面
-        ReList = addFxml(StaticResourcesConfig.EQUIPMENTSETTING_VIEW_PATH, heightProperty, widthProperty);
+        ReList = FxmlLoader.addFxml(StaticResourcesConfig.EQUIPMENTSETTING_VIEW_PATH);
         equipmentSettingController = (EquipmentSettingController) ReList.get(0);
         equipmentSettingAnchorPane = (AnchorPane) ReList.get(1);
-        equipmentSettingAnchorPane.prefHeightProperty().bind(heightProperty);
-        equipmentSettingAnchorPane.prefWidthProperty().bind(widthProperty);
+        //绑定长宽到父元素stackPane的长宽
+        equipmentSettingAnchorPane.prefHeightProperty().bind(stackPane.heightProperty());
+        equipmentSettingAnchorPane.prefWidthProperty().bind(stackPane.widthProperty());
 
         //以上三个放入stackPane显示
         stackPane.getChildren().addAll(equipmentSettingAnchorPane, productDetectAnchorPane, accountManageAnchorPane);
 
     }
 
-    private ArrayList<Object> addFxml(String fxmlPath, SimpleDoubleProperty stackPaneHeightProperty, SimpleDoubleProperty stackPaneWidthProperty) {
-        ArrayList<Object> objectsToReturn = new ArrayList<>();
-        FXMLLoader loader = new FXMLLoader();
-
-        loader.setBuilderFactory(new JavaFXBuilderFactory());
-        loader.setLocation(MyApplication.class.getResource(fxmlPath));
-
-
-        InputStream in = MyApplication.class.getResourceAsStream(fxmlPath);
-
-        try {
-            AnchorPane page = (AnchorPane) loader.load(in);
-            objectsToReturn.add((Initializable) loader.getController());
-            objectsToReturn.add(page);
-//            page.widthProperty().bind(stackPaneWidthProperty);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-
-            return objectsToReturn;
-        }
-
-    }
 
     public void setApp(MyApplication myApplication) {
         this.myApplication = myApplication;

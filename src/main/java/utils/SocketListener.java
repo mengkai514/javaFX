@@ -34,10 +34,10 @@ public class SocketListener implements Runnable {
                 Socket socket = serverSocket.accept();
                 //获取输入流，读取客户端发送过来的信息
                 InputStream inputStream = socket.getInputStream();
-                BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, "gbk"));
+                BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));
                 //获取输出流，向客户端发送信息
                 OutputStream outputStream = socket.getOutputStream();
-                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(outputStream, "gbk"));
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(outputStream, "utf-8"));
 
                 //读取客户端发送过来的信息
                 String recvStr = br.readLine();
@@ -47,24 +47,24 @@ public class SocketListener implements Runnable {
 
                     //如果是告知检测到了数码管
                     if (recvMap.get("type").equals("productDetected")) {
-                        Platform.runLater(new Runnable() {
-                            @Override
-                            public void run() {
-                                //显示对于图片给用户
-                                productDetectController.setImageByPath("file:src/main/resources/image/positionDetected.jpg");
-                                //重置检测结果图片下方的三个圆点的颜色为绿色
-                                productDetectController.resetDefectCircleColor();
-                            }
-                        });
+//                        Platform.runLater(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                //显示对于图片给用户
+//                                productDetectController.setImageByPath("file:src/main/resources/image/positionDetected.jpg");
+//                                //重置检测结果图片下方的三个圆点的颜色为绿色
+//                                productDetectController.resetDefectCircleColor();
+//                            }
+//                        });
                     }
                     //如果是告知抓取到了图片
                     else if (recvMap.get("type").equals("ImageCaught")) {
-                        Platform.runLater(new Runnable() {
-                            @Override
-                            public void run() {
-                                productDetectController.setImageByPath("file:src/main/resources/image/computing.jpg");
-                            }
-                        });
+//                        Platform.runLater(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                productDetectController.setImageByPath("file:src/main/resources/image/computing.jpg");
+//                            }
+//                        });
                     }
                     //如果是设置结果集
                     else if (recvMap.get("type").equals("setDetectResult")) {
@@ -93,12 +93,6 @@ public class SocketListener implements Runnable {
                 //severSocket不能在此关闭，否则serverSocket.accept()会报错closed
                 //serverSocket.close();
             } catch (Exception e) {
-                e.printStackTrace();
-            }
-            //线程睡眠5秒
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }

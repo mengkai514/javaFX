@@ -27,11 +27,11 @@ public class MyApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
         stage.setTitle("数码管缺陷检测系统");
+        //设置可以改变窗口大小
+        stage.setResizable(true);
         //加载登录界面
         gotoLogin();
-        //设置可改变窗口大小
-        stage.setResizable(true);
-        //展示揭界面
+        //展示界面
         stage.show();
     }
 
@@ -64,6 +64,7 @@ public class MyApplication extends Application {
         try {
             ProductDetectController productDetectController = (ProductDetectController) replaceSceneContent(StaticResourcesConfig.PRODUCTDETECT_VIEW_PATH);
             productDetectController.setApp(this);
+//            stage.setMaximized(true);
         } catch (Exception ex) {
             System.out.println("技术操作员界面加载错误");
         }
@@ -81,18 +82,21 @@ public class MyApplication extends Application {
      * @throws Exception
      */
     private Initializable replaceSceneContent(String fxml) throws Exception {
+        //先将窗口最大化效果取消，如果不这个做，下面设置在窗口最大化时会出现显示问题，原因不明
+        stage.setMaximized(false);
 
         FXMLLoader loader = new FXMLLoader();
         loader.setBuilderFactory(new JavaFXBuilderFactory());
         loader.setLocation(MyApplication.class.getResource(fxml));
         InputStream in = MyApplication.class.getResourceAsStream(fxml);
         try {
-
             Parent root = loader.load(in);
 //            准备好新Scene
             Scene scene = new Scene(root);
+//            将新Scene设置到Stage中
             stage.setScene(scene);
-            stage.sizeToScene();
+//             设置窗口最大化
+            stage.setMaximized(true);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
