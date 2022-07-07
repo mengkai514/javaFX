@@ -2,23 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/PythonImageConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_28.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaFX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFX.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Check.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/DeviceParamsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/DeviceParamsView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/DetectProductPositionByFiberSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/DetectProductPositionByFiberSensors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/ImageCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ImageCatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/deviceParams.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/deviceParams.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Camera.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Check$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Check$1$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Check$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Check$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Check.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientReceive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ClientReceive.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ClientSend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/DeviceParamsView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/DeviceParamsView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/MainUi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/MainUi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/PythonImageConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/PythonImageConnect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/deviceParams.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/deviceParams.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/util/DetectProductPositionByFiberSensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/DetectProductPositionByFiberSensors.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/util/ImageCatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ImageCatch.class" afterDir="false" />
     </list>
@@ -74,6 +88,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -93,6 +109,11 @@
         <option name="mavenHome" value="$PROJECT_DIR$/../../develop/apache-maven-3.3.9" />
         <option name="userSettingsFile" value="D:\JAVA\develop\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
@@ -114,18 +135,27 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/app" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JAVA\workspace\JavaFX\src\main\resources\sample" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\app" />
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\configs" />
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\controllers" />
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\DAO" />
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\service" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.MyApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -195,6 +225,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.MyApplication" />
+      <module name="JavaFX" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -234,6 +278,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyApplication" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MKMK" />
         <item itemvalue="Application.Check" />
@@ -260,7 +305,14 @@
       <workItem from="1656594590460" duration="1714000" />
       <workItem from="1656638839604" duration="2276000" />
       <workItem from="1656725447676" duration="23599000" />
-      <workItem from="1656812500069" duration="13704000" />
+      <workItem from="1656812500069" duration="15777000" />
+      <workItem from="1656915430742" duration="34144000" />
+      <workItem from="1657025464436" duration="3824000" />
+      <workItem from="1657069004735" duration="4649000" />
+      <workItem from="1657073719467" duration="77000" />
+      <workItem from="1657073839998" duration="21764000" />
+      <workItem from="1657105401668" duration="2336000" />
+      <workItem from="1657176354564" duration="547000" />
     </task>
     <servers />
   </component>
@@ -272,49 +324,118 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1656589369101">
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1657077530492">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1656589369101" />
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1657077530492" />
+    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1657104178453">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1657104178453" />
     <state x="305" y="45" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1655969187263">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="305" y="45" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.728@0.0.1366.728" timestamp="1655969187263" />
-    <state x="463" y="108" key="FileChooserDialogImpl" timestamp="1655969277536">
+    <state x="467" y="230" width="431" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1657083841640">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1655969277536" />
-    <state width="1323" height="350" key="GridCell.Tab.0.bottom" timestamp="1656838783928">
+    <state x="467" y="230" width="431" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1657083841640" />
+    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1657081694895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="350" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1656838783928" />
-    <state width="1323" height="350" key="GridCell.Tab.0.center" timestamp="1656838783928">
+    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1657081694895" />
+    <state x="463" y="108" key="FileChooserDialogImpl" timestamp="1657074015243">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="350" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1656838783928" />
-    <state width="1323" height="350" key="GridCell.Tab.0.left" timestamp="1656838783927">
+    <state x="463" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1657074015243" />
+    <state width="1323" height="476" key="GridCell.Tab.0.bottom" timestamp="1657115527066">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="350" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1656838783927" />
-    <state width="1323" height="350" key="GridCell.Tab.0.right" timestamp="1656838783928">
+    <state width="1323" height="476" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1657115527066" />
+    <state width="1323" height="476" key="GridCell.Tab.0.center" timestamp="1657115527065">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="350" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1656838783928" />
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1655969644689">
+    <state width="1323" height="476" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1657115527065" />
+    <state width="1323" height="476" key="GridCell.Tab.0.left" timestamp="1657115527065">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1655969644689" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1655969285440">
+    <state width="1323" height="476" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1657115527065" />
+    <state width="1323" height="476" key="GridCell.Tab.0.right" timestamp="1657115527065">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1655969285440" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1656489091797">
+    <state width="1323" height="476" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1657115527065" />
+    <state width="1323" height="348" key="GridCell.Tab.1.bottom" timestamp="1657105357588">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1656489091797" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1656399672189">
+    <state width="1323" height="348" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1657105357588" />
+    <state width="1323" height="348" key="GridCell.Tab.1.center" timestamp="1657105357587">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1656399672189" />
+    <state width="1323" height="348" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1657105357587" />
+    <state width="1323" height="348" key="GridCell.Tab.1.left" timestamp="1657105357587">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="348" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1657105357587" />
+    <state width="1323" height="348" key="GridCell.Tab.1.right" timestamp="1657105357588">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="348" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1657105357588" />
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1657074096076">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1657074096076" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1657077009878">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1657077009878" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1657097787789">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1657097787789" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1657096333720">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1657096333720" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/utils/SocketListener.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

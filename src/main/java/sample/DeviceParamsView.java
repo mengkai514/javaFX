@@ -21,10 +21,10 @@ public class DeviceParamsView extends Application {
         TextField conveyorSpeed = (TextField) root.lookup("#conveyorSpeed");
 
         cameraHeight.setText(controller.paramsList.get(2));
-        cameraWidth.setText(controller.paramsList.get(4));
+        cameraWidth.setText(controller.paramsList.get(3));
         exposureTime.setText(controller.paramsList.get(1));
         acquisitionFrameRate.setText(controller.paramsList.get(0));
-        conveyorSpeed.setText(controller.paramsList.get(3));
+        conveyorSpeed.setText(controller.paramsList.get(4));
 //        System.out.println(controller.paramsList.get(1));
 
     }

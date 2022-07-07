@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/main/java/DAO/AccountDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/MyApplication.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/configs/StaticResourcesConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controllers/AccountManageController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controllers/LoginController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/model/UserInfo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/ConveyorService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/impl/AccountManageServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/impl/ConveyorServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/utils/DBConnector.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/utils/SocketListener.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

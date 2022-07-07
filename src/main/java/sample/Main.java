@@ -26,20 +26,20 @@ public class Main{
             }
         }).start();
 
-        new Thread(new Runnable() {
-            public void run() {
-                // 通过光纤传感器检测物品位置，看物品是否到达检测区域
-                while(true){
-                    boolean isArrive = detectProduct.detectProductPosition();
-                    System.out.println(isArrive);
-                    if (isArrive){
-//                        flag = false;
-                        mainApp.ImageCatch2();
-                    }
-                }
-
-            }
-        }).start();
+//        new Thread(new Runnable() {
+//            public void run() {
+//                // 通过光纤传感器检测物品位置，看物品是否到达检测区域
+//                while(true){
+//                    boolean isArrive = detectProduct.detectProductPosition();
+//                    System.out.println(isArrive);
+//                    if (isArrive){
+////                        flag = false;
+//                        mainApp.ImageCatch2();
+//                    }
+//                }
+//
+//            }
+//        }).start();
 
     }
 }

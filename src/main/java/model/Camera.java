@@ -1,4 +1,4 @@
-package entity;
+package model;
 
 public class Camera {
     private String height;

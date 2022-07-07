@@ -3,11 +3,8 @@ package util;
 import com.alibaba.fastjson.JSONObject;
 import sample.Main;
 import sample.PythonImageConnect;
-import sample.SocketCommunication;
 import sun.misc.BASE64Decoder;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.*;
 
 public class ImageCatch implements Runnable {
@@ -46,12 +43,15 @@ public class ImageCatch implements Runnable {
 //            e.printStackTrace();
 //        }
 
-        String catchImageResult = imageResult.getString("imageReturn");
+        String catchImageResult = imageResult.getString("content");
+        JSONObject ImageResult = JSONObject.parseObject(catchImageResult);
+        String image = ImageResult.getString("ImageResult");
+
 //        byte[] imageBytes = catchImageResult.getBytes();
         System.out.println("图片到达");
         BASE64Decoder decoder = new BASE64Decoder();
         try {
-            byte[] b = decoder.decodeBuffer(catchImageResult);
+            byte[] b = decoder.decodeBuffer(image);
             for (int i = 0; i < b.length ; i++) {
                 if (b[i] < 0){
                     b[i] += 256;

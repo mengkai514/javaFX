@@ -1,10 +1,8 @@
 package sample;
 
 import com.alibaba.fastjson.JSONObject;
-import entity.Camera;
+import model.Camera;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -32,30 +30,36 @@ public class Controller {
 
 
     static ArrayList<String> paramsList = new ArrayList<String>();
-
+    // 开启传送带
     public void runDevice(MouseEvent mouseEvent) {
-        SocketCommunication socketCommunication = new SocketCommunication("deviceStart");
-//        socketCommunication.communite("deviceStart");
+        SocketCommunication startConveyor = new SocketCommunication();
+        startConveyor.send("startConveyor");
     }
 
     public void runCamera(MouseEvent mouseEvent) {
-        SocketCommunication socketCommunication = new SocketCommunication("cameraStart");
-//        socketCommunication.communite("cameraStart");
+        SocketCommunication cameraStart = new SocketCommunication();
+        cameraStart.send("cameraStart");
     }
 
+    // 关闭传送带
     public void stopDevice(MouseEvent mouseEvent) {
-        SocketCommunication socketCommunication = new SocketCommunication("deviceStop");
-//        socketCommunication.communite("deviceStop");
+        SocketCommunication stopConveyor = new SocketCommunication();
+        stopConveyor.send("stopConveyor");
     }
 
     public void toOpenDeviceParamsView(MouseEvent mouseEvent) {
         Stage deviceParamsStage = (Stage) deviceParams.getScene().getWindow();
         deviceParamsStage.close();
         try {
+            long startTime = System.currentTimeMillis();
+            SocketCommunication getDeviceParams = new SocketCommunication();
+            String deviceParams = getDeviceParams.send("getDeviceParams");
+            System.out.println(deviceParams);
+            JSONObject params = JSONObject.parseObject(deviceParams);
 
-            SocketCommunication socketCommunication = new SocketCommunication("getDeviceParams");
-//            JSONObject params = socketCommunication.communite("getDeviceParams");
-            JSONObject params = socketCommunication.res;
+            long endTime = System.currentTimeMillis();
+            System.out.println("获取设备参数时间:"+(endTime-startTime));
+
             String paramsData = params.getString("content");
             Map<String,String> paramsMap = (Map) JSONObject.parse(paramsData);
             for (Object map : paramsMap.entrySet()) {
@@ -74,19 +78,23 @@ public class Controller {
     public void alterParams(MouseEvent mouseEvent) {
 
         //获取界面上的参数值
-//        String height = cameraHeight.getText();
-//        String width = cameraWidth.getText();
-//        String acquisitionRate = acquisitionFrameRate.getText();
-//        String exTime = exposureTime.getText();
-//        String conveyorspeed = conveyorSpeed.getText();
-//
-//        Camera camera = new Camera(height,width,acquisitionRate,exTime,conveyorspeed);
-//        System.out.println(camera);
+        String height = cameraHeight.getText();
+        String width = cameraWidth.getText();
+        String acquisitionRate = acquisitionFrameRate.getText();
+        String exTime = exposureTime.getText();
+        String conveyorspeed = conveyorSpeed.getText();
+
+        Camera camera = new Camera(height,width,acquisitionRate,exTime,conveyorspeed);
+        System.out.println(camera);
 //        JSONObject jsonObject = new JSONObject();
 //        JSONObject json = (JSONObject) jsonObject.toJSON(camera);
 //        System.out.println(json);
-//
-//        SocketCommunication socketCommunication = new SocketCommunication(json.toString());
+//        JSONObject cameraJson= (JSONObject) JSONObject.toJSON(camera);
+        JSONObject cameraJson = new JSONObject();
+        cameraJson.put("type","alterParams");
+        cameraJson.put("content",camera);
+        System.out.println("camera对象的json:" + cameraJson.toString());
+//        SocketCommunication socketCommunication = new SocketCommunication(cameraJson.toString());
 
 
         // 跳转技术员产品检测页面

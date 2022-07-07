@@ -85,7 +85,7 @@
             <TextField fx:id="acquisitionFrameRate" layoutX="93.0" layoutY="98.0" prefHeight="23.0" prefWidth="93.0" />
          </children>
       </Pane>
-      <Label layoutX="266.0" text="相机参数">
+      <Label layoutX="266.0" text="设备参数">
          <font>
             <Font size="40.0" />
          </font>
