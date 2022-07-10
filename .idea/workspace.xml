@@ -2,39 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_28.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaFX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFX.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/DeviceParamsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/DeviceParamsView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/DetectProductPositionByFiberSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/DetectProductPositionByFiberSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ImageCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ImageCatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/deviceParams.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/deviceParams.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Camera.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Check$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Check$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Check$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Check$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Check.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientReceive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ClientReceive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ClientSend.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/DeviceParamsView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/DeviceParamsView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/MainUi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/MainUi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/PythonImageConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/PythonImageConnect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/StaticResourcesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/StaticResourcesConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/EquipmentSettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/EquipmentSettingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TechFrameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TechFrameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SocketListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/result.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/accountManage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/accountManage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/equipmentSetting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/equipmentSetting.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/productDetect.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/MyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/MyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/configs/StaticResourcesConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/configs/StaticResourcesConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/EquipmentSettingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/EquipmentSettingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ProductDetectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ProductDetectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/TechFrameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/TechFrameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/image/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/image/result.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientReceive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientSend.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/deviceParams.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/deviceParams.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/DetectProductPositionByFiberSensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/DetectProductPositionByFiberSensors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ImageCatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ImageCatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/SocketCommunicationOri.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/accountManage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/accountManage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/equipmentSetting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/equipmentSetting.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/productDetect.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/productDetect.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/GetParamsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/GetParamsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/SocketListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/SocketListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/SocketListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/SocketListener.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +85,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="HTML File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -128,6 +126,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -139,20 +138,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/app" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/sample" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/sample" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\utils" />
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\controllers" />
       <recent name="D:\JAVA\workspace\JavaFX\src\main\resources\sample" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controllers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\resources\sample" />
       <recent name="D:\JAVA\workspace\JavaFX\src\main\java\app" />
       <recent name="D:\JAVA\workspace\JavaFX\src\main\java\configs" />
       <recent name="D:\JAVA\workspace\JavaFX\src\main\java\controllers" />
       <recent name="D:\JAVA\workspace\JavaFX\src\main\java\DAO" />
-      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\service" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MyApplication">
@@ -255,6 +260,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="dataAnalyze.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/JavaFX/sample/dataAnalyze.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -279,6 +287,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MyApplication" />
+        <item itemvalue="JavaScript Debug.dataAnalyze.html" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.MKMK" />
         <item itemvalue="Application.Check" />
@@ -312,7 +321,13 @@
       <workItem from="1657073719467" duration="77000" />
       <workItem from="1657073839998" duration="21764000" />
       <workItem from="1657105401668" duration="2336000" />
-      <workItem from="1657176354564" duration="547000" />
+      <workItem from="1657176354564" duration="16493000" />
+      <workItem from="1657201099038" duration="860000" />
+      <workItem from="1657243176474" duration="8745000" />
+      <workItem from="1657254907672" duration="11871000" />
+      <workItem from="1657337458339" duration="37000" />
+      <workItem from="1657337536233" duration="24000" />
+      <workItem from="1657337698309" duration="11881000" />
     </task>
     <servers />
   </component>
@@ -328,10 +343,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1657077530492" />
-    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1657104178453">
+    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1657245940564">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1657104178453" />
+    <state x="830" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1657245940564" />
     <state x="305" y="45" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1655969187263">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -340,30 +355,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="467" y="230" width="431" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1657083841640" />
-    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1657081694895">
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1657191494305">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1657081694895" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1657191494305" />
+    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1657249425119">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1657249425119" />
+    <state x="413" y="113" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1657338829233">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="113" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1657338829233" />
     <state x="463" y="108" key="FileChooserDialogImpl" timestamp="1657074015243">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1657074015243" />
-    <state width="1323" height="476" key="GridCell.Tab.0.bottom" timestamp="1657115527066">
+    <state width="1323" height="232" key="GridCell.Tab.0.bottom" timestamp="1657447076989">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="476" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1657115527066" />
-    <state width="1323" height="476" key="GridCell.Tab.0.center" timestamp="1657115527065">
+    <state width="1323" height="244" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1657445885987" />
+    <state width="1877" height="411" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1657339812485" />
+    <state width="1323" height="244" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1657444985640" />
+    <state width="1323" height="232" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1657447076989" />
+    <state width="1323" height="232" key="GridCell.Tab.0.center" timestamp="1657447076989">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="476" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1657115527065" />
-    <state width="1323" height="476" key="GridCell.Tab.0.left" timestamp="1657115527065">
+    <state width="1323" height="244" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1657445885987" />
+    <state width="1877" height="411" key="GridCell.Tab.0.center/0.0.1366.728/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1657339812485" />
+    <state width="1323" height="244" key="GridCell.Tab.0.center/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1657444985640" />
+    <state width="1323" height="232" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1657447076989" />
+    <state width="1323" height="232" key="GridCell.Tab.0.left" timestamp="1657447076989">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="476" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1657115527065" />
-    <state width="1323" height="476" key="GridCell.Tab.0.right" timestamp="1657115527065">
+    <state width="1323" height="244" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1657445885986" />
+    <state width="1877" height="411" key="GridCell.Tab.0.left/0.0.1366.728/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1657339812485" />
+    <state width="1323" height="244" key="GridCell.Tab.0.left/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1657444985640" />
+    <state width="1323" height="232" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1657447076989" />
+    <state width="1323" height="232" key="GridCell.Tab.0.right" timestamp="1657447076989">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="476" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1657115527065" />
+    <state width="1323" height="244" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1657445885987" />
+    <state width="1877" height="411" key="GridCell.Tab.0.right/0.0.1366.728/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1657339812485" />
+    <state width="1323" height="244" key="GridCell.Tab.0.right/0.0.1366.728/-1920.0.1920.1040@0.0.1366.728" timestamp="1657444985640" />
+    <state width="1323" height="232" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1657447076989" />
     <state width="1323" height="348" key="GridCell.Tab.1.bottom" timestamp="1657105357588">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -380,62 +415,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="348" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1657105357588" />
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1657074096076">
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog" timestamp="1657245131227">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1657074096076" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1657077009878">
+    <state x="213" y="22" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1657245131227" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1657201958376">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1657077009878" />
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1657097787789">
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1657201958376" />
+    <state x="482" y="144" key="chooseDestDirectoryDialog" timestamp="1657196041767">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1657097787789" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1657096333720">
+    <state x="482" y="144" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1657196041767" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1657247059144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1657096333720" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java</url>
-          <line>110</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utils/SocketListener.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1657247059144" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1657200475222">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1657200475222" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package app;
 
 import configs.StaticResourcesConfig;
+import controllers.FactoryManagerController;
 import controllers.LoginController;
 import controllers.ProductDetectController;
 import controllers.TechFrameController;
@@ -71,6 +72,12 @@ public class MyApplication extends Application {
 
 
     public void gotoMasterPage() {
+        try {
+            FactoryManagerController factoryManagerController = (FactoryManagerController) replaceSceneContent(StaticResourcesConfig.MASTERMAIN_VIEW_PATH);
+            factoryManagerController.setApp(this);
+        } catch (Exception ex) {
+            System.out.println("厂长界面加载错误");
+        }
     }
 
     /**

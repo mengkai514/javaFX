@@ -16,7 +16,7 @@ import java.util.Map;
  */
 public class SocketListener implements Runnable {
 
-    private static ProductDetectController productDetectController;
+    private ProductDetectController productDetectController;
 
     @Override
     public void run() {
@@ -41,12 +41,12 @@ public class SocketListener implements Runnable {
 
                 //读取客户端发送过来的信息
                 String recvStr = br.readLine();
-                System.out.println("recvStr"+recvStr);
                 if (recvStr != null) {
-//                    //将recvStr这个json转换Map对象
+                    //将recvStr这个json转换Map对象
                     Map<String, Object> recvMap = JSONObject.parseObject(recvStr, Map.class);
-//                    //如果是告知检测到了数码管
-//                    if (recvMap.get("type").equals("productDetected")) {
+
+                    //如果是告知检测到了数码管
+                    if (recvMap.get("type").equals("productDetected")) {
 //                        Platform.runLater(new Runnable() {
 //                            @Override
 //                            public void run() {
@@ -56,20 +56,20 @@ public class SocketListener implements Runnable {
 //                                productDetectController.resetDefectCircleColor();
 //                            }
 //                        });
-//                    }
-//                    //如果是告知抓取到了图片
-//                    else if (recvMap.get("type").equals("ImageCaught")) {
+                    }
+                    //如果是告知抓取到了图片
+                    else if (recvMap.get("type").equals("ImageCaught")) {
 //                        Platform.runLater(new Runnable() {
 //                            @Override
 //                            public void run() {
 //                                productDetectController.setImageByPath("file:src/main/resources/image/computing.jpg");
 //                            }
 //                        });
-//                    }
+                    }
                     //如果是设置结果集
-                    if (recvMap.get("type").equals("setDetectResult")) {
+                    else if (recvMap.get("type").equals("setDetectResult")) {
                         Map resultMap = (Map) recvMap.get("content");
-                        Boolean isPinAsknew = (Boolean) resultMap.get("isPinAsknew");
+                        Boolean isPinAskew = (Boolean) resultMap.get("isPinAskew");
                         Boolean isPinGlue = (Boolean) resultMap.get("isPinGlue");
                         Boolean isGlueOut = (Boolean) resultMap.get("isGlueOut");
                         String Base64Data = (String) resultMap.get("ImageResult");
@@ -77,7 +77,7 @@ public class SocketListener implements Runnable {
                         Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
-                                productDetectController.setDetectResult(Base64Data, isPinAsknew, isPinGlue, isGlueOut);
+                                productDetectController.setDetectResult(Base64Data, isPinAskew, isPinGlue, isGlueOut);
                             }
                         });
                     } else {
@@ -93,12 +93,6 @@ public class SocketListener implements Runnable {
                 //severSocket不能在此关闭，否则serverSocket.accept()会报错closed
                 //serverSocket.close();
             } catch (Exception e) {
-                e.printStackTrace();
-            }
-            //线程睡眠5秒
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
