@@ -37,6 +37,10 @@ public class EquipmentSettingController implements Initializable {
     private TextField conveyorSpeed;
     @FXML
     private Button toProductDetectView;
+    @FXML
+    private TextField cameraLeftConnect;
+    @FXML
+    private TextField PLCConnect;
 
 
     @Override
@@ -54,12 +58,20 @@ public class EquipmentSettingController implements Initializable {
                 Object acquisitionF = resultMap.get("AcquisitionFrameRate");
                 Object exposuretime = resultMap.get("ExposureTime");
                 Object conveyorspeed = resultMap.get("conveyorSpeed");
+                String cameraLeftIsConnect = (String) resultMap.get("cameraLeftIsConnect");
+                String PLCIsConnect = (String) resultMap.get("PLCIsConnect");
 
                 cameraHeight.setText(Integer.toString(height));
                 cameraWidth.setText(Integer.toString(width));
                 acquisitionFrameRate.setText(acquisitionF.toString());
                 exposureTime.setText(exposuretime.toString());
                 conveyorSpeed.setText(conveyorspeed.toString());
+                if(cameraLeftIsConnect.equals("True")){
+                    cameraLeftConnect.setText("已连接");
+                }
+                if(PLCIsConnect.equals("True")){
+                    PLCConnect.setText("已连接");
+                }
             }
         }
 
@@ -77,14 +89,14 @@ public class EquipmentSettingController implements Initializable {
         SetParamsService setParamsService = new SetParamsServiceImpl();
         boolean result = setParamsService.setParams(camera);
         if (result) {
-            //弹窗提示传送带停止成功
+            //弹窗提示修改成功
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("提示");
             alert.setHeaderText("修改成功");
             alert.setContentText("修改成功");
             alert.showAndWait();
         } else {
-            //弹窗提示传送带启动失败
+            //弹窗提示修改失败
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("提示");
             alert.setHeaderText("修改失败");

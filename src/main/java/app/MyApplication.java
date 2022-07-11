@@ -1,6 +1,7 @@
 package app;
 
 import configs.StaticResourcesConfig;
+import controllers.FactoryManagerController;
 import controllers.LoginController;
 import controllers.ProductDetectController;
 import controllers.TechFrameController;
@@ -27,10 +28,10 @@ public class MyApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
         stage.setTitle("数码管缺陷检测系统");
-        //加载登录界面
-        gotoLogin();
         //设置可改变窗口大小
         stage.setResizable(true);
+        //加载登录界面
+        gotoLogin();
         //展示揭界面
         stage.show();
     }
@@ -71,6 +72,12 @@ public class MyApplication extends Application {
 
 
     public void gotoMasterPage() {
+        try {
+            FactoryManagerController factoryManagerController = (FactoryManagerController) replaceSceneContent(StaticResourcesConfig.MASTERMAIN_VIEW_PATH);
+            factoryManagerController.setApp(this);
+        } catch (Exception ex) {
+            System.out.println("厂长界面加载错误");
+        }
     }
 
     /**
@@ -81,6 +88,8 @@ public class MyApplication extends Application {
      * @throws Exception
      */
     private Initializable replaceSceneContent(String fxml) throws Exception {
+        //先将窗口最大化效果取消，如果不这个做，下面设置在窗口最大化时会出现显示问题，原因不明
+        stage.setMaximized(false);
 
         FXMLLoader loader = new FXMLLoader();
         loader.setBuilderFactory(new JavaFXBuilderFactory());
@@ -93,6 +102,8 @@ public class MyApplication extends Application {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.sizeToScene();
+            //             设置窗口最大化
+            stage.setMaximized(true);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

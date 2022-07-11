@@ -5,13 +5,15 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="857.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountManageController">
+<!--<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1332.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountManageController">-->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="863.0" prefWidth="1332.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountManageController">
    <children>
-      <VBox fx:id="vBox" prefHeight="857.0" prefWidth="1360.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox fx:id="vBox" prefHeight="857.0" prefWidth="1360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-padding: 10; -fx-background-color: white;">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="6.0" layoutY="2.0" text="账号条件筛选" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Label layoutX="6.0" layoutY="2.0" text="账号条件筛选" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                      <font>
                         <Font size="24.0" />
                      </font>

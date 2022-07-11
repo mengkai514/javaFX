@@ -5,9 +5,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="vBox" prefHeight="936.0" prefWidth="1384.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TechFrameController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1042.0" prefWidth="1592.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TechFrameController">
    <children>
-      <HBox fx:id="hBox" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 30;">
+      <HBox alignment="CENTER" prefHeight="105.0" prefWidth="1616.0" style="-fx-spacing: 20;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button fx:id="accountManageButton" mnemonicParsing="false" onAction="#onAccountManageButtonClick" text="账号管理">
                <font>
@@ -26,6 +26,6 @@
             </Button>
          </children>
       </HBox>
-      <StackPane fx:id="stackPane" prefHeight="829.0" prefWidth="1384.0" />
+      <StackPane fx:id="stackPane" layoutY="105.0" prefHeight="946.0" prefWidth="1616.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0" />
    </children>
-</VBox>
+</AnchorPane>

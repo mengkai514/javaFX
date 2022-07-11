@@ -14,7 +14,5 @@ public class GetParamsServiceImpl implements GetParamsService {
 
         System.out.println(retsString);
         return retsString;
-
-
     }
 }

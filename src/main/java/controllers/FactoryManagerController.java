@@ -9,7 +9,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.control.Button;
-import javafx.scene.layout.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import utils.FxmlLoader;
 
 import java.io.IOException;
@@ -24,16 +27,18 @@ import java.util.ResourceBundle;
  * @author: 黄涛
  * @date: 2022-7-4
  */
-public class TechFrameController implements Initializable {
+public class FactoryManagerController implements Initializable {
     private MyApplication myApplication;
 
     private AccountManageController accountManageController;
     private EquipmentSettingController equipmentSettingController;
     private ProductDetectController productDetectController;
+    private DataAnalyzeController dataAnalyzeController;
 
     private AnchorPane accountManageAnchorPane;
     private AnchorPane equipmentSettingAnchorPane;
     private AnchorPane productDetectAnchorPane;
+    private AnchorPane dataAnalyzeAnchorPane;
 
     @FXML
     private StackPane stackPane;
@@ -57,6 +62,7 @@ public class TechFrameController implements Initializable {
     void onAccountManageButtonClick(ActionEvent event) {
         equipmentSettingAnchorPane.setVisible(false);
         productDetectAnchorPane.setVisible(false);
+        dataAnalyzeAnchorPane.setVisible(false);
         accountManageAnchorPane.toFront();
         accountManageAnchorPane.setVisible(true);
 
@@ -66,6 +72,7 @@ public class TechFrameController implements Initializable {
     void onEquipmentSettingButtonClick(ActionEvent event) {
 //        equipmentSetting.toFront();
         productDetectAnchorPane.setVisible(false);
+        dataAnalyzeAnchorPane.setVisible(false);
         accountManageAnchorPane.setVisible(false);
         equipmentSettingAnchorPane.toFront();
         equipmentSettingAnchorPane.setVisible(true);
@@ -75,11 +82,21 @@ public class TechFrameController implements Initializable {
     @FXML
     void onProductDetectButtonClick(ActionEvent event) {
 //        productDetect.toFront();
-        equipmentSettingAnchorPane.setVisible(false);
+        dataAnalyzeAnchorPane.setVisible(false);
         accountManageAnchorPane.setVisible(false);
+        equipmentSettingAnchorPane.setVisible(false);
         productDetectAnchorPane.toFront();
         productDetectAnchorPane.setVisible(true);
 
+    }
+
+    @FXML
+    public void onDataAnalyzeButtonClick(ActionEvent event) {
+        productDetectAnchorPane.setVisible(false);
+        accountManageAnchorPane.setVisible(false);
+        equipmentSettingAnchorPane.setVisible(false);
+        dataAnalyzeAnchorPane.toFront();
+        dataAnalyzeAnchorPane.setVisible(true);
     }
 
     @Override
@@ -112,17 +129,25 @@ public class TechFrameController implements Initializable {
         equipmentSettingAnchorPane.prefWidthProperty().bind(stackPane.widthProperty());
 //        equipmentSettingAnchorPane.setVisible(false);
 
+        //加载数据分析界面
+        ReList = FxmlLoader.addFxml(StaticResourcesConfig.DATA_ANALYZE_VIEW_PATH);
+        dataAnalyzeController = (DataAnalyzeController) ReList.get(0);
+        dataAnalyzeAnchorPane = (AnchorPane) ReList.get(1);
+        dataAnalyzeAnchorPane.prefHeightProperty().bind(stackPane.heightProperty());
+        dataAnalyzeAnchorPane.prefWidthProperty().bind(stackPane.widthProperty());
+//        dataAnalyzeAnchorPane.setVisible(false);
 
-
-        //以上三个放入stackPane显示
-        stackPane.getChildren().addAll(equipmentSettingAnchorPane, productDetectAnchorPane, accountManageAnchorPane);
+        //以上四个放入stackPane显示
+        stackPane.getChildren().addAll(dataAnalyzeAnchorPane, equipmentSettingAnchorPane, productDetectAnchorPane, accountManageAnchorPane);
 
     }
+
 
 
     public void setApp(MyApplication myApplication) {
         this.myApplication = myApplication;
     }
+
 
 }
 
