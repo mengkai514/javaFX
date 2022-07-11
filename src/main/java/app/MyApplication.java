@@ -28,14 +28,13 @@ public class MyApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
         stage.setTitle("数码管缺陷检测系统");
-        //设置可改变窗口大小
+        //设置可以改变窗口大小
         stage.setResizable(true);
         //加载登录界面
         gotoLogin();
-        //展示揭界面
+        //展示界面
         stage.show();
     }
-
     /**
      * 跳转到登录界面
      */
@@ -96,13 +95,12 @@ public class MyApplication extends Application {
         loader.setLocation(MyApplication.class.getResource(fxml));
         InputStream in = MyApplication.class.getResourceAsStream(fxml);
         try {
-
             Parent root = loader.load(in);
 //            准备好新Scene
             Scene scene = new Scene(root);
+//            将新Scene设置到Stage中
             stage.setScene(scene);
-            stage.sizeToScene();
-            //             设置窗口最大化
+//             设置窗口最大化
             stage.setMaximized(true);
         } catch (Exception e) {
             e.printStackTrace();

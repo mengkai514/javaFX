@@ -5,71 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_73.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_73.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GeneratorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GeneratorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaFX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFX.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/SocketSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/SocketSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/configs/StaticResourcesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/StaticResourcesConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/EquipmentSettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/EquipmentSettingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TechFrameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TechFrameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Check.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/DeviceParamsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/DeviceParamsView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/MainUi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/MainUi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/PythonImageConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/PythonImageConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SocketCommunicationOri.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/GetParamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/GetParamsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/SetParamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SetParamsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/ConveyorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/ConveyorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/GetParamsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/GetParamsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/SetParamsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/SetParamsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/DetectProductPositionByFiberSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/DetectProductPositionByFiberSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ImageCatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ImageCatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SocketListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SocketListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/result.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/ImageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/ImageView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/accountManage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/accountManage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/checkImg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/checkImg.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/deviceParams.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/deviceParams.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/equipmentSetting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/equipmentSetting.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/productDetect.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/productDetect.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/MyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/MyApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/configs/StaticResourcesConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/configs/StaticResourcesConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/EquipmentSettingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/EquipmentSettingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ProductDetectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ProductDetectController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/TechFrameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/TechFrameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/image/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/image/result.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientReceive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ClientSend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ImageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ImageView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/SocketCommunicationOri.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/accountManage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/accountManage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/checkImg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/checkImg.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/deviceParams.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/deviceParams.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/equipmentSetting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/equipmentSetting.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/productDetect.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/productDetect.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/GetParamsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/GetParamsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/SocketListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/SocketListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/SocketListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/SocketListener.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,6 +288,7 @@
       <workItem from="1657270028821" duration="510000" />
       <workItem from="1657509595772" duration="3448000" />
       <workItem from="1657513148343" duration="9000" />
+      <workItem from="1657513946117" duration="356000" />
     </task>
     <servers />
   </component>
@@ -368,11 +306,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/utils/SocketListener.java</url>
           <line>79</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/app/MyApplication.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
