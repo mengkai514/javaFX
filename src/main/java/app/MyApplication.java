@@ -88,7 +88,7 @@ public class MyApplication extends Application {
      */
     private Initializable replaceSceneContent(String fxml) throws Exception {
         //先将窗口最大化效果取消，如果不这个做，下面设置在窗口最大化时会出现显示问题，原因不明
-        stage.setMaximized(false);
+//        stage.setMaximized(false);
 
         FXMLLoader loader = new FXMLLoader();
         loader.setBuilderFactory(new JavaFXBuilderFactory());
@@ -101,7 +101,8 @@ public class MyApplication extends Application {
 //            将新Scene设置到Stage中
             stage.setScene(scene);
 //             设置窗口最大化
-            stage.setMaximized(true);
+//            stage.setMaximized(true);
+            stage.setFullScreen(true);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

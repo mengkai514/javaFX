@@ -5,7 +5,7 @@
 <?import javafx.scene.chart.StackedBarChart?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="1500.0" prefWidth="1631.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DataAnalyzeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1631.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DataAnalyzeController">
 <!--            prefHeight="945.0" prefWidth="1631.0">-->
 <!--            prefHeight="756.0" prefWidth="1332.0">-->
 

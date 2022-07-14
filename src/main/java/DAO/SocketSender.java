@@ -32,7 +32,7 @@ public class SocketSender {
             int len = inputStream.read(bytes);
             retString = new String(bytes, 0, len);
 //            while((retString = bufferedReader.readLine())!=null){}
-
+            System.out.println(retString.charAt(retString.length()-1));
         } catch (IOException e) {
             e.printStackTrace();
 

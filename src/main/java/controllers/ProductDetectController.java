@@ -30,28 +30,28 @@ import java.util.ResourceBundle;
 public class ProductDetectController implements Initializable {
 
     @FXML
-    private AnchorPane anchorPanel;
-
-    @FXML
     private TextField numberOfDefectTextField;
 
     @FXML
-    private Button clearProductPlateBuuton1;
+    private FlowPane flowPane;
+
+    @FXML
+    private TextField pinAskewRateTextField;
+
+    @FXML
+    private TextField glueOutRateTextField;
 
     @FXML
     private Button startButton;
 
     @FXML
-    private Button clearProductPlateBuuton;
+    private Button clearProductPlateButton;
+
+    @FXML
+    private TextField pinGlueRateTextField;
 
     @FXML
     private TextField cameraExposureTimeTextField;
-
-    @FXML
-    private ImageView imageView;
-
-    @FXML
-    private Button stopbutton;
 
     @FXML
     private TextField conveyorSpeedTextField;
@@ -69,28 +69,30 @@ public class ProductDetectController implements Initializable {
     private Label statusLabel;
 
     @FXML
-    private FlowPane flowPane;
+    private Button resetDataButton;
+
+    @FXML
+    private AnchorPane anchorPane;
 
     @FXML
     private TextField numberOfGoodProductTextField;
 
     @FXML
-    private Circle pinAskewCircle;
-
-    @FXML
-    private Circle pinGlueCircle;
+    private Button stopButton;
 
     @FXML
     private TextField defectRateTextField;
 
-    @FXML
-    private Circle glueOutCircle;
     //已检测数量
     private int numberOfDetected = 0;
     //缺陷数量
     private int numberOfDefect = 0;
-    //缺陷率
-    private double defectRate = 0;
+    //针脚歪斜产品数量
+    private int numberOfPinAskew = 0;
+    //针脚粘胶产品数量
+    private int numberOfPinGlue = 0;
+    //溢胶产品数量
+    private int numberOfGlueOut = 0;
     //良品数量
     private int numberOfGoodProduct = 0;
 
@@ -99,7 +101,7 @@ public class ProductDetectController implements Initializable {
     private ArrayList<AnchorPane> resultViewAnchorPaneList = new ArrayList<>();
 
     public static int currentResultViewIndex=0;
-    public static int maxResultViewIndex=9;
+    public static int maxResultViewIndex=11;
 
     private MyApplication myApplication;
 
@@ -203,32 +205,45 @@ public class ProductDetectController implements Initializable {
 
 //        更新批次统计信息
         numberOfDetectedTextField.setText(String.valueOf(++numberOfDetected));
-//        if (isPinAskew == false || isPinGlue == false || isGlueOut == false) {
-//            numberOfDefectTextField.setText(String.valueOf(++numberOfDefect));
-//        }
+        //更新缺陷数量
         if (isPinAskew == true || isPinGlue == true || isGlueOut == true) {
             numberOfDefectTextField.setText(String.valueOf(++numberOfDefect));
         }
-        defectRate = ((double) numberOfDefect) / numberOfDetected;
 
-        if(String.valueOf(defectRate * 100).length() > 4){
+        //更新缺陷率
+        setRate(numberOfDefect,defectRateTextField);
 
-            defectRateTextField.setText(String.valueOf(defectRate * 100).substring(0, 4) + "%");
-        }else{
-            defectRateTextField.setText(defectRate * 100 + "%");
+        //更新针脚歪斜率
+        if (isPinAskew == true) {
+            setRate(++numberOfPinAskew,pinAskewRateTextField);
         }
 
+        //更新针脚黏胶率
+        if (isPinGlue == true) {
+            setRate(++numberOfPinGlue,pinGlueRateTextField);
+        }
+        //更新溢胶率
+        if (isGlueOut == true) {
+            setRate(++numberOfGlueOut,glueOutRateTextField);
+        }
+
+        //更新良品率
         numberOfGoodProduct = numberOfDetected - numberOfDefect;
         numberOfGoodProductTextField.setText(String.valueOf(numberOfGoodProduct));
     }
 
     /**
-     * 重置标记缺陷类型的圆圈的颜色
+     * 增加某种缺陷的缺陷率
+     * @param number 某种缺陷的产品数量
+     * @param rateTextField 某种缺陷的缺陷率文本框实例
      */
-    public void resetDefectCircleColor() {
-        pinAskewCircle.setFill(Color.GREEN);
-        pinGlueCircle.setFill(Color.GREEN);
-        glueOutCircle.setFill(Color.GREEN);
+    private void setRate(int number,TextField rateTextField){
+        double rate = ((double) ++number) / numberOfDetected;
+        if(String.valueOf(rate * 100).length() > 4){
+            rateTextField.setText(String.valueOf(rate * 100).substring(0, 4) + "%");
+        }else{
+            rateTextField.setText(rate * 100 + "%");
+        }
     }
     /**
      * 在加载本页面时，并获取本Controller的示例时，会调用此方法进行初始化
@@ -243,7 +258,7 @@ public class ProductDetectController implements Initializable {
 
         //设置flowPane中内容的间距
         flowPane.setHgap(10);
-        flowPane.setVgap(10);
+        flowPane.setVgap(30);
 
         //在flowPane中添加组件
         ArrayList<Object> reList = new ArrayList<>();
@@ -254,6 +269,7 @@ public class ProductDetectController implements Initializable {
         while(i<=ProductDetectController.maxResultViewIndex){
             //加载resultView的Controller 和 AnchorPane对象
             reList = FxmlLoader.addFxml(StaticResourcesConfig.RESULTVIEW_VIEW_PATH);
+
             resultViewController = (ResultViewController) reList.get(0);
             resultViewAnchorPane = (AnchorPane) reList.get(1);
             //设置每个resultView左上角的label显示的字样

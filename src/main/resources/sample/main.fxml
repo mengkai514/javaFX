@@ -14,7 +14,7 @@
                   <Font size="32.0" />
                </font>
             </Button>
-            <Button fx:id="equipmentSettingButton" mnemonicParsing="false" onAction="#onEquipmentSettingButtonClick" text="设备检修">
+            <Button fx:id="equipmentSettingButton" mnemonicParsing="false" onAction="#onEquipmentSettingButtonClick" text="设备参数">
                <font>
                   <Font size="32.0" />
                </font>

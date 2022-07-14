@@ -84,15 +84,15 @@ public class Controller {
         String exTime = exposureTime.getText();
         String conveyorspeed = conveyorSpeed.getText();
 
-        Camera camera = new Camera(height,width,acquisitionRate,exTime,conveyorspeed);
-        System.out.println(camera);
+//        Camera camera = new Camera(height,width,acquisitionRate,exTime,conveyorspeed);
+//        System.out.println(camera);
 //        JSONObject jsonObject = new JSONObject();
 //        JSONObject json = (JSONObject) jsonObject.toJSON(camera);
 //        System.out.println(json);
 //        JSONObject cameraJson= (JSONObject) JSONObject.toJSON(camera);
         JSONObject cameraJson = new JSONObject();
         cameraJson.put("type","alterParams");
-        cameraJson.put("content",camera);
+//        cameraJson.put("content",camera);
         System.out.println("camera对象的json:" + cameraJson.toString());
 //        SocketCommunication socketCommunication = new SocketCommunication(cameraJson.toString());
 

@@ -9,14 +9,16 @@ import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import sun.misc.BASE64Decoder;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -41,6 +43,9 @@ public class ResultViewController implements Initializable {
 
     @FXML
     private AnchorPane anchorPane;
+
+    @FXML
+    private ImageView imageView;
 
     //检测图片的base64编码，只保存，不显示
     private String base64;
@@ -78,6 +83,8 @@ public class ResultViewController implements Initializable {
         this.isPinGlue = isPinGlue;
         this.isGlueOut = isGlueOut;
 
+        //设置图片
+        this.setImageByBase64(base64);
         //设置检测结果
         //针脚歪斜
         if (isPinAskew) {
@@ -160,6 +167,45 @@ public class ResultViewController implements Initializable {
         }
     }
 
+    private void setImageByBase64(String base64) {
+        //将base64解码为jpg图片,并显示在imageView上
+        BASE64Decoder decoder = new BASE64Decoder();
+        OutputStream out = null;
+        try {
+//          打开文件输出流
+            out = new FileOutputStream("src\\main\\resources\\image\\result.jpg");
+            //去掉前缀data:image/jpeg;base64,
+            base64 = base64.substring(base64.indexOf(",", 1) + 1, base64.length());
+            // Base64解码
+            byte[] b = decoder.decodeBuffer(base64);
+            //处理异常值
+            for (int i = 0; i < b.length; ++i) {
+                if (b[i] < 0) {// 调整异常数据
+                    b[i] += 256;
+                }
+            }
+            //写入文件
+            out.write(b);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            try {
+                out.flush();
+                out.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+        //从刚刚存入的文件中创建Image对象
+        Image image = new Image("file:src/main/resources/image/result.jpg");
+        //将image对象显示在imageView上
+        imageView.setImage(image);
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

@@ -18,7 +18,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <AnchorPane fx:id="loginAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="55.0" prefHeight="49.0" prefWidth="108.0" text="账号" textFill="#0436f9" AnchorPane.leftAnchor="87.0" AnchorPane.topAnchor="55.0">
                      <font>
@@ -51,6 +51,11 @@
                         <Font size="32.0" />
                      </font>
                   </Button>
+                  <Label fx:id="loggingIn" layoutX="472.0" layoutY="300.0" prefHeight="42.0" prefWidth="98.0" text="正在登录……" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </items>

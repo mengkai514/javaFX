@@ -4,16 +4,20 @@ import com.alibaba.fastjson.JSONObject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import model.Camera;
 import service.GetParamsService;
 import service.SetParamsService;
 import service.impl.GetParamsServiceImpl;
 import service.impl.SetParamsServiceImpl;
+import sun.misc.BASE64Decoder;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URL;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -41,6 +45,17 @@ public class EquipmentSettingController implements Initializable {
     private TextField cameraLeftConnect;
     @FXML
     private TextField PLCConnect;
+    @FXML
+    private Button cameraTips;
+    @FXML
+    private Button IPTips;
+    @FXML
+    private ImageView cameraShow;
+    @FXML
+    private ComboBox selectCameraOrientation;
+    @FXML
+    private ComboBox selectCamera;
+
 
 
     @Override
@@ -48,6 +63,13 @@ public class EquipmentSettingController implements Initializable {
 
         GetParamsService getParams = new GetParamsServiceImpl();
         String params = getParams.getParams();
+
+        //设置提示图标
+        Image image = new Image("file:src/main/resources/image/tips.png");
+        ImageView imageView = new ImageView(image);
+        ImageView imageViewIPIcon = new ImageView(image);
+        cameraTips.setGraphic(imageView);
+        IPTips.setGraphic(imageViewIPIcon);
 
         if(params != null){
             Map<String, Object> paramsMap = JSONObject.parseObject(params,Map.class);
@@ -85,8 +107,13 @@ public class EquipmentSettingController implements Initializable {
         String acquisitionRate = acquisitionFrameRate.getText();
         String exTime = exposureTime.getText();
         String conveyorspeed = conveyorSpeed.getText();
-        Camera camera = new Camera(height,width,acquisitionRate,exTime,conveyorspeed);
-        SetParamsService setParamsService = new SetParamsServiceImpl();
+        // 获取下拉框选中的相机
+        String cameraOption = (String) selectCamera.getValue();
+        // 获取下拉框选中的相机方位
+        String cameraOrientation = (String) selectCameraOrientation.getValue();
+
+        Camera camera = new Camera(height,width,acquisitionRate,exTime,conveyorspeed,cameraOption,cameraOrientation);
+        SetParamsService setParamsService = new SetParamsServiceImpl(this);
         boolean result = setParamsService.setParams(camera);
         if (result) {
             //弹窗提示修改成功
@@ -103,6 +130,44 @@ public class EquipmentSettingController implements Initializable {
             alert.setContentText("修改失败");
             alert.showAndWait();
         }
+    }
 
+    public void setParamsWithPic(int height, int width, Object acquisitionF,
+                          Object exposuretime,Object conveyorspeed, String base64){
+        cameraHeight.setText(Integer.toString(height));
+        cameraWidth.setText(Integer.toString(width));
+        acquisitionFrameRate.setText(acquisitionF.toString());
+        exposureTime.setText(exposuretime.toString());
+        conveyorSpeed.setText(conveyorspeed.toString());
+        BASE64Decoder decoder = new BASE64Decoder();
+        try {
+            byte[] b = decoder.decodeBuffer(base64);
+            for (int i = 0; i < b.length ; i++) {
+                if (b[i] < 0){
+                    b[i] += 256;
+                }
+            }
+            OutputStream out = new FileOutputStream("src\\main\\resources\\image\\alterResult.jpg");
+            out.write(b);
+            out.flush();
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Image image = new Image("file:src\\main\\resources\\image\\alterResult.jpg");
+        cameraShow.setImage(image);
+    }
+
+    public void getTips(MouseEvent mouseEvent) {
+        Tooltip tooltip = new Tooltip();
+        tooltip.setText("相机高度为2的倍数，相机宽度为4的倍数\n"+"曝光率为0.400000~500.000000\n" +
+                "曝光时间为27~2500000");
+        cameraTips.setTooltip(tooltip);
+    }
+
+    public void getIPTips(MouseEvent mouseEvent) {
+        Tooltip tooltip = new Tooltip();
+        tooltip.setText("电脑的IP地址，PIC的IP地址");
+        IPTips.setTooltip(tooltip);
     }
 }

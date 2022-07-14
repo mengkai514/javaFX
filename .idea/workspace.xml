@@ -4,9 +4,56 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+    <list default="true" id="2699d12a-1839-4526-ba32-678ed0b65351" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_73.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_73.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/SocketSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/SocketSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/StaticResourcesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/StaticResourcesConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DataAnalyzeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DataAnalyzeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/EquipmentSettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/EquipmentSettingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/SocketCommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/SetParamsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/SetParamsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/SocketListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/SocketListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/result.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/dataAnalyze.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/dataAnalyze.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/equipmentSetting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/equipmentSetting.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/productDetect.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/productDetect.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/resultView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/resultView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAO/SocketSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAO/SocketSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/MyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/MyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/configs/StaticResourcesConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/configs/StaticResourcesConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/EquipmentSettingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/EquipmentSettingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/LoginController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/LoginController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/LoginController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/LoginController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/LoginController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/LoginController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/LoginController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/LoginController$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ProductDetectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ProductDetectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ResultViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/ResultViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/image/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/image/result.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Camera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/SocketCommunication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/dataAnalyze.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/dataAnalyze.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/equipmentSetting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/equipmentSetting.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/productDetect.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/productDetect.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/resultView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/resultView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/LoginServiceImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/LoginServiceImpl$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/LoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/impl/SetParamsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/impl/SetParamsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/SocketListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/SocketListener$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/SocketListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/SocketListener.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +129,11 @@
         <option name="userSettingsFile" value="D:\JAVA\develop\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="2Ay3dH7JEufE8pL1eSdGDtVsaV9" />
@@ -107,23 +159,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/image" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\resources\sample" />
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\controllers" />
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\resources\image" />
+      <recent name="D:\Projects_workspace\java_projects\javaFX\src\main\resources\sample" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAVA\workspace\JavaFX\src\main\resources\image" />
       <recent name="D:\JAVA\workspace\JavaFX\src\main\java\app" />
       <recent name="D:\JAVA\workspace\JavaFX\src\main\java\configs" />
       <recent name="D:\JAVA\workspace\JavaFX\src\main\java\controllers" />
       <recent name="D:\JAVA\workspace\JavaFX\src\main\java\DAO" />
-      <recent name="D:\JAVA\workspace\JavaFX\src\main\java\service" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects_workspace\java_projects\javaFX\src\main\resources\sample" />
-      <recent name="D:\JAVA\workspace\JavaFX\src\main\resources\sample" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MyApplication">
@@ -256,13 +310,13 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <changelist id="2699d12a-1839-4526-ba32-678ed0b65351" name="Default Changelist" comment="" />
       <created>1359379246138</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -289,26 +343,98 @@
       <workItem from="1657509595772" duration="3448000" />
       <workItem from="1657513148343" duration="9000" />
       <workItem from="1657513946117" duration="356000" />
+      <workItem from="1657544400913" duration="2575000" />
+      <workItem from="1657588906052" duration="816000" />
+      <workItem from="1657607280905" duration="12555000" />
+      <workItem from="1657675777075" duration="23918000" />
+      <workItem from="1657713418435" duration="297000" />
+      <workItem from="1657713774617" duration="757000" />
+      <workItem from="1657765430669" duration="6653000" />
+      <workItem from="1657781029663" duration="8339000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/utils/SocketListener.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1657694295475">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657694295475" />
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1657677287367" />
+    <state x="467" y="230" width="431" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1657677192069">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="467" y="230" width="431" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1657677192069" />
+    <state x="496" y="262" key="Github.CreateGistDialog" timestamp="1657610126728">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="496" y="262" key="Github.CreateGistDialog/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657610126728" />
+    <state width="1877" height="414" key="GridCell.Tab.0.bottom" timestamp="1657803165678">
+      <screen x="-1920" y="-313" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1657803165678" />
+    <state width="1323" height="475" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657769121656" />
+    <state width="1323" height="475" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1657768562758" />
+    <state width="1877" height="414" key="GridCell.Tab.0.center" timestamp="1657803165678">
+      <screen x="-1920" y="-313" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1657803165678" />
+    <state width="1323" height="475" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657769121656" />
+    <state width="1323" height="475" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1657768562757" />
+    <state width="1877" height="414" key="GridCell.Tab.0.left" timestamp="1657803165678">
+      <screen x="-1920" y="-313" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1657803165678" />
+    <state width="1323" height="475" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657769121655" />
+    <state width="1323" height="475" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1657768562757" />
+    <state width="1877" height="414" key="GridCell.Tab.0.right" timestamp="1657803165678">
+      <screen x="-1920" y="-313" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1657803165678" />
+    <state width="1323" height="475" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657769121656" />
+    <state width="1323" height="475" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1657768562758" />
+    <state width="1877" height="414" key="GridCell.Tab.1.bottom" timestamp="1657803165679">
+      <screen x="-1920" y="-313" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.1.bottom/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1657803165679" />
+    <state width="1323" height="264" key="GridCell.Tab.1.bottom/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657701136211" />
+    <state width="1323" height="347" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1657626115942" />
+    <state width="1877" height="414" key="GridCell.Tab.1.center" timestamp="1657803165678">
+      <screen x="-1920" y="-313" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.1.center/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1657803165678" />
+    <state width="1323" height="264" key="GridCell.Tab.1.center/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657701136210" />
+    <state width="1323" height="347" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1657626115942" />
+    <state width="1877" height="414" key="GridCell.Tab.1.left" timestamp="1657803165678">
+      <screen x="-1920" y="-313" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.1.left/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1657803165678" />
+    <state width="1323" height="264" key="GridCell.Tab.1.left/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657701136210" />
+    <state width="1323" height="347" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1657626115942" />
+    <state width="1877" height="414" key="GridCell.Tab.1.right" timestamp="1657803165678">
+      <screen x="-1920" y="-313" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="414" key="GridCell.Tab.1.right/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1657803165678" />
+    <state width="1323" height="264" key="GridCell.Tab.1.right/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657701136211" />
+    <state width="1323" height="347" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1657626115942" />
+    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1657690182636">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657690182636" />
+    <state x="425" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1657677263388">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="425" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1657677263388" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1657615505028">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657615505028" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -44,7 +44,6 @@ public class SocketListener implements Runnable {
                 if (recvStr != null) {
                     //将recvStr这个json转换Map对象
                     Map<String, Object> recvMap = JSONObject.parseObject(recvStr, Map.class);
-
                     //如果是告知检测到了数码管
                     if (recvMap.get("type").equals("productDetected")) {
 //                        Platform.runLater(new Runnable() {

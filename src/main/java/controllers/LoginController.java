@@ -5,11 +5,16 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.FlowPane;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import service.impl.LoginServiceImpl;
 
 import java.net.URL;
@@ -21,6 +26,8 @@ import java.util.ResourceBundle;
  * @date: 2022-7-4
  */
 public class LoginController implements Initializable {
+    @FXML
+    private Label loggingIn;
 
     private MyApplication myApplication;
     //    以下每个属性都代表界面上的一个组件，在使用时不需要实例化（new），因为注脚@FXML已经帮我们做了这件事了
@@ -40,6 +47,9 @@ public class LoginController implements Initializable {
     @FXML
     private Button loginButton;
 
+    @FXML
+    private AnchorPane loginAnchorPane;
+
     /**
      * 事件处理函数，本函数绑定在“登录”按钮上，当按钮被点击时触发此函数。
      * （关于如何绑定，在图形化拖拽工具右侧边栏，code选项中的“on Action”，填入事件处理函数的名称即可；也可查看本项目文件“login.fxml”文件第44行，有onAction="#login"字样）
@@ -48,11 +58,17 @@ public class LoginController implements Initializable {
      */
     @FXML
     void login(ActionEvent event) {
-
 //      获取用户输入的账号密码
         String userId = userIdTextField.getText();
         String password = userPasswordTextField.getText();
         String accountType = accountTypeChoiceBox.getValue();
+        loggingIn.setVisible(true);
+
+        ProgressIndicator p1 = new ProgressIndicator();
+
+        loginAnchorPane.getChildren().add(p1);
+        p1.setLayoutY(300);
+        p1.setLayoutX(600);
         new LoginServiceImpl(this).login(userId, password, accountType);
     }
 
@@ -149,6 +165,4 @@ public class LoginController implements Initializable {
         accountTypeChoiceBox.getItems().addAll("技术操作员", "技术管理员", "厂长");
         accountTypeChoiceBox.setValue("技术操作员");
     }
-
-
 }

@@ -2,15 +2,13 @@ package sample;
 
 import com.alibaba.fastjson.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
 public class SocketCommunication {
+    StringBuilder sb;
     public SocketCommunication(){}
     public String send(String sendString) {
         Socket socket = null;
@@ -25,9 +23,6 @@ public class SocketCommunication {
         } else {
             str = sendString;
         }
-
-
-
         int PORT = 50001;
         String HOST = "192.168.3.100";
         try {
@@ -39,9 +34,15 @@ public class SocketCommunication {
             out.print("over");
             out.flush();
             byte[] bytes = new byte[1024];
-            int len = inputStream.read(bytes);
-            retString = new String(bytes, 0, len);
-            System.out.println("接收数据"+retString);
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+            sb = new StringBuilder();
+            String tmp = null;
+            while((tmp = br.readLine()) != null)
+                sb.append(tmp).append('\n');
+//            int len = inputStream.read(bytes);
+//            retString = new String(bytes, 0, len);
+//            System.out.println(retString.charAt(retString.length()-1));
+            System.out.println("接收数据"+sb.toString());
         } catch (Exception e) {
             e.printStackTrace();
 
@@ -55,7 +56,7 @@ public class SocketCommunication {
             }
 
 
-            return retString;
+            return sb.toString();
         }
     }
 }
