@@ -119,7 +119,7 @@ public class ProductDetectController implements Initializable {
     private ArrayList<Pane> paneList = new ArrayList<>();
 
     public static int currentResultViewIndex=0;
-    public static int maxResultViewIndex=998;
+    public static int maxResultViewIndex=319;
 
     private MyApplication myApplication;
 
@@ -228,9 +228,17 @@ public class ProductDetectController implements Initializable {
     public void setDetectResult(String imageBase64, boolean isPinAskew, boolean isPinGlue, boolean isGlueOut) {
         //更新小方块颜色
         if(isDefect(isPinAskew, isPinGlue, isGlueOut)){
-            paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
+            //设置小方块的颜色
+            //黄色
+//            paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill( Color.rgb(252,202,6), CornerRadii.EMPTY, Insets.EMPTY)));
+            //黑色
+            paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill( Color.rgb(216,42,32), CornerRadii.EMPTY, Insets.EMPTY)));
         }else {
-            paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+//            浅绿
+//            paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill(Color.rgb(51,222,47), CornerRadii.EMPTY, Insets.EMPTY)));
+//            几乎看不见绿
+            paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill(Color.rgb(178,255,197), CornerRadii.EMPTY, Insets.EMPTY)));
+
         }
 //        resultViewControllerList.get(currentResultViewIndex).setDetectResult(imageBase64 ,isPinAskew, isPinGlue, isGlueOut);
 
@@ -238,7 +246,7 @@ public class ProductDetectController implements Initializable {
         //默认样式
         paneList.get(currentResultViewIndex).setBorder( new Border(new BorderStroke(Color.GREEN, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
         //选中样式
-        paneList.get((currentResultViewIndex+1)%(maxResultViewIndex+1)).setBorder(new Border(new BorderStroke(Color.rgb(255,0,0), BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
+        paneList.get((currentResultViewIndex+1)%(maxResultViewIndex+1)).setBorder(new Border(new BorderStroke(Color.rgb(255,0,0), BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(4))));
 //        resultViewControllerList.get(currentResultViewIndex).setDefaultBorderStyle();
 //        resultViewControllerList.get((currentResultViewIndex+1)%(maxResultViewIndex+1)).setSelectedBorderStyle();
 
@@ -330,8 +338,8 @@ public class ProductDetectController implements Initializable {
         socketListener.setProductDetectController(this);
 
         //设置flowPane中内容的间距
-        flowPane.setHgap(2);
-        flowPane.setVgap(2);
+        flowPane.setHgap(5);
+        flowPane.setVgap(5);
 
         //在flowPane中添加组件
         ArrayList<Object> reList = new ArrayList<>();
@@ -366,9 +374,9 @@ public class ProductDetectController implements Initializable {
 //            resultViewControllerList.add(resultViewController);
 
             Pane pane = new Pane();
-            pane.setPrefWidth(30);
-            pane.setPrefHeight(30);
-            pane.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+            pane.setPrefWidth(55);
+            pane.setPrefHeight(55);
+            pane.setBackground(new Background(new BackgroundFill(Color.GRAY, CornerRadii.EMPTY, Insets.EMPTY)));
             paneList.add(pane);
             flowPane.getChildren().add(pane);
             i++;

@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2699d12a-1839-4526-ba32-678ed0b65351" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_73.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_73.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sample/productDetect.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/productDetect.fxml" afterDir="false" />
@@ -314,7 +312,7 @@
       <workItem from="1658735366750" duration="2139000" />
       <workItem from="1658802968404" duration="3170000" />
       <workItem from="1658831227059" duration="2587000" />
-      <workItem from="1658891139397" duration="8668000" />
+      <workItem from="1658891139397" duration="10710000" />
     </task>
     <servers />
   </component>
@@ -330,7 +328,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java</url>
-          <line>317</line>
+          <line>325</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

@@ -158,7 +158,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="1299.0" layoutY="677.0" prefHeight="254.0" prefWidth="622.0" style="-fx-border-width: 2; -fx-border-color: #FFCE47;" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="677.0">
+      <AnchorPane layoutX="1299.0" layoutY="677.0" prefHeight="254.0" prefWidth="622.0" style="-fx-border-width: 2; -fx-border-color: #FFCE47;" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="677.0">
          <children>
             <Label layoutX="18.0" layoutY="29.0" text="传送带速度" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="29.0">
                <font>
@@ -195,6 +195,6 @@
          </font>
       </Label>
       <Button fx:id="exitSystemButton" layoutX="1508.0" layoutY="8.0" mnemonicParsing="false" onAction="#onExitSystemButtonClick" prefHeight="36.0" prefWidth="40.0" style="-fx-background-color: #FFFFFF;" visible="false" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="8.0" />
-      <FlowPane fx:id="flowPane" alignment="TOP_CENTER" columnHalignment="CENTER" layoutX="33.0" layoutY="109.0" prefHeight="830.0" prefWidth="917.0" style="-fx-background-color: rgb(250,250,250);" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="109.0" />
+      <FlowPane fx:id="flowPane" alignment="TOP_CENTER" columnHalignment="CENTER" layoutX="33.0" layoutY="109.0" prefHeight="823.0" prefWidth="917.0" style="-fx-background-color: rgb(250,250,250);" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="681.0" AnchorPane.topAnchor="109.0" />
    </children>
 </AnchorPane>
