@@ -5,16 +5,17 @@ import configs.StaticResourcesConfig;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import service.ConveyorService;
 import service.impl.ConveyorServiceImpl;
 import utils.FxmlLoader;
@@ -32,6 +33,9 @@ public class ProductDetectController implements Initializable {
 
     @FXML
     private TextField numberOfDefectTextField;
+
+    @FXML
+    private TextField pinGlueNumTextField;
 
     @FXML
     private FlowPane flowPane;
@@ -61,6 +65,9 @@ public class ProductDetectController implements Initializable {
     private TextField numberOfDetectedTextField;
 
     @FXML
+    private Button exitSystemButton;
+
+    @FXML
     private TextField CameraResolutionTextField;
 
     @FXML
@@ -82,10 +89,15 @@ public class ProductDetectController implements Initializable {
     private Button stopButton;
 
     @FXML
-    private TextField defectRateTextField;
+    private TextField pinAskewNumTextField;
 
     @FXML
-    private Button exitSystemButton;
+    private TextField glueOutNumTextField;
+
+    @FXML
+    private TextField defectRateTextField;
+
+
 
     //已检测数量
     private int numberOfDetected = 0;
@@ -104,8 +116,10 @@ public class ProductDetectController implements Initializable {
 
     private ArrayList<AnchorPane> resultViewAnchorPaneList = new ArrayList<>();
 
+    private ArrayList<Pane> paneList = new ArrayList<>();
+
     public static int currentResultViewIndex=0;
-    public static int maxResultViewIndex=11;
+    public static int maxResultViewIndex=998;
 
     private MyApplication myApplication;
 
@@ -177,13 +191,32 @@ public class ProductDetectController implements Initializable {
 
     @FXML
     void resetData(ActionEvent event) {
+        //已检测数量
         numberOfDetectedTextField.setText("0");
-        numberOfDefectTextField.setText("0");
-        defectRateTextField.setText("0");
+        //良品数量
         numberOfGoodProductTextField.setText("0");
-
+        //缺陷数量
+        numberOfDefectTextField.setText("0");
+        //缺陷率
+        defectRateTextField.setText("0%");
+        //针脚歪斜数量
+        pinAskewNumTextField.setText("0");
+        //针脚歪斜率
+        pinAskewRateTextField.setText("0%");
+        //针脚粘胶数量
+        pinGlueNumTextField.setText("0");
+        //针脚粘胶率
+        pinGlueRateTextField.setText("0%");
+        //溢胶数量
+        glueOutNumTextField.setText("0");
+        //溢胶率
+        glueOutRateTextField.setText("0%");
     }
 
+    @FXML
+    public void onExitSystemButtonClick(ActionEvent actionEvent) {
+        System.exit(0);
+    }
 
     /**
      * 回调函数，用于设置结果在resultView上显示
@@ -193,11 +226,22 @@ public class ProductDetectController implements Initializable {
      * @param isGlueOut 是否溢胶
      */
     public void setDetectResult(String imageBase64, boolean isPinAskew, boolean isPinGlue, boolean isGlueOut) {
-        //更新结果
-        resultViewControllerList.get(currentResultViewIndex).setDetectResult(imageBase64 ,isPinAskew, isPinGlue, isGlueOut);
+        //更新小方块颜色
+        if(isDefect(isPinAskew, isPinGlue, isGlueOut)){
+            paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));
+        }else {
+            paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+        }
+//        resultViewControllerList.get(currentResultViewIndex).setDetectResult(imageBase64 ,isPinAskew, isPinGlue, isGlueOut);
+
         //设置当前resultView的边框样式为默认样式，并将下一个resultView的边框样式改为选中样式
-        resultViewControllerList.get(currentResultViewIndex).setDefaultBorderStyle();
-        resultViewControllerList.get((currentResultViewIndex+1)%(maxResultViewIndex+1)).setSelectedBorderStyle();
+        //默认样式
+        paneList.get(currentResultViewIndex).setBorder( new Border(new BorderStroke(Color.GREEN, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
+        //选中样式
+        paneList.get((currentResultViewIndex+1)%(maxResultViewIndex+1)).setBorder(new Border(new BorderStroke(Color.rgb(255,0,0), BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(1))));
+//        resultViewControllerList.get(currentResultViewIndex).setDefaultBorderStyle();
+//        resultViewControllerList.get((currentResultViewIndex+1)%(maxResultViewIndex+1)).setSelectedBorderStyle();
+
         //更新currentResultViewIndex
         if(currentResultViewIndex<maxResultViewIndex){
             currentResultViewIndex++;
@@ -208,30 +252,37 @@ public class ProductDetectController implements Initializable {
 
 
 //        更新批次统计信息
+
+        //更新已检测数量
         numberOfDetectedTextField.setText(String.valueOf(++numberOfDetected));
+
         //更新缺陷数量
         if (isPinAskew == true || isPinGlue == true || isGlueOut == true) {
             numberOfDefectTextField.setText(String.valueOf(++numberOfDefect));
         }
-
         //更新缺陷率
         setRate(numberOfDefect,defectRateTextField);
 
-        //更新针脚歪斜率
+
+        //更新针脚歪斜率、针脚歪斜数量
         if (isPinAskew == true) {
+            pinAskewNumTextField.setText(String.valueOf(numberOfPinAskew+1));
             setRate(++numberOfPinAskew,pinAskewRateTextField);
         }else {
             setRate(numberOfPinAskew,pinAskewRateTextField);
         }
 
-        //更新针脚黏胶率
+        //更新针脚黏胶率、针脚黏胶数量
         if (isPinGlue == true) {
+            pinGlueNumTextField.setText(String.valueOf(numberOfPinGlue+1));
             setRate(++numberOfPinGlue,pinGlueRateTextField);
         }else {
             setRate(numberOfPinGlue,pinGlueRateTextField);
         }
-        //更新溢胶率
+
+        //更新溢胶率、溢胶数量
         if (isGlueOut == true) {
+            glueOutNumTextField.setText(String.valueOf(numberOfGlueOut+1));
             setRate(++numberOfGlueOut,glueOutRateTextField);
         }else{
             setRate(numberOfGlueOut,glueOutRateTextField);
@@ -255,6 +306,18 @@ public class ProductDetectController implements Initializable {
             rateTextField.setText(rate * 100 + "%");
         }
     }
+
+    /**
+     * 判断产品是否是缺陷产品
+     * @param isPinAskew
+     * @param isPinGlue
+     * @param isGlueOut
+     * @return
+     */
+    private boolean isDefect(boolean isPinAskew, boolean isPinGlue, boolean isGlueOut){
+        return isPinAskew || isPinGlue || isGlueOut;
+    }
+
     /**
      * 在加载本页面时，并获取本Controller的示例时，会调用此方法进行初始化
      */
@@ -267,8 +330,8 @@ public class ProductDetectController implements Initializable {
         socketListener.setProductDetectController(this);
 
         //设置flowPane中内容的间距
-        flowPane.setHgap(10);
-        flowPane.setVgap(30);
+        flowPane.setHgap(2);
+        flowPane.setVgap(2);
 
         //在flowPane中添加组件
         ArrayList<Object> reList = new ArrayList<>();
@@ -287,19 +350,27 @@ public class ProductDetectController implements Initializable {
             exitSystemButton.setVisible(false);
         }
 
+        //批量加载resultView
         int i=0;
         while(i<=ProductDetectController.maxResultViewIndex){
-            //加载resultView的Controller 和 AnchorPane对象
-            reList = FxmlLoader.addFxml(StaticResourcesConfig.RESULTVIEW_VIEW_PATH);
+//            //加载resultView的Controller 和 AnchorPane对象
+//            reList = FxmlLoader.addFxml(StaticResourcesConfig.RESULTVIEW_VIEW_PATH);
+//
+//            resultViewController = (ResultViewController) reList.get(0);
+//            resultViewAnchorPane = (AnchorPane) reList.get(1);
+//            //设置每个resultView左上角的label显示的字样
+//            resultViewController.setIndexLabel("数码管"+String.valueOf(i+1));
+//            //将resultView载入到flowPane中
+//            flowPane.getChildren().add(resultViewAnchorPane);
+////            将resultViewController保存在一个List方便后面调用
+//            resultViewControllerList.add(resultViewController);
 
-            resultViewController = (ResultViewController) reList.get(0);
-            resultViewAnchorPane = (AnchorPane) reList.get(1);
-            //设置每个resultView左上角的label显示的字样
-            resultViewController.setIndexLabel("数码管"+String.valueOf(i+1));
-            //将resultView载入到flowPane中
-            flowPane.getChildren().add(resultViewAnchorPane);
-//            将resultViewController保存在一个List方便后面调用
-            resultViewControllerList.add(resultViewController);
+            Pane pane = new Pane();
+            pane.setPrefWidth(30);
+            pane.setPrefHeight(30);
+            pane.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));
+            paneList.add(pane);
+            flowPane.getChildren().add(pane);
             i++;
         }
         //设置第一个resultView的边框样式为选中样式(不知道为什么没有效果)
@@ -308,10 +379,7 @@ public class ProductDetectController implements Initializable {
         new Thread(socketListener).start();
     }
 
-    @FXML
-    public void onExitSystemButtonClick(ActionEvent actionEvent) {
-        System.exit(0);
-    }
+
 
 
 }

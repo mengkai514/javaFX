@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2699d12a-1839-4526-ba32-678ed0b65351" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_73.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_73.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_18.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/DataAnalyzeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/DataAnalyzeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/EquipmentSettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/EquipmentSettingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/FactoryManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/FactoryManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultImageViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultImageViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ResultViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ResultViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/TechFrameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/TechFrameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/SetParamsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SetParamsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/SetParamsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/SetParamsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/alterResult.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/alterResult.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/result.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/equipmentSetting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/equipmentSetting.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/masterMain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/masterMain.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sample/productDetect.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/productDetect.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,11 +84,6 @@
         <option name="mavenHome" value="$PROJECT_DIR$/../../develop/apache-maven-3.3.9" />
         <option name="userSettingsFile" value="D:\JAVA\develop\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
@@ -280,7 +261,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -333,103 +314,27 @@
       <workItem from="1658735366750" duration="2139000" />
       <workItem from="1658802968404" duration="3170000" />
       <workItem from="1658831227059" duration="2587000" />
+      <workItem from="1658891139397" duration="8668000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="-1234" y="-194" key="#com.intellij.ide.util.MemberChooser" timestamp="1658472351990">
-      <screen x="-1920" y="-313" width="1920" height="1040" />
-    </state>
-    <state x="-1234" y="-194" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1658472351990" />
-    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657694295475" />
-    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1657677287367" />
-    <state x="467" y="230" width="431" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1657677192069">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="467" y="230" width="431" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1657677192069" />
-    <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1658825796939">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1658825796939" />
-    <state x="496" y="262" key="Github.CreateGistDialog" timestamp="1657610126728">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="496" y="262" key="Github.CreateGistDialog/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657610126728" />
-    <state width="1323" height="520" key="GridCell.Tab.0.bottom" timestamp="1658831212505">
-      <screen x="-1920" y="-313" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="520" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1658831212505" />
-    <state width="1323" height="90" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658643646410" />
-    <state width="1323" height="520" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1658825731538" />
-    <state width="1323" height="520" key="GridCell.Tab.0.center" timestamp="1658831212505">
-      <screen x="-1920" y="-313" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="520" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1658831212505" />
-    <state width="1323" height="90" key="GridCell.Tab.0.center/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658643646410" />
-    <state width="1323" height="520" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1658825731537" />
-    <state width="1323" height="520" key="GridCell.Tab.0.left" timestamp="1658831212504">
-      <screen x="-1920" y="-313" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="520" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1658831212504" />
-    <state width="1323" height="90" key="GridCell.Tab.0.left/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658643646410" />
-    <state width="1323" height="520" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1658825731537" />
-    <state width="1323" height="520" key="GridCell.Tab.0.right" timestamp="1658831212505">
-      <screen x="-1920" y="-313" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="520" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1658831212505" />
-    <state width="1323" height="90" key="GridCell.Tab.0.right/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658643646410" />
-    <state width="1323" height="520" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1658825731537" />
-    <state width="1323" height="263" key="GridCell.Tab.1.bottom" timestamp="1658649339121">
-      <screen x="-1920" y="-313" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="263" key="GridCell.Tab.1.bottom/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1658649339121" />
-    <state width="1323" height="263" key="GridCell.Tab.1.bottom/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658642358493" />
-    <state width="1877" height="414" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1658497149469" />
-    <state width="1323" height="263" key="GridCell.Tab.1.center" timestamp="1658649339121">
-      <screen x="-1920" y="-313" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="263" key="GridCell.Tab.1.center/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1658649339121" />
-    <state width="1323" height="263" key="GridCell.Tab.1.center/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658642358493" />
-    <state width="1877" height="414" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1658497149469" />
-    <state width="1323" height="263" key="GridCell.Tab.1.left" timestamp="1658649339121">
-      <screen x="-1920" y="-313" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="263" key="GridCell.Tab.1.left/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1658649339121" />
-    <state width="1323" height="263" key="GridCell.Tab.1.left/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658642358493" />
-    <state width="1877" height="414" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1658497149469" />
-    <state width="1323" height="263" key="GridCell.Tab.1.right" timestamp="1658649339121">
-      <screen x="-1920" y="-313" width="1920" height="1040" />
-    </state>
-    <state width="1323" height="263" key="GridCell.Tab.1.right/0.0.1366.728/-1920.-313.1920.1040@-1920.-313.1920.1040" timestamp="1658649339121" />
-    <state width="1323" height="263" key="GridCell.Tab.1.right/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658642358493" />
-    <state width="1877" height="414" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1658497149469" />
-    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1657690182636">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657690182636" />
-    <state x="370" y="0" width="626" height="728" key="find.popup" timestamp="1657882681731">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="370" y="0" width="626" height="728" key="find.popup/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1657882681731" />
-    <state x="425" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1657677263388">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="425" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1657677263388" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1658642517578">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658642517578" />
-    <state x="405" y="281" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1658643596920">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="405" y="281" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1366.728/-1920.-313.1920.1040@0.0.1366.728" timestamp="1658643596920" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/ProductDetectController.java</url>
+          <line>317</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
