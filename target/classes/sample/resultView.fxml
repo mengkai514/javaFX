@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onMouseClicked" prefHeight="240.0" prefWidth="360.0" style="-fx-background-color: rgb(245,245,245); -fx-border-color: #008000; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ResultViewController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="240.0" fitWidth="360.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" />
+      <Label fx:id="digitalTubeIndexLabel" layoutX="5.0" layoutY="2.0" text="数码管1" textFill="#c9b900" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="2.0">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+      <Circle fx:id="pinAskewCircle" fill="GREEN" layoutX="134.0" layoutY="206.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="126.0" AnchorPane.topAnchor="198.0" />
+      <Circle fx:id="pinGlueCircle" fill="GREEN" layoutX="190.0" layoutY="206.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="198.0" />
+      <Circle fx:id="glueOutCircle" fill="GREEN" layoutX="247.0" layoutY="206.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="239.0" AnchorPane.topAnchor="198.0" />
+      <Label layoutX="113.0" layoutY="196.0" prefHeight="16.0" prefWidth="40.0" text="针脚歪斜" textFill="#c9b900" AnchorPane.bottomAnchor="2.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="196.0" prefHeight="16.0" prefWidth="40.0" text="针脚黏胶" textFill="#c9b900" AnchorPane.bottomAnchor="2.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="238.0" layoutY="221.0" prefHeight="16.0" prefWidth="20.0" text="溢胶" textFill="#c9b900" AnchorPane.bottomAnchor="2.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

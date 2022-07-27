@@ -40,7 +40,7 @@ public class SetParamsServiceImpl implements SetParamsService {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                equipmentSettingController.setParamsWithPic(height,width,acquisitionF,exposuretime,conveyorspeed,base64);
+                equipmentSettingController.setParamsWithPic(height,width,acquisitionF,exposuretime,conveyorspeed);
             }
         });
         if (retMap.get("statusCode").equals("200") || (Integer) retMap.get("statusCode") == 200){
@@ -48,6 +48,30 @@ public class SetParamsServiceImpl implements SetParamsService {
         } else {
             return false;
         }
+    }
 
+    @Override
+    public boolean getCheckCameraPic(Camera camera) {
+        JSONObject cameraJson = new JSONObject();
+        cameraJson.put("type","getCheckCameraPic");
+        cameraJson.put("content",camera);
+        System.out.println("camera对象的json:" + cameraJson.toString());
+        String retsString = new SocketCommunication().send(cameraJson.toString());
+        Map<String, Object> retMap = JSONObject.parseObject(retsString, Map.class);
+        if (retMap.get("type").equals("getCheckCameraPicReply")) {
+            Map resultMap = (Map) retMap.get("content");
+            base64 = (String) resultMap.get("ImageResult");
+        }
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                equipmentSettingController.setCheckCameraPic(base64);
+            }
+        });
+        if (retMap.get("statusCode").equals("200") || (Integer) retMap.get("statusCode") == 200){
+            return true;
+        } else {
+            return false;
+        }
     }
 }

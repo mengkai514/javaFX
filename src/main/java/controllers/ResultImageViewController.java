@@ -98,21 +98,21 @@ public class ResultImageViewController implements Initializable {
         setImageByBase64(imageBase64);
         //针脚歪斜
         if (isPinAskew) {
-            pinAskewCircle.setFill(Color.GREEN);
-        } else {
             pinAskewCircle.setFill(Color.RED);
+        } else {
+            pinAskewCircle.setFill(Color.GREEN);
         }
         //针脚粘胶
         if (isPinGlue) {
-            pinGlueCircle.setFill(Color.GREEN);
-        } else {
             pinGlueCircle.setFill(Color.RED);
+        } else {
+            pinGlueCircle.setFill(Color.GREEN);
         }
         //溢胶
         if (isGlueOut) {
-            glueOutCircle.setFill(Color.GREEN);
-        } else {
             glueOutCircle.setFill(Color.RED);
+        } else {
+            glueOutCircle.setFill(Color.GREEN);
         }
     }
 

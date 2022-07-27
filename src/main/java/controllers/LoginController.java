@@ -40,7 +40,6 @@ public class LoginController implements Initializable {
 
     @FXML
     private ChoiceBox<String> accountTypeChoiceBox;
-
     @FXML
     private FlowPane loginFlowPane;
 
@@ -62,6 +61,10 @@ public class LoginController implements Initializable {
         String userId = userIdTextField.getText();
         String password = userPasswordTextField.getText();
         String accountType = accountTypeChoiceBox.getValue();
+
+        ProductDetectController productDetectController = new ProductDetectController();
+        productDetectController.accountType = accountType;
+
         loggingIn.setVisible(true);
 
         ProgressIndicator p1 = new ProgressIndicator();
@@ -159,6 +162,7 @@ public class LoginController implements Initializable {
     public void setApp(MyApplication myApplication) {
         this.myApplication = myApplication;
     }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -83,6 +84,9 @@ public class ProductDetectController implements Initializable {
     @FXML
     private TextField defectRateTextField;
 
+    @FXML
+    private Button exitSystemButton;
+
     //已检测数量
     private int numberOfDetected = 0;
     //缺陷数量
@@ -105,7 +109,7 @@ public class ProductDetectController implements Initializable {
 
     private MyApplication myApplication;
 
-
+    public static String accountType;
 
     public void setApp(MyApplication myApplication) {
         this.myApplication = myApplication;
@@ -216,15 +220,21 @@ public class ProductDetectController implements Initializable {
         //更新针脚歪斜率
         if (isPinAskew == true) {
             setRate(++numberOfPinAskew,pinAskewRateTextField);
+        }else {
+            setRate(numberOfPinAskew,pinAskewRateTextField);
         }
 
         //更新针脚黏胶率
         if (isPinGlue == true) {
             setRate(++numberOfPinGlue,pinGlueRateTextField);
+        }else {
+            setRate(numberOfPinGlue,pinGlueRateTextField);
         }
         //更新溢胶率
         if (isGlueOut == true) {
             setRate(++numberOfGlueOut,glueOutRateTextField);
+        }else{
+            setRate(numberOfGlueOut,glueOutRateTextField);
         }
 
         //更新良品率
@@ -238,7 +248,7 @@ public class ProductDetectController implements Initializable {
      * @param rateTextField 某种缺陷的缺陷率文本框实例
      */
     private void setRate(int number,TextField rateTextField){
-        double rate = ((double) ++number) / numberOfDetected;
+        double rate = ((double) number) / numberOfDetected;
         if(String.valueOf(rate * 100).length() > 4){
             rateTextField.setText(String.valueOf(rate * 100).substring(0, 4) + "%");
         }else{
@@ -265,6 +275,18 @@ public class ProductDetectController implements Initializable {
         ResultViewController resultViewController=null;
         AnchorPane resultViewAnchorPane=null;
 //        在界面中的flowPane中添加多个resultView（检测结果的View）
+
+
+        if (accountType.equals("技术操作员")){
+            // 设置退出系统图标
+            Image image = new Image("file:src/main/resources/image/退出5.png");
+            ImageView imageView = new ImageView(image);
+            exitSystemButton.setGraphic(imageView);
+            exitSystemButton.setVisible(true);
+        }else {
+            exitSystemButton.setVisible(false);
+        }
+
         int i=0;
         while(i<=ProductDetectController.maxResultViewIndex){
             //加载resultView的Controller 和 AnchorPane对象
@@ -285,4 +307,11 @@ public class ProductDetectController implements Initializable {
         //启动socket监听线程
         new Thread(socketListener).start();
     }
+
+    @FXML
+    public void onExitSystemButtonClick(ActionEvent actionEvent) {
+        System.exit(0);
+    }
+
+
 }

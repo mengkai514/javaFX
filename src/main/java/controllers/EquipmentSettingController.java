@@ -55,6 +55,12 @@ public class EquipmentSettingController implements Initializable {
     private ComboBox selectCameraOrientation;
     @FXML
     private ComboBox selectCamera;
+    @FXML
+    private Label tipsLabel;
+    @FXML
+    private Button checkCamera;
+    @FXML
+    private Button defaultSetting;
 
 
 
@@ -133,12 +139,15 @@ public class EquipmentSettingController implements Initializable {
     }
 
     public void setParamsWithPic(int height, int width, Object acquisitionF,
-                          Object exposuretime,Object conveyorspeed, String base64){
+                          Object exposuretime,Object conveyorspeed){
         cameraHeight.setText(Integer.toString(height));
         cameraWidth.setText(Integer.toString(width));
         acquisitionFrameRate.setText(acquisitionF.toString());
         exposureTime.setText(exposuretime.toString());
         conveyorSpeed.setText(conveyorspeed.toString());
+    }
+
+    public void setCheckCameraPic(String base64) {
         BASE64Decoder decoder = new BASE64Decoder();
         try {
             byte[] b = decoder.decodeBuffer(base64);
@@ -159,15 +168,71 @@ public class EquipmentSettingController implements Initializable {
     }
 
     public void getTips(MouseEvent mouseEvent) {
-        Tooltip tooltip = new Tooltip();
-        tooltip.setText("相机高度为2的倍数，相机宽度为4的倍数\n"+"曝光率为0.400000~500.000000\n" +
-                "曝光时间为27~2500000");
-        cameraTips.setTooltip(tooltip);
+//        Tooltip tooltip = new Tooltip();
+//        tooltip.setText("相机高度为2的倍数，相机宽度为4的倍数\n"+"曝光率为0.400000~500.000000\n" +
+//                "曝光时间为27~2500000");
+//        cameraTips.setTooltip(tooltip);
+        tipsLabel.setVisible(true);
+        tipsLabel.setText("温馨提示：相机高度为2的倍数，相机宽度为4的倍数。曝光率为0.400000~500.000000。曝光时间为27~2500000");
+        tipsLabel.setWrapText(true);
     }
 
+
     public void getIPTips(MouseEvent mouseEvent) {
-        Tooltip tooltip = new Tooltip();
-        tooltip.setText("电脑的IP地址，PIC的IP地址");
-        IPTips.setTooltip(tooltip);
+//        Tooltip tooltip = new Tooltip();
+//        tooltip.setText("电脑的IP地址，PIC的IP地址");
+//        IPTips.setTooltip(tooltip);
+        tipsLabel.setVisible(true);
+        tipsLabel.setText("温馨提示：电脑的IP地址，PIC的IP地址");
+    }
+
+    public void getCheckPic(ActionEvent actionEvent) {
+        //获取界面上的参数值
+        String height = cameraHeight.getText();
+        String width = cameraWidth.getText();
+        String acquisitionRate = acquisitionFrameRate.getText();
+        String exTime = exposureTime.getText();
+        String conveyorspeed = conveyorSpeed.getText();
+        // 获取下拉框选中的相机
+        String cameraOption = (String) selectCamera.getValue();
+        // 获取下拉框选中的相机方位
+        String cameraOrientation = (String) selectCameraOrientation.getValue();
+
+        Camera camera = new Camera(height,width,acquisitionRate,exTime,conveyorspeed,cameraOption,cameraOrientation);
+        SetParamsService setParamsService = new SetParamsServiceImpl(this);
+        setParamsService.getCheckCameraPic(camera);
+    }
+
+
+    public void setDefaultParams(ActionEvent actionEvent) {
+        //获取界面上的参数值
+        String height = "2048";
+        String width = "3072";
+        String acquisitionRate = "13.6000";
+        String exTime = "58806.0";
+        String conveyorspeed = "80.0";
+        // 获取下拉框选中的相机
+        String cameraOption = "相机1";
+        // 获取下拉框选中的相机方位
+        String cameraOrientation = "左";
+
+        Camera camera = new Camera(height,width,acquisitionRate,exTime,conveyorspeed,cameraOption,cameraOrientation);
+        SetParamsService setParamsService = new SetParamsServiceImpl(this);
+        boolean result = setParamsService.setParams(camera);
+        if (result) {
+            //弹窗提示修改成功
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("提示");
+            alert.setHeaderText("保存成功");
+            alert.setContentText("保存成功");
+            alert.showAndWait();
+        } else {
+            //弹窗提示修改失败
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("提示");
+            alert.setHeaderText("保存成功");
+            alert.setContentText("保存成功");
+            alert.showAndWait();
+        }
     }
 }

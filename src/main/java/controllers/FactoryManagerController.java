@@ -9,6 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -59,6 +61,9 @@ public class FactoryManagerController implements Initializable {
     private Button productDetectButton;
 
     @FXML
+    private Button exitSystemButton;
+
+    @FXML
     void onAccountManageButtonClick(ActionEvent event) {
         equipmentSettingAnchorPane.setVisible(false);
         productDetectAnchorPane.setVisible(false);
@@ -104,6 +109,11 @@ public class FactoryManagerController implements Initializable {
 
         ArrayList<Object> ReList = null;
 
+        // 设置退出系统图标
+        Image image = new Image("file:src/main/resources/image/退出4.png");
+        ImageView imageView = new ImageView(image);
+        exitSystemButton.setGraphic(imageView);
+
         //加载账户管理界面
         ReList = FxmlLoader.addFxml(StaticResourcesConfig.ACCOUNTMANAGE_VIEW_PATH);
         accountManageController = (AccountManageController) ReList.get(0);
@@ -142,6 +152,10 @@ public class FactoryManagerController implements Initializable {
 
     }
 
+    @FXML
+    void onExitSystemButtonClick(ActionEvent event){
+        System.exit(0);
+    }
 
 
     public void setApp(MyApplication myApplication) {

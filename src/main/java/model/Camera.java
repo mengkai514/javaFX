@@ -24,4 +24,6 @@ public class Camera {
         this.cameraOption = cameraOption;
         this.cameraOrientation = cameraOrientation;
     }
+
+
 }

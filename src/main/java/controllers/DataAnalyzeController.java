@@ -104,5 +104,63 @@ public class DataAnalyzeController implements Initializable {
                 }
             });
         }
+
+        for (final XYChart.Data<String, Number> dt : PinAsknew.getData()) {
+            final Node n = dt.getNode();
+
+            n.setEffect(null);
+            n.setOnMouseEntered(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent e) {
+                    Tooltip t = new Tooltip(dt.getYValue().toString());
+                    Font value = Font.font(20);
+                    t.setFont(value);
+                    t.setStyle("-fx-background-color:white");
+                    t.setStyle("-fx-border-color:orange");
+                    t.setStyle("-fx-border-width:2");
+                    t.setStyle("-fx-border-radius:3");
+                    Tooltip.install(dt.getNode(), t);
+                }
+            });
+        }
+
+        for (final XYChart.Data<String, Number> dt : GlueOut.getData()) {
+            final Node n = dt.getNode();
+
+            n.setEffect(null);
+            n.setOnMouseEntered(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent e) {
+                    Tooltip t = new Tooltip(dt.getYValue().toString());
+                    Font value = Font.font(20);
+                    t.setFont(value);
+                    t.setStyle("-fx-background-color:white");
+                    t.setStyle("-fx-border-color:orange");
+                    t.setStyle("-fx-border-width:2");
+                    t.setStyle("-fx-border-radius:3");
+                    Tooltip.install(dt.getNode(), t);
+                }
+            });
+        }
+        for (final XYChart.Data<String, Number> dt : standard.getData()) {
+            final Node n = dt.getNode();
+
+            n.setEffect(null);
+            n.setOnMouseEntered(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent e) {
+                    Tooltip t = new Tooltip(dt.getYValue().toString());
+                    Font value = Font.font(20);
+                    t.setFont(value);
+                    t.setStyle("-fx-background-color:white");
+                    t.setStyle("-fx-border-color:orange");
+                    t.setStyle("-fx-border-width:2");
+                    t.setStyle("-fx-border-radius:3");
+                    Tooltip.install(dt.getNode(), t);
+                }
+            });
+        }
+
+
     }
 }

@@ -120,7 +120,7 @@ public class ResultViewController implements Initializable {
      * @description: 设置当前resultView的边框为选中状态
      */
     public void setSelectedBorderStyle() {
-        Border border = new Border(new BorderStroke(Color.rgb(255,206,71), BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(4)));
+        Border border = new Border(new BorderStroke(Color.rgb(255,0,0), BorderStrokeStyle.SOLID, CornerRadii.EMPTY, new BorderWidths(4)));
         anchorPane.setBorder(border);
     }
 
