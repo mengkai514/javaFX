@@ -231,7 +231,6 @@ public class ProductDetectController implements Initializable {
             //设置小方块的颜色
             //黄色
 //            paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill( Color.rgb(252,202,6), CornerRadii.EMPTY, Insets.EMPTY)));
-            //黑色
             paneList.get(currentResultViewIndex).setBackground(new Background(new BackgroundFill( Color.rgb(216,42,32), CornerRadii.EMPTY, Insets.EMPTY)));
         }else {
 //            浅绿
